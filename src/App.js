@@ -2,17 +2,21 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Home } from './components/Home';
 import { Navbar } from './components/Navbar';
-import { Shop } from './components/Shop';
 import { Contact } from "./components/Contact"
+import { Chairs } from './components/chair';
+import React from 'react';
+import { ChairDetails } from './chairDetails';
 
 function App() {
+  
   return (
     <BrowserRouter>
     <Navbar></Navbar>
     <Routes>
       <Route path='/' element={<Home/>}/>
-      <Route path="/Shop" element={<Shop/>}></Route>
-      <Route path="/Contact" element={<Contact></Contact>}></Route>
+      <Route path="/Chairs" element={<Chairs/>}></Route>
+      <Route path='/Chairs/:title' element={<ChairDetails/>}></Route>
+      <Route path="/Contact" element={<Contact/>}/>
     </Routes>
     </BrowserRouter>
   );
