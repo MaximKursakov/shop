@@ -6,6 +6,6 @@ a {
 .chair {
 }
 
-.addToCart:hover, .removeFromCart:hover {
+.addToWishlist:hover, .removeFromWishlist:hover {
   cursor: pointer;
 }

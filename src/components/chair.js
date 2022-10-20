@@ -14,29 +14,36 @@ export function Chairs() {
     {
         title: "Kubrick", description:"Wing Back Chair, Scuba Blue Fabric", price: 525, category: "bedroom", id: 4
     }])
-    const [cart, setCart] = useState([1,2, 1])
-    const [cartState, setCartState] = useState(true)
+    const [Wishlist, setWishlist] = useState([])
+    const [WishlistState, setWishlistState] = useState(true)
 
-    function addToCart(chair) {
-        setCart(cart.concat(chair))
-        setCartState(false)
+    function addToWishlist(chair) {
+        setWishlist(Wishlist.concat(chair))
+        setWishlistState(false)
+        
     }
-    function removeFromCart(chair) {
-        setCart(cart.filter(myCart => {
-            return myCart !== chair
+    function removeFromWishlist(chair) {
+        setWishlist(Wishlist.filter(myWishlist => {
+            return myWishlist !== chair
         }))
-        setCartState(true)
+        setWishlistState(true)
+        console.log(Wishlist)
+
     }
 
     return(
         <div>
             {chairInfo.map((chair) => (
                 <div key={chair.id}>
-                        <img src={"images/"+ chair.title + ".avif"}  alt={chair.title} className="chair"></img>
-                    {cartState 
-                    ?   <p className="addToCart" onClick={() => addToCart(chair.id)}>+</p>
-                    :   <p className="removeFromCart" onClick={() => removeFromCart(chair.id)}>-</p>}
-                    <Link to={`/Chairs/${chair.title}`} state={{ chair}}>{chair.description}</Link>
+                        <Link to={`/Chairs/${chair.title}`} state={{ chair}}>
+                            <img src={"images/"+ chair.title + ".avif"}  alt={chair.title} className="chair"></img>
+                            </Link>
+                    {WishlistState 
+                    ?   <p className="addToWishlist" onClick={() => addToWishlist(chair.id)}>+</p>
+                    :   <p className="removeFromWishlist" onClick={() => removeFromWishlist(chair.id)}>-</p>}
+                    <Link to={`/Chairs/${chair.title}`} state={{ chair}}>
+                        {chair.description}
+                        </Link>
                     <p>{chair.price}€</p>
                 </div>
             ))}
