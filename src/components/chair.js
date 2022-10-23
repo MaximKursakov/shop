@@ -2,19 +2,8 @@ import {useState} from "react"
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai"
 import { Link, useParams } from "react-router-dom"
 
-export function Chairs({wishlist, setWishlist}) {
-    const [chairInfo, setChairInfo] = useState([{
-        title: "Solomon", description:"Dining Chair, Faux Sheepskin & Black Legs", price: 220, wishlist: false, id: 1
-    },
-    {
-        title: "Abbon", description:"Woven Dining Chair, Charcoal Black Wash", price: 350, category: "dining", wishlist: false, id: 2
-    },
-    {
-        title: "Hektor", description:"Tub Office Chair, Tan & Black", price: 230, category: "office", wishlist: false, id: 3
-    },
-    {
-        title: "Kubrick", description:"Wing Back Chair, Scuba Blue Fabric", price: 525, category: "bedroom", wishlist: true, id: 4
-    }])
+export function Chairs({chairInfo, setChairInfo, wishlist, setWishlist}) {
+    
 
     function addToWishlist(chair) {
         console.log(wishlist)
