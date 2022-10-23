@@ -13,3 +13,18 @@ a {
 .active {
   font-size: 1.2rem;
 }
+
+.basket, .wishlist {
+  font-size: 2rem;
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+}
+
+.wishlist {
+  right: 80px;
+}
+
+.wishlistItem, .cartItem {
+  border: solid 1px black;
+}

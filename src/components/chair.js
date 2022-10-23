@@ -1,34 +1,43 @@
 import {useState} from "react"
+import { AiFillHeart, AiOutlineHeart } from "react-icons/ai"
 import { Link, useParams } from "react-router-dom"
 
-export function Chairs() {
+export function Chairs({wishlist, setWishlist}) {
     const [chairInfo, setChairInfo] = useState([{
-        title: "Solomon", description:"Dining Chair, Faux Sheepskin & Black Legs", price: 220, id: 1
+        title: "Solomon", description:"Dining Chair, Faux Sheepskin & Black Legs", price: 220, wishlist: false, id: 1
     },
     {
-        title: "Abbon", description:"Woven Dining Chair, Charcoal Black Wash", price: 350, category: "dining", id: 2
+        title: "Abbon", description:"Woven Dining Chair, Charcoal Black Wash", price: 350, category: "dining", wishlist: false, id: 2
     },
     {
-        title: "Hektor", description:"Tub Office Chair, Tan & Black", price: 230, category: "office", id: 3
+        title: "Hektor", description:"Tub Office Chair, Tan & Black", price: 230, category: "office", wishlist: false, id: 3
     },
     {
-        title: "Kubrick", description:"Wing Back Chair, Scuba Blue Fabric", price: 525, category: "bedroom", id: 4
+        title: "Kubrick", description:"Wing Back Chair, Scuba Blue Fabric", price: 525, category: "bedroom", wishlist: true, id: 4
     }])
-    const [Wishlist, setWishlist] = useState([])
-    const [WishlistState, setWishlistState] = useState(true)
 
     function addToWishlist(chair) {
-        setWishlist(Wishlist.concat(chair))
-        setWishlistState(false)
-        
+        console.log(wishlist)
+        setWishlist(wishlist.concat(chair))
+        setChairInfo(chairInfo.map(item => {
+            if (item.id === chair.id){
+              return {...item, wishlist: true}
+            }
+            return item
+          }));
     }
     function removeFromWishlist(chair) {
-        setWishlist(Wishlist.filter(myWishlist => {
-            return myWishlist !== chair
+        console.log(wishlist)
+        setWishlist(wishlist.filter(item => {
+            return item.id !== chair.id
         }))
-        setWishlistState(true)
-        console.log(Wishlist)
-
+        setChairInfo(chairInfo.map(item => {
+            if (item.id === chair.id){
+              return {...item, wishlist: false}
+            }
+            return item
+          }));
+    
     }
 
     return(
@@ -38,9 +47,9 @@ export function Chairs() {
                         <Link to={`/Chairs/${chair.title}`} state={{ chair}}>
                             <img src={"images/"+ chair.title + ".avif"}  alt={chair.title} className="chair"></img>
                             </Link>
-                    {WishlistState 
-                    ?   <p className="addToWishlist" onClick={() => addToWishlist(chair.id)}>+</p>
-                    :   <p className="removeFromWishlist" onClick={() => removeFromWishlist(chair.id)}>-</p>}
+                    {!chair.wishlist 
+                    ?   <p className="addToWishlist" onClick={() => addToWishlist(chair)}><AiOutlineHeart></AiOutlineHeart></p>
+                    :   <p className="removeFromWishlist" onClick={() => removeFromWishlist(chair)}><AiFillHeart></AiFillHeart></p>}
                     <Link to={`/Chairs/${chair.title}`} state={{ chair}}>
                         {chair.description}
                         </Link>

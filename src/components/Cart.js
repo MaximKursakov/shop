@@ -22,7 +22,8 @@ export function Cart ({Basket, setBasket}) {
             ? <p>Basket is empty, click <Link to={"/Chairs"}>here</Link> to browse our shop!</p>
             : <div>
                 {Basket.map((item) => (
-                <div key={item.id}>
+                <div className="cartItem" key={item.id}>
+                    <img src={`images/${Basket.title}.avif`}  alt={Basket.title}></img>
                     <p>{item.title}</p>
                     <p>{item.price}€</p>
                     <button onClick={() => removeItem(item)}>remove</button>
