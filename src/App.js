@@ -9,7 +9,7 @@ import { ChairDetails } from './chairDetails';
 import { Cart } from './components/Cart';
 
 function App() {
-  const [Basket, setBasket] = useState([{title: "test item", id: 20}])
+  const [Basket, setBasket] = useState([{title: "test item", price: 20, id: 20}])
   return (
     <BrowserRouter>
     <Navbar Basket={Basket}></Navbar>
