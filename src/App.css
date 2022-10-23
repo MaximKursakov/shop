@@ -9,3 +9,7 @@ a {
 .addToWishlist:hover, .removeFromWishlist:hover {
   cursor: pointer;
 }
+
+.active {
+  font-size: 1.2rem;
+}

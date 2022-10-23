@@ -1,19 +1,16 @@
-import { useEffect, useState } from "react"
 import { useLocation } from "react-router-dom"
 
-export function ChairDetails(props) {
+export function ChairDetails({setBasket, Basket}) {
+    console.log(Basket)
     const location = useLocation()
     const chairInfo = location.state.chair
-    const [Basket, setBasket] = useState([{hey : "yes"}])
-    // console.log(Basket)
 
     function addToBasket() {
         setBasket(Basket.concat(chairInfo))
-        // console.log(Basket.indexOf(chairInfo))
     }
 
     const itemInBasket = Basket.indexOf(chairInfo)
-console.log(Basket)
+    
 
 
     return(
