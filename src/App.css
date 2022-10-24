@@ -5,6 +5,12 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   color: #a3a3a3;
+  padding: 0;
+  margin: 0;
+}
+
+.active {
+  color: black;
 }
 
 a {
@@ -77,24 +83,68 @@ a {
 }
 
 .hero {
-  padding-top: 200px;
   min-height: 100vh;
   width: 100%;
   background-color: #f6f6f6;
   display: flex;
-  justify-content: center;
-  gap: 200px;
+  justify-content:center;
+  align-items: center;
+  gap: 150px;
+}
+
+.hero-mid {
+  width: 20vw;
+  text-align: center;
+}
+
+.hero-mid h1, h2 {
+  border: solid black 1px;
+  margin: 0;
+  color: rgb(54, 53, 53);
+  letter-spacing: .3rem;
+  font-size: 1rem;
+  padding: 15px;
+}
+
+.hero-mid h1 {
+  border-top: 0;
+  font-size: 4rem;
+  padding: 20px;
+  letter-spacing: 1rem;
+}
+.hero-mid p {
+  margin-top: 40px;
+}
+
+.shop-link {
+  margin-top: 20px;
+  color: rgb(54, 53, 53);
+  font-size: 1.2rem;
+  width: 200px;
+  height: 50px;
+  background-color: #f6f6f6;
+  border: solid black 1px;
+  font-family: "Montserrat";
+  font-weight: 400;
+}
+.shop-link:hover {
+  cursor: pointer;
 }
 
 .hero-img {
-  width: 20vw;
+  width: 15vw;
   height: 100%;
+  transition: transform .2s;
+}
+
+.hero-img:hover {
+  transform: scale(1.2);
 }
 
 .chair {
 }
 
-.addToWishlist:hover, .removeFromWishlist:hover {
+.addToWishlist:hover, .removeFromWishlist:hover, .shop-link:hover, .hero-img:hover {
   cursor: pointer;
 }
 
