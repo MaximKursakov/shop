@@ -1,3 +1,4 @@
+import { BsSearch } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 
 
@@ -10,10 +11,13 @@ export function Navbar({Basket, wishlist}) {
                 <NavLink to="/Wishlist"><p className="stick-bar-link">WISHLIST <div className="wishlist-size">{wishlist.length}</div></p></NavLink>
             </div>
             <div className="navbar">
-                <div>LOGO</div>
-                <NavLink to="/">HOME</NavLink>
-                <NavLink to="/Chairs">SHOP</NavLink>
-                <NavLink to="Contact">CONTACT</NavLink>
+                <div className="logo">LOGO</div>
+                <div className="navbar-links">
+                    <NavLink to="/Home">HOME</NavLink>
+                    <NavLink to="/Chairs">SHOP</NavLink>
+                    <NavLink to="Contact">CONTACT</NavLink>
+                </div>
+                <div className="search"><BsSearch></BsSearch></div>
             </div>
         </nav>
     )

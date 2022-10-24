@@ -55,8 +55,26 @@ a {
   margin-top: 8vh;
   width: 100%;
   height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+.navbar-links {
+  display: flex;
+  gap: 120px;
+}
+
+.logo {
+  font-family: "Playfair Display";
+  font-size: 2rem;
+  margin-left: 70px;
+  color: #747474;
+}
+
+.search {
+  margin-right: 70px;
+}
 
 .hero {
   min-height: 100vh;
