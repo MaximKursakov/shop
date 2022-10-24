@@ -1,16 +1,20 @@
 import { NavLink } from "react-router-dom";
-import { BsCart3} from "react-icons/bs";
-import { AiOutlineHeart } from "react-icons/ai";
 
-export function Navbar() {
+
+export function Navbar({Basket, wishlist}) {
     return(
         <nav>
-            <div>LOGO</div>
-            <NavLink to="/">Home</NavLink>
-            <NavLink to="/Chairs">Shop</NavLink>
-            <NavLink to="Contact">Contact</NavLink>
-            <NavLink to="/Cart" aria-label="Shopping Cart" className={"basket"}><BsCart3></BsCart3></NavLink>
-            <NavLink to="/Wishlist" aria-label="wishlist" className={"wishlist"}><AiOutlineHeart></AiOutlineHeart></NavLink>
+            <div className="sticky-bar">
+                <NavLink to="Login"><p className="stick-bar-link">LOGIN</p></NavLink>
+                <NavLink to="/Cart"><p className="stick-bar-link">MY CART <div className="basket-size">{Basket.length}</div></p></NavLink>
+                <NavLink to="/Wishlist"><p className="stick-bar-link">WISHLIST <div className="wishlist-size">{wishlist.length}</div></p></NavLink>
+            </div>
+            <div className="navbar">
+                <div>LOGO</div>
+                <NavLink to="/">HOME</NavLink>
+                <NavLink to="/Chairs">SHOP</NavLink>
+                <NavLink to="Contact">CONTACT</NavLink>
+            </div>
         </nav>
     )
 }

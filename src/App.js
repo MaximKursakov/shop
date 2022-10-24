@@ -25,9 +25,10 @@ function App() {
 {
     title: "Kubrick", description:"Wing Back Chair, Scuba Blue Fabric", price: 525, category: "bedroom", wishlist: true, id: 4
 }])
+
   return (
     <BrowserRouter>
-    <Navbar Basket={Basket}></Navbar>
+    <Navbar Basket={Basket} wishlist={wishlist}></Navbar>
     <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/ChairShop' element={<ChairShop></ChairShop>}/>
