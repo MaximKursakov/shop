@@ -5,8 +5,9 @@ export function Wishlist ({wishlist, Basket, setBasket}) {
 
     return(
         <div>
+            <h1>Wishlist</h1>
             {wishlist.map((item) => (
-                <div className="wishlistItem">
+                <div key={item.id} className="wishlistItem">
                     <p>{item.title}</p>
                     <p>{item.description}</p>
                     <p>{item.price}</p>

@@ -22,7 +22,7 @@ export function Cart ({Basket, setBasket}) {
             ? <p>Basket is empty, click <Link to={"/Chairs"}>here</Link> to browse our shop!</p>
             : <div>
                 {Basket.map((item) => (
-                <div className="cartItem" key={item.id}>
+                <div key={item.id} className="cartItem" >
                     <img src={`images/${Basket.title}.avif`}  alt={Basket.title}></img>
                     <p>{item.title}</p>
                     <p>{item.price}€</p>
