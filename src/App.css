@@ -77,9 +77,18 @@ a {
 }
 
 .hero {
+  padding-top: 200px;
   min-height: 100vh;
   width: 100%;
   background-color: #f6f6f6;
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+}
+
+.hero-img {
+  width: 20vw;
+  height: 100%;
 }
 
 .chair {
