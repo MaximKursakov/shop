@@ -1,5 +1,6 @@
 import {useState} from "react"
 import { ChairShop } from "./chairShop"
+import { SortChairs } from "./SortChairs"
 
 export function ChairFilter({chairInfo, setChairInfo, wishlist, setWishlist}) {
     const [filterState, setFilterState] = useState({office: false, dining: false, bedroom: false, })
@@ -9,7 +10,6 @@ export function ChairFilter({chairInfo, setChairInfo, wishlist, setWishlist}) {
     const officeChairs = chairInfo.filter(item => item.category === "office")
     const diningChairs = chairInfo.filter(item => item.category === "dining")
     const bedroomChairs = chairInfo.filter(item => item.category === "bedroom")
-
 
 
     return(
