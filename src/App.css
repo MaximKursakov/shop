@@ -7,6 +7,8 @@ body {
   color: #a3a3a3;
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 .active {
@@ -144,8 +146,8 @@ a {
 }
 
 .slider {
-  width: 100%;
-  height: 20vh;
+  width: auto;
+  height: 50vh;
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -155,6 +157,7 @@ a {
 
 .slider div {
   border: solid black 1px;
+  width: 500px;
 }
 
 .chair {
