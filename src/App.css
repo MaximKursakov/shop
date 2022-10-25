@@ -148,7 +148,13 @@ a {
   height: 20vh;
   display: flex;
   justify-content: center;
+  gap: 10px;
+  
   font-size: 10rem;
+}
+
+.slider div {
+  border: solid black 1px;
 }
 
 .chair {
