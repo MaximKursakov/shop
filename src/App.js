@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Home } from './components/Home';
 import { Navbar } from './components/Navbar';
@@ -30,6 +30,7 @@ function App() {
     <BrowserRouter>
     <Navbar Basket={Basket} wishlist={wishlist}></Navbar>
     <Routes>
+      <Route path='/' element={<Navigate to="/Home"></Navigate>}/>
       <Route path='/Home' element={<Home/>}/>
       <Route path='/ChairShop' element={<ChairShop></ChairShop>}/>
       <Route path="/Chairs" element={<ChairFilter chairInfo={chairInfo} setChairInfo={setChairInfo} wishlist={wishlist} setWishlist={setWishlist}/>}></Route>
