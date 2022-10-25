@@ -2,33 +2,25 @@ import { motion, useMotionValue, useTransform } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
 
 export function Slider () {
-    const x = useMotionValue(0)
-    
-    const scale = useTransform(x, [500, 0, -500], [0.5, 1, 0.5])
-    const opacity = useTransform(x, [1000, 500, 0, -500, -1000], [0, 0, 1, 0, 0])
-    const carousel = useRef()
-    const [width, setWidth] = useState(0)
-    useEffect(() => {
-        setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
-        console.log(width)
-    }, [])
+    const testInput = [{title: "test1", index: 1}, {title: "test1", index: 2}, {title: "test1", index: 3}, {title: "test1", index: 4}]
+    const [position, setPosition] = useState(0)
+
+
     
     
     return(
         <div >
-            <motion.div ref={carousel}>
-                <motion.button className="slider"
-                    
-                    drag="x"
-                    dragConstraints={{right: 0, left: -width}} 
-                    >
-                    <motion.div >TEST 1</motion.div>
-                    <motion.div >TEST 2</motion.div>
-                    <motion.div >TEST 3</motion.div>
-                    <motion.div >TEST 4</motion.div>
-                    <motion.div >TEST 5</motion.div>
-                    <motion.div >TEST 6</motion.div>
-                </motion.button>
+            <motion.div className="slider">
+                {testInput.map((item) => (
+                    <motion.div 
+                    key={item.index} 
+                    className="container"
+                    animate={{
+                        left: item.index * 500
+                    }}>
+                        <p>{item.title}</p>
+                    </motion.div>
+                ))}
             </motion.div>
         </div>
     )

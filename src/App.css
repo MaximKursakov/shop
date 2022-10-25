@@ -153,11 +153,16 @@ a {
   gap: 10px;
   
   font-size: 10rem;
+  position: relative;
 }
 
 .slider div {
   border: solid black 1px;
   width: 500px;
+}
+
+.container {
+  position:absolute;
 }
 
 .chair {
