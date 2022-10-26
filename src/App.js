@@ -29,7 +29,7 @@ function App() {
     title: "ch29", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "bedroom", wishlist: false, id: 5, featured: false
 },
 {
-    title: "ch30", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "bedroom", wishlist: false, id: 6, featured: false
+    title: "ch30", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "bedroom", wishlist: false, id: 6, featured: true
 },
 {
     title: "ch33", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "bedroom", wishlist: false, id: 7, featured: false

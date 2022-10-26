@@ -1,10 +1,20 @@
-import { motion, useMotionValue, useTransform } from "framer-motion"
+import { motion, useAnimationControls, useMotionValue, useTransform } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai"
 
 export function Slider ({chairInfo}) {
     let counter = 0
     const [position, setPosition] = useState(2)
     const [containerWidth, setContainerWidth] = useState(0)
+    const [sliderPulsing, setSliderPulsing] = useState(Infinity)
+    const controlPulse = useAnimationControls()
+    controlPulse.start({
+        scale: 1.2,
+        transition: {
+            repeat: Infinity,
+            repeatType: "reverse",
+            duration: .5}
+    })
     const chairsFiltered = chairInfo.filter((chair) => chair.featured)
     const chairsUpdatedID = chairsFiltered.map(chair => {
                     if(true) {
@@ -13,28 +23,6 @@ export function Slider ({chairInfo}) {
                     }
                     return chair
                 })
-                    
-
-    
-
-    // function updateChairID () {
-    //     let counter = 0;
-    //     chairsUpdatedID(current => 
-    //         current.map(chair => {
-    //             if(true) {
-    //                 console.log(counter)
-    //                 counter++
-    //                 return {...chair, id : counter}
-    //             }
-    //             return chair
-    //         }))
-            
-    // }
-    // console.log(chairsUpdatedID)
-    // useEffect(() => {
-    //     updateChairID()
-    // },[])
-
 
     const container = useRef()
     useEffect(() => {
@@ -45,20 +33,21 @@ export function Slider ({chairInfo}) {
         if (position < chairsUpdatedID.length ) {
             setPosition(position + 1)
         }
+        controlPulse.stop()
     }
 
     function slideLeft() {
         if (position-1  > 0) {
             setPosition(position - 1)
         }
+        controlPulse.stop()
     }
-
 
 
     return(
         <div className="slider-container">
-            <button onClick={slideLeft}> left </button>
-            <button onClick={slideRight}> right </button>
+            <motion.button animate={controlPulse} className="slide-left" onClick={slideLeft}> <AiOutlineLeft></AiOutlineLeft> </motion.button>
+            <motion.button animate={controlPulse} className="slide-right" onClick={slideRight}> <AiOutlineRight></AiOutlineRight> </motion.button>
             <motion.div ref={container} className="slider">
                 {chairsUpdatedID.map((item) => (
                         <motion.div 

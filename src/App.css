@@ -1,8 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&family=Playfair+Display&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Montserrat:wght@100;200;300;400;500&family=Mulish:wght@200;300;400&family=Playfair+Display&family=Quattrocento+Sans:wght@400;700&display=swap');
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Mulish', sans-serif;
   font-weight: 500;
   color: #a3a3a3;
   padding: 0;
@@ -176,6 +174,43 @@ a {
   bottom: 0;
   right: 0;
   margin: auto;
+}
+
+.slide-left, .slide-right {
+  position: absolute;
+  border: none;
+  font-size: 2rem;
+  color: #747474;
+  background-color:transparent;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.slide-left {
+  margin-left: 40px;
+  left: 0;
+}
+
+.slide-right {
+  margin-right: 40px;
+  right: 0;
+}
+
+.slider-section {
+  padding-top: 100px;
+  font-family: "Lora";
+}
+
+
+
+.featured-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.featured-header h1 {
+  color: black;
 }
 
 .featured-img {
