@@ -34,6 +34,7 @@ a {
   background-color: white;
   width: 100%;
   min-height: 6vh;
+  z-index: 1;
 }
 
 .sticky-bar a {
@@ -138,31 +139,47 @@ a {
 .hero-img {
   width: 15vw;
   height: 100%;
-  transition: transform .4s;
+  transition: transform .2s;
 }
 
 .hero-img:hover {
   transform: scale(1.1);
 }
 
+.slider-container {
+  overflow: hidden;
+  height: 70vh;
+  width: 100vw;
+}
+
 .slider {
-  width: auto;
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  
-  font-size: 10rem;
+  width: 100%;
+  height: 100%;
   position: relative;
 }
 
-.slider div {
-  border: solid black 1px;
-  width: 500px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position:absolute;
+  width: 60vw;
+  height: 60vh;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
 }
 
-.container {
-  position:absolute;
+.featured-img {
+  width: 12vw;
+}
+
+.featured-info {
+  text-align: center;
+  color: rgb(66, 66, 66);
 }
 
 .chair {

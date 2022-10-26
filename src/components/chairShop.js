@@ -62,7 +62,7 @@ export function ChairShop({displayChairs, chairInfo, setChairInfo, wishlist, set
             {displayChairs.map((chair) => (
                 <div key={chair.id}>
                     <Link to={`/Chairs/${chair.title}`} state={{ chair}}>
-                        <img src={"images/"+ chair.title + ".avif"}  alt={chair.title} className="chair"></img>
+                        <img src={"images/"+ chair.title + ".png"}  alt={chair.title} className="chair"></img>
                     </Link>
                     {!chair.wishlist 
                     ?   <p className="addToWishlist" onClick={() => addToWishlist(chair)}><AiOutlineHeart></AiOutlineHeart></p>
