@@ -182,9 +182,13 @@ a {
   width: 12vw;
 }
 
-.featured-info {
+.featured-title {
   text-align: center;
   color: rgb(66, 66, 66);
+}
+
+.featured-price {
+  text-align: center;
 }
 
 .chair {

@@ -35,13 +35,13 @@ function App() {
     title: "ch33", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "bedroom", wishlist: false, id: 7, featured: false
 },
 {
-    title: "ch36", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "bedroom", wishlist: false, id: 8, featured: false
+    title: "ch36", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "bedroom", wishlist: false, id: 8, featured: true
 },
 {
     title: "ch37", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "bedroom", wishlist: false, id: 9, featured: false
 },
 {
-    title: "ch46", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "bedroom", wishlist: false, id: 10, featured: false
+    title: "ch46", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "bedroom", wishlist: false, id: 10, featured: true
 },
 {
     title: "ch47", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "bedroom", wishlist: false, id: 11, featured: false
