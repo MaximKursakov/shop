@@ -1,7 +1,11 @@
+
 import { AiOutlineSend } from "react-icons/ai"
 import { TiSocialInstagramCircular, TiSocialYoutubeCircular, TiSocialFacebookCircular, TiSocialGooglePlusCircular, TiSocialTwitterCircular} from "react-icons/ti"
+import { Newsletter } from "./Newsletter"
 
 export function Footer() {
+
+
     return(
         <div className="footer">
             <div className="footer-info">
@@ -26,10 +30,7 @@ export function Footer() {
             </div>
             <div className="footer-newsletter">
                 <h3 className="footer-title">NEWSLETTER</h3>
-                <form className="newsletter-signup">
-                    <input type="email" id="email" placeholder="Your email adress" required></input>
-                    <button type="button"><AiOutlineSend></AiOutlineSend></button>
-                </form>
+                <Newsletter></Newsletter>
                 <div className="social-media">
                     <TiSocialInstagramCircular></TiSocialInstagramCircular>
                     <TiSocialYoutubeCircular></TiSocialYoutubeCircular>
