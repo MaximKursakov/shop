@@ -9,6 +9,7 @@ import { ChairDetails } from './chairDetails';
 import { Cart } from './components/Cart';
 import { Wishlist } from './components/Wishlist';
 import { ChairShop } from './components/chairShop';
+import { Footer } from './components/Footer';
 
 function App() {
   const [Basket, setBasket] = useState([{title: "Hektor", description:"Tub Office Chair, Tan & Black", price: 230, category: "office", wishlist: false, id: 3}])
@@ -66,6 +67,7 @@ function App() {
       <Route path='/Cart' element={<Cart setBasket={setBasket} Basket={Basket}></Cart>}/>
       <Route path='/Wishlist' element={<Wishlist wishlist={wishlist} setWishlist={setWishlist} setBasket={setBasket} Basket={Basket}></Wishlist>}/>
     </Routes>
+    <Footer></Footer>
     </BrowserRouter>
   );
 }
