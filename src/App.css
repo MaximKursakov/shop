@@ -267,6 +267,23 @@ a {
   border: none;
 }
 
+.rooms-categories {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+
+.rooms-categories a li {
+  color: white;
+  z-index: 1;
+}
+
 .room-button {
   letter-spacing: 4px;
   color: white;
@@ -305,10 +322,9 @@ a {
   display: flex;
   flex-direction: row;
   float: left; 
-  width: 27.33%; 
+  width: 100%;
   margin: 5% 0;
   position: relative;
-  width: 100%;
 }
 
 .email-input {
@@ -321,7 +337,6 @@ a {
 }
 
 .email-input ~ .focus-animation {
-  background-color: transparent;
   position: absolute; 
   bottom: 0; 
   left: 0; 
@@ -329,6 +344,7 @@ a {
   height: 2px; 
   background-color: #3399FF; 
   transition: 0.4s;
+  z-index: 1;
 }
 
 .email-input:focus ~ .focus-animation {

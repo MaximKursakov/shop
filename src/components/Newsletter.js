@@ -9,7 +9,7 @@ export function Newsletter() {
     const [checkedInvalid, setCheckedInvalid] = useState(false)
 
     const variants = {
-        invisible: {opacity: 0, y: -100},
+        invisible: {opacity: 0, y: -50},
         visible: {opacity: 1, y: -10}
     }
     const validateEmail = (e) => {

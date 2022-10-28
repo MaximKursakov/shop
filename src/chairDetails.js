@@ -1,7 +1,6 @@
 import { useLocation } from "react-router-dom"
 
 export function ChairDetails({setBasket, Basket}) {
-    console.log(Basket)
     const location = useLocation()
     const chairInfo = location.state.chair
 

@@ -1,4 +1,3 @@
-import { useState } from "react"
 
 export function SortChairs({displayChairs, order, setOrder, changeOrder}) {
     
