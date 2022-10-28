@@ -18,40 +18,40 @@ function App() {
     title: "ch20", description:"Lorem ipsum dolor sit amet, consetetur", price: 220, category: "dining", wishlist: false, id: 1, featured: true
 },
 {
-    title: "ch23", description:"Lorem ipsum dolor sit amet, consetetur", price: 350, category: "dining", wishlist: false, id: 2, featured: true
+    title: "ch23", description:"Lorem ipsum dolor sit amet, consetetur", price: 350, category: "dining", wishlist: false, id: 2, featured: false
 },
 {
-    title: "ch24", description:"Lorem ipsum dolor sit amet, consetetur", price: 230, category: "office", wishlist: false, id: 3, featured: true
+    title: "ch24", description:"Lorem ipsum dolor sit amet, consetetur", price: 230, category: "bar", wishlist: false, id: 3, featured: true
 },
 {
-    title: "ch26", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "bedroom", wishlist: false, id: 4, featured: false
+    title: "ch26", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "living", wishlist: false, id: 4, featured: false
 },
 {
-    title: "ch29", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "bedroom", wishlist: false, id: 5, featured: false
+    title: "ch29", description:"Lorem ipsum dolor sit amet, consetetur", price: 230, category: "bar", wishlist: false, id: 5, featured: false
 },
 {
-    title: "ch30", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "bedroom", wishlist: false, id: 6, featured: true
+    title: "ch30", description:"Lorem ipsum dolor sit amet, consetetur", price: 300, category: "dining", wishlist: false, id: 6, featured: true
 },
 {
-    title: "ch33", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "bedroom", wishlist: false, id: 7, featured: false
+    title: "ch33", description:"Lorem ipsum dolor sit amet, consetetur", price: 250, category: "living", wishlist: false, id: 7, featured: false
 },
 {
-    title: "ch36", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "bedroom", wishlist: false, id: 8, featured: true
+    title: "ch36", description:"Lorem ipsum dolor sit amet, consetetur", price: 460, category: "living", wishlist: false, id: 8, featured: true
 },
 {
-    title: "ch37", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "bedroom", wishlist: false, id: 9, featured: false
+    title: "ch37", description:"Lorem ipsum dolor sit amet, consetetur", price: 400, category: "dininig", wishlist: false, id: 9, featured: false
 },
 {
-    title: "ch46", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "bedroom", wishlist: false, id: 10, featured: true
+    title: "ch46", description:"Lorem ipsum dolor sit amet, consetetur", price: 500, category: "dininig", wishlist: false, id: 10, featured: true
 },
 {
-    title: "ch47", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "bedroom", wishlist: false, id: 11, featured: false
+    title: "ch47", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "living", wishlist: false, id: 11, featured: false
 },
 {
-    title: "ch88b", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "bedroom", wishlist: false, id: 12, featured: false
+    title: "ch88b", description:"Lorem ipsum dolor sit amet, consetetur", price: 390, category: "bar", wishlist: false, id: 12, featured: false
 },
 {
-    title: "ch88t", description:"Lorem ipsum dolor sit amet, consetetur", price: 525, category: "bedroom", wishlist: false, id: 13, featured: false
+    title: "ch88t", description:"Lorem ipsum dolor sit amet, consetetur", price: 320, category: "bar", wishlist: false, id: 13, featured: false
 }])
 
   return (

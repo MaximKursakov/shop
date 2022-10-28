@@ -13,11 +13,19 @@ export function Navbar({Basket, wishlist}) {
             <div className="navbar">
                 <div className="logo">LOGO</div>
                 <div className="navbar-links">
-                    <NavLink to="/Home">HOME</NavLink>
-                    <NavLink to="/Chairs">SHOP</NavLink>
-                    <NavLink to="Contact">CONTACT</NavLink>
+                    <div className="navlink1">
+                        <NavLink to="/Home">Home</NavLink>
+                        <span className="hover-navlink"></span>
+                    </div>
+                    <div className="navlink2">
+                        <NavLink to="/Chairs">Product</NavLink>
+                        <span className="hover-navlink"></span>
+                    </div>
+                    <div className="navlink3">
+                        <NavLink to="Contact">Contact</NavLink>
+                        <span className="hover-navlink"></span>
+                    </div>
                 </div>
-                <div className="search"><BsSearch></BsSearch></div>
             </div>
         </nav>
     )

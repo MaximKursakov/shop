@@ -1,20 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Montserrat:wght@100;200;300;400;500&family=Mulish:wght@200;300;400&family=Playfair+Display&family=Quattrocento+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Montserrat:wght@100;200;300;400;500&family=Mulish:wght@200;300;400&family=Playfair+Display&family=Quattrocento+Sans:wght@400;700&family=Roboto:wght@100;300;400&display=swap');
+
+/* filter fonts when done! */
+
 body {
-  font-family: 'Mulish', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   color: #868686;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  background-color: #f6f6f6;
 }
 
-.active {
-  color: black;
+.active ~ .hover-navlink{
+  position: absolute; 
+  bottom: 0px; 
+  left: 0; 
+  top: 30px;
+  width: 50%; 
+  height: 1px; 
+  background-color: #a3a3a3; 
 }
 
 a {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   color: #a3a3a3;
   text-decoration: none;
@@ -60,17 +70,47 @@ a {
 
 .navbar {
   margin-top: 8vh;
+  margin-right: 10vw;
   width: 100%;
   height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: transparent;
 }
 
 .navbar-links {
+  margin-right: 2vw;
   display: flex;
-  gap: 120px;
+  gap: 100px;
 }
+
+.navlink1, .navlink2, .navlink3 {
+  position: relative;
+}
+
+.navbar-links a {
+  border: 0; 
+  padding: 10px 0; 
+}
+
+.hover-navlink {
+  position: absolute; 
+  bottom: 0px; 
+  left: 0; 
+  top: 30px;
+  width: 0; 
+  height: 1px; 
+  background-color: #a3a3a3; 
+  transition: 0.2s;
+}
+
+.navbar-links a:hover ~ .hover-navlink {
+  width: 50%; 
+  transition: 0.2s;
+}
+
+
 
 .logo {
   font-family: "Playfair Display";
@@ -330,6 +370,8 @@ a {
 
 .email-input {
   width: 100%;
+  font-size: 1rem;
+  opacity: 0.5;
   border: none;
   outline: none;
   padding: 7px 0; 
