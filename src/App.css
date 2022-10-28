@@ -263,7 +263,7 @@ a {
 
 .room-title {
   color: white;
-  font-size: 3rem;
+  font-size: 2.2rem;
   border: none;
 }
 
@@ -271,7 +271,7 @@ a {
   position: absolute;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
   padding: 0;
   list-style: none;
   font-family: "Montserrat";
@@ -280,6 +280,7 @@ a {
 
 
 .rooms-categories a li {
+  font-size: 0.9rem;
   color: white;
   z-index: 1;
 }
