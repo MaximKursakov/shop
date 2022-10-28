@@ -56,23 +56,37 @@ export function ChairShop({displayChairs, chairInfo, setChairInfo, wishlist, set
         displayChairs = [...displayChairs].sort((a, b) => a.title < b.title ? 1 : -1,)
     }
 
+    const [isHovering, setIsHovering] = useState(null)
+
     return (
-        <div>
+        <div className="shop">
+            <div className="shop-header">
+                <span></span>
+                <p>Shop</p>
+            </div>
             <SortChairs displayChairs={displayChairs} order={order} setOrder={setOrder} changeOrder={changeOrder}></SortChairs>
+            <div className="shop-items">
             {displayChairs.map((chair) => (
-                <div key={chair.id}>
-                    <Link to={`/Chairs/${chair.title}`} state={{ chair}}>
-                        <img src={"images/"+ chair.title + ".png"}  alt={chair.title} className="chair"></img>
-                    </Link>
-                    {!chair.wishlist 
+                <div className="shop-item" key={chair.id} onMo>
+                    {/* <Link to={`/Chairs/${chair.title}`} state={{ chair}}> */}
+                        <div style={{
+                            backgroundImage: `url(images/${chair.title}.png)`}}  
+                            alt={chair.title} 
+                            className="chair"
+                            onMouseOver={() => setIsHovering(chair.id)}
+                            onMouseOut={() => setIsHovering(false)}>
+                                {!chair.wishlist 
                     ?   <p className="addToWishlist" onClick={() => addToWishlist(chair)}><AiOutlineHeart></AiOutlineHeart></p>
                     :   <p className="removeFromWishlist" onClick={() => removeFromWishlist(chair)}><AiFillHeart></AiFillHeart></p>}
-                    <Link to={`/Chairs/${chair.title}`} state={{ chair}}>
-                        {chair.description}
-                    </Link>
-                    <p>{chair.price}€</p>
+                            </div>
+                            {isHovering === chair.id && <p>{chair.title}</p>}
+                            
+                    {/* </Link> */}
+                    
                 </div>
             ))}
+            </div>
+            
         </div>
     )
 }
