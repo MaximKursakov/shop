@@ -31,17 +31,15 @@ export function ChairShop({displayChairs, chairInfo, setChairInfo, wishlist, set
     const [isHovering, setIsHovering] = useState(null)
 
     return (
-        <div className="shop">
-            
+        <div>
             <div className="shop-section">
                 <div className="shop-items">
                 {displayChairs.map((chair) => (
                     <div className="shop-item" key={chair.id} onMo>
                         
-                            <motion.div 
-                                whileHover={{scale: 1.2}}
+                            <div 
                                 style={{
-                                backgroundImage: `url(images/${chair.title}.png)`}}  
+                                backgroundImage: `url(images/${chair.thumbnailimg}.jpg)`}}  
                                 alt={chair.title} 
                                 className="chair"
                                 onMouseOver={() => setIsHovering(chair.id)}
@@ -52,13 +50,8 @@ export function ChairShop({displayChairs, chairInfo, setChairInfo, wishlist, set
                         ?   <p className="addToWishlist" onClick={() => addToWishlist(chair)}><AiOutlineHeart></AiOutlineHeart></p>
                         :   <p className="removeFromWishlist" onClick={() => removeFromWishlist(chair)}><AiFillHeart></AiFillHeart></p>}
                                         </div>}
-                                </motion.div>
-                                <Link to={`/Chairs/${chair.title}`} state={{ chair}}><motion.p>{chair.title}</motion.p></Link>
-                                <motion.button>></motion.button>
+                                </div>
                                 
-                                
-                        {/* </Link> */}
-                        
                     </div>
                 ))}
                 </div>

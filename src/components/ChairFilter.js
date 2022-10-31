@@ -48,18 +48,37 @@ export function ChairFilter({displayChairs, chairInfo, setChairInfo, wishlist, s
                 <span></span>
                 <p>Shop</p>
             </div>
-            <SortChairs displayChairs={displayChairs} order={order} setOrder={setOrder} changeOrder={changeOrder}></SortChairs>
-            <button onClick={() => setFilterState(prevState => ({bar: !prevState.bar, dining: false, livingroom: false}))}>bar</button>
-            <button onClick={() => setFilterState(prevState => ({bar: false, dining: !prevState.dining, livingroom: false}))}>dining</button>
-            <button onClick={() => setFilterState(prevState => ({bar: false, dining: false, livingroom: !prevState.livingroom}))}>livingroom</button>
-            {filterState.bar 
-            && <ChairShop displayChairs={barChairs} chairInfo={chairInfo} setChairInfo={setChairInfo} wishlist={wishlist} setWishlist={setWishlist}></ChairShop>}
-            {filterState.dining 
-            && <ChairShop displayChairs={diningChairs} chairInfo={chairInfo} setChairInfo={setChairInfo} wishlist={wishlist} setWishlist={setWishlist}></ChairShop>}
-            {filterState.livingroom 
-            && <ChairShop displayChairs={livingChairs} chairInfo={chairInfo}  setChairInfo={setChairInfo} wishlist={wishlist} setWishlist={setWishlist}></ChairShop>}
-            {!filterState.bar && !filterState.dining && !filterState.livingroom 
-            &&  <ChairShop displayChairs={chairInfo} chairInfo={chairInfo}  setChairInfo={setChairInfo} wishlist={wishlist} setWishlist={setWishlist}></ChairShop>}
+            <div className="item-section">
+                <div className="shop-sidebar">
+                    <button onClick={() => setFilterState(prevState => ({bar: false, dining: false, livingroom: false}))}>ALL</button>
+                    <button onClick={() => setFilterState(prevState => ({bar: !prevState.bar, dining: false, livingroom: false}))}>BAR</button>
+                    <button onClick={() => setFilterState(prevState => ({bar: false, dining: !prevState.dining, livingroom: false}))}>DINING</button>
+                    <button onClick={() => setFilterState(prevState => ({bar: false, dining: false, livingroom: !prevState.livingroom}))}>LIVING ROOM</button>
+                    <SortChairs displayChairs={displayChairs} order={order} setOrder={setOrder} changeOrder={changeOrder}></SortChairs>
+                </div>
+                {filterState.bar 
+                && <div className="conts"> 
+                    <p className="filter-title">BAR</p>
+                    <ChairShop displayChairs={barChairs} chairInfo={chairInfo} setChairInfo={setChairInfo} wishlist={wishlist} setWishlist={setWishlist}></ChairShop>
+                    </div>}
+                {filterState.dining 
+                && 
+                <div className="conts"> 
+                    <p className="filter-title">DINING</p>
+                    <ChairShop displayChairs={diningChairs} chairInfo={chairInfo} setChairInfo={setChairInfo} wishlist={wishlist} setWishlist={setWishlist}></ChairShop>
+                    </div>}
+                {filterState.livingroom 
+                && <div className="conts"> 
+                    <p className="filter-title">LIVINGROOM</p>
+                        <ChairShop displayChairs={livingChairs} chairInfo={chairInfo}  setChairInfo={setChairInfo} wishlist={wishlist} setWishlist={setWishlist}></ChairShop>
+                    </div>}
+                {!filterState.bar && !filterState.dining && !filterState.livingroom 
+                &&  
+                <div className="conts"> 
+                    <p className="filter-title">ALL</p>
+                    <ChairShop displayChairs={chairInfo} chairInfo={chairInfo}  setChairInfo={setChairInfo} wishlist={wishlist} setWishlist={setWishlist}></ChairShop>
+                </div>}
+            </div>
         </div>
     )
 }
