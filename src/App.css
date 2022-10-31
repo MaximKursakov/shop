@@ -77,7 +77,6 @@ a {
   justify-content: space-between;
   align-items: center;
   background-color: transparent;
-  position: absolute;
 }
 
 .navbar-links {
@@ -125,7 +124,8 @@ a {
 }
 
 .hero {
-  min-height: 116vh;
+  min-height: 100vh;
+  margin-bottom: 16vh;
   width: 100%;
   background-color: #f6f6f6;
   display: flex;
@@ -444,6 +444,10 @@ a {
   width: 30px;
 }
 
+.shop-section {
+  display: flex;
+}
+
 .shop-items {
   width: 80vw;
   display: flex;
@@ -454,6 +458,7 @@ a {
 .shop-item {
   width: 45%;
   height: 20%;
+  position: relative
   /* display: flex;
   flex-direction: column;
   align-items: center; */
@@ -467,6 +472,23 @@ a {
   height: 30vh;
 }
 
+.chair-hover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+}
+
+.addToWishlist, .removeFromWishlist {
+  position: absolute;
+  top: 0;
+  right: 5%;
+}
+
+.chair-filter {
+}
 
 .wishlistItem, .cartItem {
   border: solid 1px black;

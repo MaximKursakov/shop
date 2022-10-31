@@ -2,6 +2,8 @@ import { useState } from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { SortChairs } from "./SortChairs";
+import { motion} from "framer-motion"
+
 
 export function ChairShop({displayChairs, chairInfo, setChairInfo, wishlist, setWishlist }) {
     function addToWishlist(chair) {
@@ -25,68 +27,43 @@ export function ChairShop({displayChairs, chairInfo, setChairInfo, wishlist, set
           }));
     }
 
-    const [order, setOrder] = useState({priceLH: false, priceHL: false, nameAZ: false, nameZA: false})
-
-    function changeOrder(e) {
-        const orderValue = e.target.value
-        if (orderValue === "priceLH") {
-            setOrder({priceLH: true, priceHL: false, nameAZ: false, nameZA: false})
-        }
-        if (orderValue === "priceHL") {
-            setOrder({priceLH: false, priceHL: true, nameAZ: false, nameZA: false})
-        }
-        if (orderValue === "nameAZ") {
-            setOrder({priceLH: false, priceHL: false, nameAZ: true, nameZA: false})
-        }
-        if (orderValue === "nameZA") {
-            setOrder({priceLH: false, priceHL: false, nameAZ: false, nameZA: true})
-        }
-    }
-
-    if(order.priceLH) {
-        displayChairs = [...displayChairs].sort((a, b) => a.price - b.price)
-    }
-    else if(order.priceHL) {
-        displayChairs = [...displayChairs].sort((a, b) => b.price - a.price)
-    }
-    else if(order.nameAZ) {
-        displayChairs = [...displayChairs].sort((a, b) => a.title > b.title ? 1 : -1,)
-    }
-    else if(order.nameZA) {
-        displayChairs = [...displayChairs].sort((a, b) => a.title < b.title ? 1 : -1,)
-    }
-
+    
     const [isHovering, setIsHovering] = useState(null)
 
     return (
         <div className="shop">
-            <div className="shop-header">
-                <span></span>
-                <p>Shop</p>
-            </div>
-            <SortChairs displayChairs={displayChairs} order={order} setOrder={setOrder} changeOrder={changeOrder}></SortChairs>
-            <div className="shop-items">
-            {displayChairs.map((chair) => (
-                <div className="shop-item" key={chair.id} onMo>
-                    {/* <Link to={`/Chairs/${chair.title}`} state={{ chair}}> */}
-                        <div style={{
-                            backgroundImage: `url(images/${chair.title}.png)`}}  
-                            alt={chair.title} 
-                            className="chair"
-                            onMouseOver={() => setIsHovering(chair.id)}
-                            onMouseOut={() => setIsHovering(false)}>
-                                {!chair.wishlist 
-                    ?   <p className="addToWishlist" onClick={() => addToWishlist(chair)}><AiOutlineHeart></AiOutlineHeart></p>
-                    :   <p className="removeFromWishlist" onClick={() => removeFromWishlist(chair)}><AiFillHeart></AiFillHeart></p>}
-                            </div>
-                            {isHovering === chair.id && <p>{chair.title}</p>}
-                            
-                    {/* </Link> */}
-                    
-                </div>
-            ))}
-            </div>
             
+            <div className="shop-section">
+                <div className="shop-items">
+                {displayChairs.map((chair) => (
+                    <div className="shop-item" key={chair.id} onMo>
+                        
+                            <motion.div 
+                                whileHover={{scale: 1.2}}
+                                style={{
+                                backgroundImage: `url(images/${chair.title}.png)`}}  
+                                alt={chair.title} 
+                                className="chair"
+                                onMouseOver={() => setIsHovering(chair.id)}
+                                onMouseOut={() => setIsHovering(false)}>
+                                    {isHovering === chair.id 
+                                    && <div className="chair-hover">
+                                        {!chair.wishlist 
+                        ?   <p className="addToWishlist" onClick={() => addToWishlist(chair)}><AiOutlineHeart></AiOutlineHeart></p>
+                        :   <p className="removeFromWishlist" onClick={() => removeFromWishlist(chair)}><AiFillHeart></AiFillHeart></p>}
+                                        </div>}
+                                </motion.div>
+                                <Link to={`/Chairs/${chair.title}`} state={{ chair}}><motion.p>{chair.title}</motion.p></Link>
+                                <motion.button>></motion.button>
+                                
+                                
+                        {/* </Link> */}
+                        
+                    </div>
+                ))}
+                </div>
+               
+            </div>
         </div>
     )
 }
