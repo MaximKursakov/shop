@@ -431,16 +431,26 @@ a {
 }
 
 .shop-header {
+  margin: 5% 0;
   display: flex;
+  color: white;
   align-items: center;
+  padding-left: 13vw;
   gap: 20px;
-  margin-left: 15vw;
   font-size: 2rem;
   height: 50vh;
+  background-image: url(/public/images/shop-bg.jpg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.shop-header:hover {
+  cursor:default;
 }
 
 .shop-header span {
-  background-color: #868686;
+  background-color: white;
   height: 1px;
   width: 30px;
 }

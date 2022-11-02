@@ -1,10 +1,10 @@
-import { useLocation } from "react-router-dom"
+import { useLocation, useParams } from "react-router-dom"
 
 export function ChairDetails({setBasket, Basket}) {
     const location = useLocation()
-    const chairInfo = location.state.chair
-    console.log(location)
-
+    const path = useParams().title
+    const chairInfo = location.state[path]
+    
     function addToBasket() {
         setBasket(Basket.concat(chairInfo))
     }
