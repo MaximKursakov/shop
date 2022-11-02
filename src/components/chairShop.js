@@ -30,6 +30,8 @@ export function ChairShop({displayChairs, chairInfo, setChairInfo, wishlist, set
     
     const [isHovering, setIsHovering] = useState(null)
 
+console.log(isHovering)
+
     return (
         <div>
             <div className="shop-section">
@@ -37,7 +39,7 @@ export function ChairShop({displayChairs, chairInfo, setChairInfo, wishlist, set
                 {displayChairs.map((chair) => (
                     <div className="shop-item" key={chair.id} onMo>
                         
-                            <div 
+                            <motion.div 
                                 style={{
                                 backgroundImage: `url(images/${chair.thumbnailimg}.jpg)`}}  
                                 alt={chair.title} 
@@ -46,11 +48,16 @@ export function ChairShop({displayChairs, chairInfo, setChairInfo, wishlist, set
                                 onMouseOut={() => setIsHovering(false)}>
                                     {isHovering === chair.id 
                                     && <div className="chair-hover">
+                                        
                                         {!chair.wishlist 
-                        ?   <p className="addToWishlist" onClick={() => addToWishlist(chair)}><AiOutlineHeart></AiOutlineHeart></p>
-                        :   <p className="removeFromWishlist" onClick={() => removeFromWishlist(chair)}><AiFillHeart></AiFillHeart></p>}
+                                        ?   <p className="addToWishlist" onClick={() => addToWishlist(chair)}><AiOutlineHeart></AiOutlineHeart></p>
+                                        :   <p className="removeFromWishlist" onClick={() => removeFromWishlist(chair)}><AiFillHeart></AiFillHeart></p>}
+                                        <div className="chair-mid">
+                                            <p>{chair.title}</p>
+                                            <Link to={`/Chairs/${chair.title}`} state={{chair}}> {">"} </Link>
+                                        </div>
                                         </div>}
-                                </div>
+                                </motion.div>
                                 
                     </div>
                 ))}

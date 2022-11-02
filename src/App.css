@@ -373,6 +373,7 @@ a {
   width: 100%;
   font-size: 1rem;
   opacity: 0.5;
+  background-color: transparent;
   border: none;
   outline: none;
   padding: 7px 0; 
@@ -446,6 +447,7 @@ a {
 
 .item-section {
   display: flex;
+  margin-left: 5vw;
 }
 
 .shop-sidebar {
@@ -462,6 +464,7 @@ a {
   background-color: transparent;
   border: none;
   font-family: "Roboto";
+  font-size: 1rem;
   color:#868686
 }
 
@@ -499,7 +502,7 @@ a {
 }
 
 .shop-items {
-  width: 85vw;
+  width: 70vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -509,6 +512,8 @@ a {
 .shop-item {
   width: 40%;
   height: 20vw;
+  overflow: hidden;
+  position: relative;
 }
 
 .chair {
@@ -519,23 +524,57 @@ a {
   height: 100%;
 }
 
+.chair-hover > * {
+  transform: translateY(50%);
+  transition: transform 0.5s;
+}
 
 .chair-hover {
+  position: absolute;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   height: 100%;
-  color: white;
+  width: 100%;
+  top: 0;
+  left: 0;
+  color: rgb(218, 218, 218);
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.chair-hover:hover > * {
+  transform: translateY(0);
+}
+
+.chair-hover:hover {
+  opacity: 1;
+}
+
+.chair-mid {
+  margin: auto 0;
+  font-weight: 300;
+  text-align: center;
+}
+
+.chair-mid p{
+  padding-bottom: 50%;
+}
+
+.chair-mid a {
+  border: solid rgb(218, 218, 218) 1px;
+  padding: .5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .addToWishlist, .removeFromWishlist {
-  position: absolute;
-  top: 0;
-  right: 5%;
-}
-
-.chair-filter {
+  align-self: flex-end;
+  padding-right: 5%;
 }
 
 .wishlistItem, .cartItem {

@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom"
 export function ChairDetails({setBasket, Basket}) {
     const location = useLocation()
     const chairInfo = location.state.chair
+    console.log(location)
 
     function addToBasket() {
         setBasket(Basket.concat(chairInfo))
@@ -15,7 +16,7 @@ export function ChairDetails({setBasket, Basket}) {
     return(
         <div>
             <div key={chairInfo.id}>
-                    <img src={`/images/${chairInfo.title}.avif`}  alt={chairInfo.title} className="chairInfo"></img>
+                    <img src={`/images/${chairInfo.title}.png`}  alt={chairInfo.title} className="chairInfo"></img>
                     <p>{chairInfo.description}</p>
                     <p>{chairInfo.price}€</p>
                     {itemInBasket !== -1 && <p>Item is in Basket</p>}
