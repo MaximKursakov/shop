@@ -15,43 +15,43 @@ function App() {
   const [Basket, setBasket] = useState([{title: "Hektor", description:"Tub Office Chair, Tan & Black", price: 230, category: "office", wishlist: false, id: 3}])
   const [wishlist, setWishlist] = useState([{title: "Kubrick", description:"Wing Back Chair, Scuba Blue Fabric", price: 525, category: "bedroom", id: 4}])
   const [chairInfo, setChairInfo] = useState([{
-    title: "ch20", thumbnailimg: "thumbnail1", description:"Lorem ipsum dolor sit amet, consetetur", price: 220.00, category: "dining", wishlist: false, id: 1, featured: true
+    title: "ch20", thumbnailimg: "thumbnail1", description:"Lorem ipsum dolor sit amet, consetetur", price: 220.00, category: "dining", wishlist: false, id: 1, featured: true, availability: 1, discount: 20,
 },
 {
-    title: "ch23", thumbnailimg: "thumbnail2",description:"Lorem ipsum dolor sit amet, consetetur", price: 350.00, category: "dining", wishlist: false, id: 2, featured: false
+    title: "ch23", thumbnailimg: "thumbnail2",description:"Lorem ipsum dolor sit amet, consetetur", price: 350.00, category: "dining", wishlist: false, id: 2, featured: false, availability: 2, discount: 20
 },
 {
-    title: "ch24", thumbnailimg: "thumbnail3",description:"Lorem ipsum dolor sit amet, consetetur", price: 230.00, category: "bar", wishlist: false, id: 3, featured: true
+    title: "ch24", thumbnailimg: "thumbnail3",description:"Lorem ipsum dolor sit amet, consetetur", price: 230.00, category: "bar", wishlist: false, id: 3, featured: true, availability: 8, discount: 0
 },
 {
-    title: "ch26", thumbnailimg: "thumbnail4",description:"Lorem ipsum dolor sit amet, consetetur", price: 525.00, category: "living", wishlist: false, id: 4, featured: false
+    title: "ch26", thumbnailimg: "thumbnail4",description:"Lorem ipsum dolor sit amet, consetetur", price: 525.00, category: "living", wishlist: false, id: 4, featured: false, availability: 9, discount: 30
 },
 {
-    title: "ch29", thumbnailimg: "thumbnail5",description:"Lorem ipsum dolor sit amet, consetetur", price: 230.00, category: "bar", wishlist: false, id: 5, featured: false
+    title: "ch29", thumbnailimg: "thumbnail5",description:"Lorem ipsum dolor sit amet, consetetur", price: 230.00, category: "bar", wishlist: false, id: 5, featured: false, availability: 8, discount: 0
 },
 {
-    title: "ch30", thumbnailimg: "thumbnail1",description:"Lorem ipsum dolor sit amet, consetetur", price: 300.00, category: "dining", wishlist: false, id: 6, featured: true
+    title: "ch30", thumbnailimg: "thumbnail1",description:"Lorem ipsum dolor sit amet, consetetur", price: 300.00, category: "dining", wishlist: false, id: 6, featured: true, availability: 3, discount: 0
 },
 {
-    title: "ch33", thumbnailimg: "thumbnail2",description:"Lorem ipsum dolor sit amet, consetetur", price: 250.00, category: "living", wishlist: false, id: 7, featured: false
+    title: "ch33", thumbnailimg: "thumbnail2",description:"Lorem ipsum dolor sit amet, consetetur", price: 250.00, category: "living", wishlist: false, id: 7, featured: false, availability: 5, discount: 0
 },
 {
-    title: "ch36", thumbnailimg: "thumbnail3",description:"Lorem ipsum dolor sit amet, consetetur", price: 460.00, category: "living", wishlist: false, id: 8, featured: true
+    title: "ch36", thumbnailimg: "thumbnail3",description:"Lorem ipsum dolor sit amet, consetetur", price: 460.00, category: "living", wishlist: false, id: 8, featured: true, availability: 2, discount: 0
 },
 {
-    title: "ch37", thumbnailimg: "thumbnail4",description:"Lorem ipsum dolor sit amet, consetetur", price: 400.00, category: "dininig", wishlist: false, id: 9, featured: false
+    title: "ch37", thumbnailimg: "thumbnail4",description:"Lorem ipsum dolor sit amet, consetetur", price: 400.00, category: "dininig", wishlist: false, id: 9, featured: false, availability: 8, discount: 0
 },
 {
-    title: "ch46", thumbnailimg: "thumbnail5",description:"Lorem ipsum dolor sit amet, consetetur", price: 500.00, category: "dininig", wishlist: false, id: 10, featured: true
+    title: "ch46", thumbnailimg: "thumbnail5",description:"Lorem ipsum dolor sit amet, consetetur", price: 500.00, category: "dininig", wishlist: false, id: 10, featured: true, availability: 8, discount: 30
 },
 {
-    title: "ch47", thumbnailimg: "thumbnail1",description:"Lorem ipsum dolor sit amet, consetetur", price: 525.00, category: "living", wishlist: false, id: 11, featured: false
+    title: "ch47", thumbnailimg: "thumbnail1",description:"Lorem ipsum dolor sit amet, consetetur", price: 525.00, category: "living", wishlist: false, id: 11, featured: false, availability: 7, discount: 20
 },
 {
-    title: "ch88b", thumbnailimg: "thumbnail2",description:"Lorem ipsum dolor sit amet, consetetur", price: 390.00, category: "bar", wishlist: false, id: 12, featured: false
+    title: "ch88b", thumbnailimg: "thumbnail2",description:"Lorem ipsum dolor sit amet, consetetur", price: 390.00, category: "bar", wishlist: false, id: 12, featured: false, availability: 2, discount: 0
 },
 {
-    title: "ch88t", thumbnailimg: "thumbnail3",description:"Lorem ipsum dolor sit amet, consetetur", price: 320.00, category: "bar", wishlist: false, id: 13, featured: false
+    title: "ch88t", thumbnailimg: "thumbnail3",description:"Lorem ipsum dolor sit amet, consetetur", price: 320.00, category: "bar", wishlist: false, id: 13, featured: false, availability: 5, discount: 0
 }])
 
   return (
@@ -62,7 +62,7 @@ function App() {
       <Route path='/Home' element={<Home chairInfo={chairInfo}/> }/>
       <Route path='/ChairShop' element={<ChairShop></ChairShop>}/>
       <Route path="/Chairs" element={<ChairFilter chairInfo={chairInfo} setChairInfo={setChairInfo} wishlist={wishlist} setWishlist={setWishlist}/>}></Route>
-      <Route path='/Chairs/:title' element={<ChairDetails setBasket={setBasket} Basket={Basket} wishlist={wishlist} setWishlist={setWishlist}/>}></Route>
+      <Route path='/Chairs/:title' element={<ChairDetails chairInfo={chairInfo} setChairInfo={setChairInfo} setBasket={setBasket} Basket={Basket} wishlist={wishlist} setWishlist={setWishlist}/>}></Route>
       <Route path="/Contact" element={<Contact/>}/>
       <Route path='/Cart' element={<Cart setBasket={setBasket} Basket={Basket}></Cart>}/>
       <Route path='/Wishlist' element={<Wishlist wishlist={wishlist} setWishlist={setWishlist} setBasket={setBasket} Basket={Basket}></Wishlist>}/>

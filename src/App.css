@@ -584,9 +584,33 @@ a {
 
 .addToWishlist, .removeFromWishlist {
   align-self: flex-end;
+  font-size: 1.3rem;
   padding-right: 5%;
 }
 
 .wishlistItem, .cartItem {
   border: solid 1px black;
+}
+
+.detailsImage {
+  width: 20vw;
+  height: auto;
+}
+
+.priceDiscounted {
+  display: flex;
+  gap: 5px;
+}
+
+.discountPrice {
+  color: rgb(199, 147, 147);
+}
+
+.originalPrice {
+  text-decoration: line-through;
+}
+
+.quantityManager {
+  display: flex;
+  gap: 20px;
 }

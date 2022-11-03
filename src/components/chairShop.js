@@ -2,35 +2,13 @@ import { useState } from "react";
 import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import { SortChairs } from "./SortChairs";
+import { WishlistManage } from "./wishlistManage";
 import { motion} from "framer-motion"
 
 
 export function ChairShop({displayChairs, chairInfo, setChairInfo, wishlist, setWishlist }) {
-    function addToWishlist(chair) {
-        setWishlist(wishlist.concat(chair))
-        setChairInfo(chairInfo.map(item => {
-            if (item.id === chair.id){
-              return {...item, wishlist: true}
-            }
-            return item
-          }));
-    }
-    function removeFromWishlist(chair) {
-        setWishlist(wishlist.filter(item => {
-            return item.id !== chair.id
-        }))
-        setChairInfo(chairInfo.map(item => {
-            if (item.id === chair.id){
-              return {...item, wishlist: false}
-            }
-            return item
-          }));
-    }
-
     
     const [isHovering, setIsHovering] = useState(null)
-
-console.log(isHovering)
 
     return (
         <div>
@@ -48,10 +26,7 @@ console.log(isHovering)
                                 onMouseOut={() => setIsHovering(false)}>
                                     {isHovering === chair.id 
                                     && <div className="chair-hover">
-                                        
-                                        {!chair.wishlist 
-                                        ?   <p className="addToWishlist" onClick={() => addToWishlist(chair)}><AiOutlineHeart></AiOutlineHeart></p>
-                                        :   <p className="removeFromWishlist" onClick={() => removeFromWishlist(chair)}><AiFillHeart></AiFillHeart></p>}
+                                        <WishlistManage chair={chair} wishlist={wishlist} setWishlist={setWishlist} chairInfo={chairInfo} setChairInfo={setChairInfo}></WishlistManage>
                                         <div className="chair-mid">
                                             <p>{chair.title}</p>
                                             <Link to={`/Chairs/${chair.title}`} state={{chair}}> {">"} </Link>
