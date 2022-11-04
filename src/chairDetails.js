@@ -7,15 +7,20 @@ export function ChairDetails({chairInfo, setChairInfo, wishlist, setWishlist, se
     const location = useLocation()
     const chairName = Object.keys(location.state)[0]
     const chair = location.state[chairName]
+    const [basketNotification, setBasketNotification] = useState(false)
 
     const [quantity, setQuantity] = useState(1)
 
     function addToBasket() {
         for(let i = 0; i < quantity; i++)
         {setBasket(basket => basket.concat(chair))}
+        setBasketNotification(true)
     }
-
-    const itemInBasket = Basket.indexOf(chair)
+    if(basketNotification) {
+        setTimeout(() => {
+            setBasketNotification(false)
+        }, 5000);
+    }
 
     function getSalePrice(n,p) {
         return n - (n * (p/100));
@@ -39,12 +44,15 @@ export function ChairDetails({chairInfo, setChairInfo, wishlist, setWishlist, se
                         <p className="discountPrice">{getSalePrice(chair.price, chair.discount)}.00 €</p>
                     </div>
                     : <p className="no-discount">{chair.price}€</p>}
+                    {basketNotification 
+                    && <p className="basket-notification">Successfully added do Basket</p>}
                     <div className="quantityManager">
                         <p>Quantity: </p>
                         <button  onClick={() => {if(quantity > 1) setQuantity(quantity - 1)}}>-</button>
                         <p>{quantity}</p>
                         <button onClick={() => setQuantity(quantity + 1)}>+</button>
                     </div>
+                    
                     {Basket.length === 0 
                     ? <button className="add-to-basket" onClick={addToBasket}>add to Basket</button>
                     : <button className="add-to-basket" onClick={addToBasket}>add another to Basket</button>}

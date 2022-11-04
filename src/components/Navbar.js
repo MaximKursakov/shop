@@ -7,7 +7,6 @@ import { TiSocialFacebookCircular, TiSocialGooglePlusCircular, TiSocialInstagram
 
 export function Navbar({Basket, wishlist}) {
     const [menuOpen, setMenuOpen] = useState(false)
-    console.log(menuOpen)
 
     const variants = {
     from: {
@@ -47,11 +46,39 @@ export function Navbar({Basket, wishlist}) {
             document.body.style.overflow = 'hidden';}
             else document.body.style.overflow = 'unset';
     }, [menuOpen])
-
     return(
         <nav>
             <div className="sticky-bar">
-                <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>X</button>
+            </div>
+            <div className="navbar">
+                <div className="logo">LOGO</div>
+                <div className="navbar-links">
+                    <div className="navlink">
+                        <NavLink to="/Home">Home</NavLink>
+                        <span className="hover-navlink"></span>
+                    </div>
+                    <div className="navlink">
+                        <NavLink to="/Chairs">Product</NavLink>
+                        <span className="hover-navlink"></span>
+                    </div>
+                    <div className="navlink">
+                        <NavLink to="Contact">Contact</NavLink>
+                        <span className="hover-navlink"></span>
+                    </div>
+                    <div className="navlink">
+                        <NavLink to="Cart">Basket ({Basket.length})</NavLink>
+                        <span className="hover-navlink"></span>
+                    </div>
+                    <div className="navlink">
+                        <NavLink to="Wishlist">Wishlist ({wishlist.length})</NavLink>
+                        <span className="hover-navlink"></span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+
+                /* <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>X</button>
                 <AnimatePresence>
                 {menuOpen 
                  && <div className="menu">
@@ -59,9 +86,22 @@ export function Navbar({Basket, wishlist}) {
                             <motion.h2 variants={menu} initial="hidden" animate="visible" transition={{delay: .3, type: "tween", duration: .5}} className="logo">LOGO</motion.h2>
                             <motion.ul className="menu-links">
                                 <motion.li variants={menu} initial="hidden" animate="visible" transition={{delay: .3, type: "tween", duration: .3}} className="menu-link" >LOGIN</motion.li>
-                                <motion.li variants={menu} initial="hidden" animate="visible" transition={{delay: .4, type: "tween", duration: .3}} className="menu-link">MY CART<p className="basket-size">{Basket.length}</p></motion.li>
-                                <motion.li variants={menu} initial="hidden" animate="visible" transition={{delay: .5, type: "tween", duration: .3}} className="menu-link">WISHLIST<p className="wishlist-size">{wishlist.length}</p></motion.li>
-                                
+                                <motion.li variants={menu} initial="hidden" animate="visible" transition={{delay: .4, type: "tween", duration: .3}} className="menu-link">MY CART</motion.li>
+                                <motion.li variants={menu} initial="hidden" animate="visible" transition={{delay: .5, type: "tween", duration: .3}} className="menu-link">WISHLIST</motion.li>
+                                <div className="navbar-links">
+                                    <div className="navlink1">
+                                        <NavLink to="/Home">Home</NavLink>
+                                        <span className="hover-navlink"></span>
+                                    </div>
+                                    <div className="navlink2">
+                                        <NavLink to="/Chairs">Product</NavLink>
+                                        <span className="hover-navlink"></span>
+                                    </div>
+                                    <div className="navlink3">
+                                        <NavLink to="Contact">Contact</NavLink>
+                                        <span className="hover-navlink"></span>
+                                    </div>
+                                </div>
                             </motion.ul>
                             <div className="social-media">
                                 <TiSocialInstagramCircular></TiSocialInstagramCircular>
@@ -73,26 +113,8 @@ export function Navbar({Basket, wishlist}) {
                         </motion.div>
                     </div>
                  }
-                 </AnimatePresence>
+                 </AnimatePresence> */
                
-            </div>
-            <div className="navbar">
-                <div className="logo">LOGO</div>
-                <div className="navbar-links">
-                    <div className="navlink1">
-                        <NavLink to="/Home">Home</NavLink>
-                        <span className="hover-navlink"></span>
-                    </div>
-                    <div className="navlink2">
-                        <NavLink to="/Chairs">Product</NavLink>
-                        <span className="hover-navlink"></span>
-                    </div>
-                    <div className="navlink3">
-                        <NavLink to="Contact">Contact</NavLink>
-                        <span className="hover-navlink"></span>
-                    </div>
-                </div>
-            </div>
-        </nav>
+            
     )
 }
