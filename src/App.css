@@ -4,7 +4,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  font-weight: 500;
+  font-weight: 300;
   color: #868686;
   padding: 0;
   margin: 0;
@@ -170,7 +170,7 @@ a {
   background-color: #f6f6f6;
   border: solid black 1px;
   font-family: "Montserrat";
-  font-weight: 400;
+  font-weight: 300;
 }
 .shop-link:hover {
   cursor: pointer;
@@ -322,6 +322,7 @@ a {
 
 .rooms-categories a li {
   font-size: 0.9rem;
+  font-weight: 300;
   color: white;
   z-index: 1;
 }
@@ -438,6 +439,7 @@ a {
   padding-left: 13vw;
   gap: 20px;
   font-size: 2rem;
+  font-weight: 200;
   height: 50vh;
   background-image: url(/public/images/shop-bg.jpg);
   background-size: cover;
@@ -592,25 +594,160 @@ a {
   border: solid 1px black;
 }
 
+.info-container {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  width: 100%;
+}
+
+.image-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
 .detailsImage {
+  min-width: 200px;
   width: 20vw;
   height: auto;
+  padding: 5vh 10vw;
+  background-color: #ebebeb;
+}
+
+.chair-info {
+width: 100%;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+}
+
+.chair-info h1 {
+  font-weight: 400;
+}
+
+.chair-availability {
+  color: #6a6a6a;
+  margin-top: 10px;
+}
+
+.chair-description {
+  width: 60%;
+  font-weight: 100;
+  line-height: 30px;
+  margin-top: 30px;
 }
 
 .priceDiscounted {
   display: flex;
-  gap: 5px;
+  align-items: center;
+  gap: 20px;
+  margin-top: 10px;
 }
 
 .discountPrice {
   color: rgb(199, 147, 147);
+  font-size: 2rem;
+  margin: 0;
 }
 
 .originalPrice {
   text-decoration: line-through;
+  margin: 0;
+}
+
+.originalPrice, .no-discount {
+  font-size: 1.5rem;
+  margin: 0;
 }
 
 .quantityManager {
+  margin-top: auto;
   display: flex;
   gap: 20px;
+}
+
+.quantityManager button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: #868686;
+  font-weight: 200;
+  cursor: pointer;
+}
+
+.add-to-basket {
+  background-color: transparent;
+  border: solid 1px #868686;;
+  padding: 15px 40px;
+  cursor: pointer;
+  color: #868686;
+  margin-bottom: 5%;
+}
+
+.chair-tabs {
+  margin-top: 10vh;
+  padding: 20px 0;
+  min-height: 20vh;
+  width: 100vw;
+  background-color: #ebebeb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.chair-tabs span {
+  background-color: #a3a3a3;
+  height: 1px;
+  width: 70vw;
+  margin-bottom: 20px;
+}
+
+.react-tabs__tab--selected {
+  color: black;
+}
+
+.itemInfo {
+  display: flex;
+  width: 70vw;
+  list-style: none;
+  gap: 50px;
+  cursor: pointer;
+}
+
+.itemInfo li {
+  font-size: 1.2rem;
+  font-family: "Lora";
+  letter-spacing: 4px;
+}
+
+.additional-info-container {
+  width: 70vw;
+}
+
+.item-description {
+  width: 70%;
+}
+
+.item-description p {
+  width: 70%;
+}
+
+.additional-info{
+  width: 70%;
+}
+
+.column-separator {
+  background-color: #d4d4d4;
+  height: .5px;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.info-column {
+  color: #5d5d5d;
+  display: flex;
+  justify-content: space-between;
 }
