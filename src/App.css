@@ -44,11 +44,18 @@ a {
   z-index: 1;
 }
 
-.menu {
+.menu, .menu-overlay {
   width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 1.2);
-  opacity: 0.2;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.menu-overlay {
+  background: rgba(0, 0, 0, 1);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -58,17 +65,22 @@ a {
 
 .menu-links {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
 }
 
-.menu .logo {
+.menu-overlay .logo {
   margin: 0;
   width: 100%;
   color: white;
   font-size: 4rem;
 }
 
-.menu .social-media {
 
+.menu .social-media {
+  padding-bottom: 1vh;
 }
 
 .basket-size, .wishlist-size {

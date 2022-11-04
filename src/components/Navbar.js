@@ -44,21 +44,23 @@ export function Navbar({Basket, wishlist}) {
                 <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>X</button>
                 <AnimatePresence>
                 {menuOpen 
-                 && <motion.div variants={variants} initial="from" animate="enter" exit="leave"  className="menu">
-                        <h2 className="logo">LOGO</h2>
-                        <div className="menu-links">
-                            <NavLink to="Login"><p className="stick-bar-link">LOGIN</p></NavLink>
-                            <NavLink to="/Cart"><p className="stick-bar-link">MY CART <div className="basket-size">{Basket.length}</div></p></NavLink>
-                            <NavLink to="/Wishlist"><p className="stick-bar-link">WISHLIST <div className="wishlist-size">{wishlist.length}</div></p></NavLink>
-                        </div>
-                        <div className="social-media">
-                            <TiSocialInstagramCircular></TiSocialInstagramCircular>
-                            <TiSocialYoutubeCircular></TiSocialYoutubeCircular>
-                            <TiSocialFacebookCircular></TiSocialFacebookCircular>
-                            <TiSocialGooglePlusCircular></TiSocialGooglePlusCircular>
-                            <TiSocialTwitterCircular></TiSocialTwitterCircular>
-                        </div>
-                    </motion.div>
+                 && <div className="menu">
+                    <motion.div variants={variants} initial="from" animate="enter" exit="leave"  className="menu-overlay">
+                            <h2 className="logo">LOGO</h2>
+                            <div className="menu-links">
+                                <NavLink to="Login"><p className="stick-bar-link">LOGIN</p></NavLink>
+                                <NavLink to="/Cart"><p className="stick-bar-link">MY CART <div className="basket-size">{Basket.length}</div></p></NavLink>
+                                <NavLink to="/Wishlist"><p className="stick-bar-link">WISHLIST <div className="wishlist-size">{wishlist.length}</div></p></NavLink>
+                            </div>
+                            <div className="social-media">
+                                <TiSocialInstagramCircular></TiSocialInstagramCircular>
+                                <TiSocialYoutubeCircular></TiSocialYoutubeCircular>
+                                <TiSocialFacebookCircular></TiSocialFacebookCircular>
+                                <TiSocialGooglePlusCircular></TiSocialGooglePlusCircular>
+                                <TiSocialTwitterCircular></TiSocialTwitterCircular>
+                            </div>
+                        </motion.div>
+                    </div>
                  }
                  </AnimatePresence>
                
