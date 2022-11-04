@@ -30,33 +30,45 @@ a {
   text-decoration: none;
 }
 
-.sticky-bar {
-  font-size: 0.9rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  position: fixed;
-  top: 0;
-  left: 0;
-  border: solid #f4f4f4 1px;
-  background-color: white;
-  width: 100%;
-  min-height: 6vh;
-  z-index: 1;
-}
-
-.sticky-bar a {
-  width: 10vw;
-  height: 6vh;
-  border: solid #f4f4f4 1px;
-  display: flex;
-  justify-content: center;
-}
 
 .stick-bar-link {
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.menu {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 1.2);
+  opacity: 0.2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.menu .logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  color: white;
+}
+
+.menu .social-media {
+
 }
 
 .basket-size, .wishlist-size {
@@ -69,7 +81,6 @@ a {
 }
 
 .navbar {
-  margin-top: 8vh;
   margin-right: 10vw;
   width: 100%;
   height: 10vh;
@@ -139,7 +150,7 @@ a {
   text-align: center;
 }
 
-.hero-mid h1, h2 {
+.hero-mid h1, .hero-mid h2 {
   cursor: default;
   border: solid black 1px;
   margin: 0;
@@ -656,6 +667,11 @@ align-items: flex-start;
   margin: 0;
 }
 
+.no-discount {
+
+  color: black;
+}
+
 .originalPrice, .no-discount {
   font-size: 1.5rem;
   margin: 0;
@@ -728,14 +744,10 @@ align-items: flex-start;
 }
 
 .item-description {
-  width: 70%;
+  line-height: 30px;
 }
 
-.item-description p {
-  width: 70%;
-}
-
-.additional-info{
+.item-description, .item-description p, .additional-info {
   width: 70%;
 }
 
@@ -750,4 +762,24 @@ align-items: flex-start;
   color: #5d5d5d;
   display: flex;
   justify-content: space-between;
+}
+
+.contact-container {
+  width: 70vw;
+  margin-left: 10%;
+  text-align: left;
+}
+
+.contact-column {
+  display: flex;
+  justify-content: space-between;
+  border-bottom:solid 1px #d4d4d4 ;
+}
+
+.contact-column div {
+  min-width: 25%;
+}
+
+.contact-column h2 {
+  font-weight: 400;
 }

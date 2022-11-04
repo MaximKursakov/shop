@@ -1,6 +1,7 @@
 import { motion, useAnimationControls, useMotionValue, useTransform } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai"
+import { Link } from "react-router-dom"
 
 export function Slider ({chairInfo}) {
     let counter = 0
@@ -59,12 +60,18 @@ export function Slider ({chairInfo}) {
                             scale: position === item.id  ? 1.2 : 0.7,
                             opacity: position === item.id  ? 1 : 0.3,
                         }}>
-                        <img className="featured-img"src={`images/${item.title}.png`} alt="chair"></img>
+                        
                             {position === item.id 
-                            && <div>
+                            ? <div>
+                                <Link to={`/Chairs/${item.title}`} state={{item}}>
+                                    <img className="featured-img"src={`images/${item.title}.png`} alt="chair"></img>
+                                </Link>
                                 <motion.p className="featured-title" initial={{opacity: 0}} animate={{opacity: 1}}>{item.title} Chair</motion.p>
                                 <motion.p className="featured-price" initial={{opacity: 0}} animate={{opacity: 1}}>{item.price}.00€</motion.p>
-                                </div>}
+                                </div>
+                            : <img className="featured-img"src={`images/${item.title}.png`} alt="chair"></img>
+                           
+                        }
                         </motion.div> 
                 ))}
             </motion.div>
