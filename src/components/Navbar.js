@@ -12,11 +12,9 @@ export function Navbar({Basket, wishlist}) {
     const variants = {
     from: {
         opacity: 0,
-        transform: "scale(0.80)",
       },
       enter: {
         opacity: .8,
-        transform: "scale(1)",
         backgroundImage: "rgba(0, 0, 0, 0.6)",
         position: "absolute",
         maxHeight: "100vh",
@@ -25,8 +23,20 @@ export function Navbar({Basket, wishlist}) {
         right: 0,
         left: 0,
       },
-      leave: { opacity: 0, transform: "scale(0)" },
+      leave: { 
+        opacity: 0,}
     }
+
+    const menu = {
+        hidden: {
+            x: -10, 
+            opacity: 0 
+        },
+        visible: {
+            x: 0, 
+            opacity: 1
+        },
+    };
 
     function toggleMenu() {
         setMenuOpen(!menuOpen)
@@ -45,13 +55,14 @@ export function Navbar({Basket, wishlist}) {
                 <AnimatePresence>
                 {menuOpen 
                  && <div className="menu">
-                    <motion.div variants={variants} initial="from" animate="enter" exit="leave"  className="menu-overlay">
-                            <h2 className="logo">LOGO</h2>
-                            <div className="menu-links">
-                                <NavLink to="Login"><p className="stick-bar-link">LOGIN</p></NavLink>
-                                <NavLink to="/Cart"><p className="stick-bar-link">MY CART <div className="basket-size">{Basket.length}</div></p></NavLink>
-                                <NavLink to="/Wishlist"><p className="stick-bar-link">WISHLIST <div className="wishlist-size">{wishlist.length}</div></p></NavLink>
-                            </div>
+                    <motion.div variants={variants} initial="from" animate="enter" exit="leave" className="menu-overlay">
+                            <motion.h2 variants={menu} initial="hidden" animate="visible" transition={{delay: .3, type: "tween", duration: .5}} className="logo">LOGO</motion.h2>
+                            <motion.ul className="menu-links">
+                                <motion.li variants={menu} initial="hidden" animate="visible" transition={{delay: .3, type: "tween", duration: .3}} className="menu-link" >LOGIN</motion.li>
+                                <motion.li variants={menu} initial="hidden" animate="visible" transition={{delay: .4, type: "tween", duration: .3}} className="menu-link">MY CART<p className="basket-size">{Basket.length}</p></motion.li>
+                                <motion.li variants={menu} initial="hidden" animate="visible" transition={{delay: .5, type: "tween", duration: .3}} className="menu-link">WISHLIST<p className="wishlist-size">{wishlist.length}</p></motion.li>
+                                
+                            </motion.ul>
                             <div className="social-media">
                                 <TiSocialInstagramCircular></TiSocialInstagramCircular>
                                 <TiSocialYoutubeCircular></TiSocialYoutubeCircular>
