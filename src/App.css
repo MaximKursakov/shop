@@ -38,7 +38,7 @@ a {
 }
 
 .menu-toggle {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   z-index: 1;
@@ -51,20 +51,20 @@ a {
   opacity: 0.2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
 }
 
+.menu-links {
+  text-align: center;
+}
+
 .menu .logo {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0;
   width: 100%;
   color: white;
+  font-size: 4rem;
 }
 
 .menu .social-media {

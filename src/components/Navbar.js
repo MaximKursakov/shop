@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { BsSearch } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
 import { AnimatePresence, motion} from "framer-motion";
@@ -12,7 +12,7 @@ export function Navbar({Basket, wishlist}) {
     const variants = {
     from: {
         opacity: 0,
-        transform: "scale(0.80)"
+        transform: "scale(0.80)",
       },
       enter: {
         opacity: .8,
@@ -23,10 +23,20 @@ export function Navbar({Basket, wishlist}) {
         top: 0,
         bottom: 0,
         right: 0,
-        left: 0
+        left: 0,
       },
       leave: { opacity: 0, transform: "scale(0)" },
     }
+
+    function toggleMenu() {
+        setMenuOpen(!menuOpen)
+    }
+
+    useEffect(() => {
+        if(menuOpen){
+            document.body.style.overflow = 'hidden';}
+            else document.body.style.overflow = 'unset';
+    }, [menuOpen])
 
     return(
         <nav>
@@ -36,7 +46,7 @@ export function Navbar({Basket, wishlist}) {
                 {menuOpen 
                  && <motion.div variants={variants} initial="from" animate="enter" exit="leave"  className="menu">
                         <h2 className="logo">LOGO</h2>
-                        <div>
+                        <div className="menu-links">
                             <NavLink to="Login"><p className="stick-bar-link">LOGIN</p></NavLink>
                             <NavLink to="/Cart"><p className="stick-bar-link">MY CART <div className="basket-size">{Basket.length}</div></p></NavLink>
                             <NavLink to="/Wishlist"><p className="stick-bar-link">WISHLIST <div className="wishlist-size">{wishlist.length}</div></p></NavLink>
