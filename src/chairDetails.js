@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useLocation, useParams } from "react-router-dom"
 import { WishlistManage } from "./components/wishlistManage"
+import { BsCartCheck } from "react-icons/bs"
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 export function ChairDetails({chairInfo, setChairInfo, wishlist, setWishlist, setBasket, Basket}) {
@@ -44,18 +45,19 @@ export function ChairDetails({chairInfo, setChairInfo, wishlist, setWishlist, se
                         <p className="discountPrice">{getSalePrice(chair.price, chair.discount)}.00 €</p>
                     </div>
                     : <p className="no-discount">{chair.price}€</p>}
-                    {basketNotification 
-                    && <p className="basket-notification">Successfully added do Basket</p>}
                     <div className="quantityManager">
                         <p>Quantity: </p>
                         <button  onClick={() => {if(quantity > 1) setQuantity(quantity - 1)}}>-</button>
                         <p>{quantity}</p>
                         <button onClick={() => setQuantity(quantity + 1)}>+</button>
                     </div>
-                    
-                    {Basket.length === 0 
-                    ? <button className="add-to-basket" onClick={addToBasket}>add to Basket</button>
-                    : <button className="add-to-basket" onClick={addToBasket}>add another to Basket</button>}
+                    <div className="basket-container">
+                        {Basket.length === 0 
+                        ? <button className="add-to-basket" onClick={addToBasket}>add to Basket</button>
+                        : <button className="add-to-basket" onClick={addToBasket}>add another to Basket</button>}
+                        {basketNotification 
+                        && <p className="basket-notification"><BsCartCheck></BsCartCheck></p>}
+                    </div>
                 </div>
             </div>
             <Tabs className="chair-tabs">

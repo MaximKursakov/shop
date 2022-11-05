@@ -3,11 +3,30 @@ import { Link, useLocation } from "react-router-dom"
 
 export function Cart ({Basket, setBasket}) {
     const [price, setPrice] = useState(0)
+    // function handleClick() {
+    //     let counter = 0
+    //     setBasket(prevBasket => prevBasket.map((item) => {
+    //         counter++
+    //         return {...item, basketID: counter}
+    //     }))
+        
+    //     console.log(Basket)
+    // }
     function removeItem(el) {
         setBasket(Basket.filter((item) => {
-            return item !== el
+            return item.basketID !== el.basketID
         }));
     }
+
+    useEffect(() => {
+        let counter = 0
+        setBasket(prevBasket => prevBasket.map((item) => {
+            counter++
+            return {...item, basketID: counter}
+        }))
+        
+        console.log(Basket)
+    }, [])
     function getTotalPrice() {
         setPrice(Basket.reduce((a,v) =>  a = a + v.price , 0 ))
     }

@@ -12,7 +12,9 @@ import { ChairShop } from './components/chairShop';
 import { Footer } from './components/Footer';
 
 function App() {
-  const [Basket, setBasket] = useState([{title: "Hektor", description:"Tub Office Chair, Tan & Black", price: 230, category: "office", wishlist: false, id: 3}])
+  const [Basket, setBasket] = useState([{title: "Hektor", description:"Tub Office Chair, Tan & Black", price: 230, category: "office", wishlist: false, id: 3},{
+    title: "ch23", thumbnailimg: "thumbnail2",description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum", price: 350.00, category: "dining", wishlist: false, id: 2, featured: false, availability: 2, discount: 20
+}])
   const [wishlist, setWishlist] = useState([{title: "Kubrick", description:"Wing Back Chair, Scuba Blue Fabric", price: 525, category: "bedroom", id: 4}])
   const [chairInfo, setChairInfo] = useState([{
     title: "ch20", thumbnailimg: "thumbnail1", description:"Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum", price: 220.00, category: "dining", wishlist: false, id: 1, featured: true, availability: 1, discount: 20,

@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
-import { BsSearch } from "react-icons/bs";
 import { NavLink } from "react-router-dom";
-import { AnimatePresence, motion} from "framer-motion";
-import { TiSocialFacebookCircular, TiSocialGooglePlusCircular, TiSocialInstagramCircular, TiSocialTwitterCircular, TiSocialYoutubeCircular } from "react-icons/ti";
+
 
 
 export function Navbar({Basket, wishlist}) {

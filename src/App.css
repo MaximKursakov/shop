@@ -476,7 +476,7 @@ a {
 
 .item-section {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .shop-sidebar {
@@ -498,7 +498,9 @@ a {
   font-family: "Roboto";
   font-size: 1rem;
   font-weight: 300;
-  color:#868686
+  color:#868686;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
 }
 
 .select-styling {
@@ -731,10 +733,18 @@ align-items: flex-start;
   cursor: pointer;
 }
 
+.basket-container {
+  display: flex;
+}
+
 .basket-notification {
-  background-color: green;
-  padding: 5px 20px;
+  background-color: rgb(104, 159, 104);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
   color: white;
+  width: 50px
 }
 
 .add-to-basket {
@@ -743,7 +753,6 @@ align-items: flex-start;
   padding: 15px 40px;
   cursor: pointer;
   color: #868686;
-  margin-bottom: 5%;
 }
 
 .chair-tabs {
