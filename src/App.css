@@ -483,23 +483,57 @@ a {
   display: flex;
   gap: 15px;
   flex-direction: column;
+  align-items: center;
+  text-align: left;
   width: 20vw;
   margin-top: 210px;
 }
 
-.shop-sidebar button, .shop-sidebar select {
+.shop-sidebar button {
+  align-self: flex-start;
+  margin-left: 5vw;
   text-align: left;
-  margin-left: 20%;
   background-color: transparent;
   border: none;
   font-family: "Roboto";
   font-size: 1rem;
+  font-weight: 300;
   color:#868686
 }
 
-.shop-sidebar select {
+.select-styling {
+  position : relative;
+  align-self: flex-start;
+
+  margin-left: 5vw
+}
+
+.chair-sort {
   appearance: none;
-  border: none;
+  font-family: "Roboto";
+  font-weight: 300;
+  color: #868686;
+  font-size: inherit;
+  background-color: transparent;  
+  border: solid 1px #a3a3a3;
+  padding: .8rem 2.5rem .8rem 1.5rem;
+  margin: 0;
+}
+
+.chair-sort:focus {
+  appearance: none;
+}
+
+.select-arrow {
+  position: absolute;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 95%;
 }
 
 .conts {
@@ -521,7 +555,7 @@ a {
 
 .filter-title::after {
     width: 20px;
-    height: 1px;
+    height: .5px;
     position: absolute;
     left: 50%;
     bottom: 0;
@@ -794,14 +828,4 @@ align-items: flex-start;
 
 .contact-column h2 {
   font-weight: 400;
-}
-
-.chair-sort {
-  appearance: none;
-  font-family: inherit;
-  font-size: inherit;
-  border: solid #a3a3a3 1px;
-  border-color: #a3a3a3;
-  background-color: transparent;
-  padding: 10px 20px;
 }
