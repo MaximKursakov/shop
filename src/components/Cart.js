@@ -80,7 +80,7 @@ export function Cart ({Basket, setBasket}) {
                         <p>{duplicateCounter[item.title]}</p>
                         <button onClick={() => setBasket(basket => basket.concat(item))}><BsCaretRightFill></BsCaretRightFill></button>
                     </div>
-                    <p className="item-total-price">{item.price}€</p>
+                    <p className="item-total-price">{item.price * duplicateCounter[item.title]}€</p>
                 </div>
             ))}
             
