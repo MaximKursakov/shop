@@ -473,6 +473,10 @@ a {
   background-position: 90%;
 }
 
+.individual-price {
+  display: flex;
+  gap: 10px;
+}
 
 .shop-header:hover, .cart-header:hover {
   cursor:default;

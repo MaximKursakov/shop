@@ -3,6 +3,7 @@ import { useLocation, useParams } from "react-router-dom"
 import { WishlistManage } from "./components/wishlistManage"
 import { BsCartCheck } from "react-icons/bs"
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Discount } from "./components/discount";
 
 export function ChairDetails({chairInfo, setChairInfo, wishlist, setWishlist, setBasket, Basket}) {
     const location = useLocation()
@@ -23,9 +24,9 @@ export function ChairDetails({chairInfo, setChairInfo, wishlist, setWishlist, se
         }, 5000);
     }
 
-    function getSalePrice(n,p) {
-        return n - (n * (p/100));
-    }
+    // function getSalePrice(n,p) {
+    //     return n - (n * (p/100));
+    // }
 
     return(
         <div >
@@ -39,12 +40,13 @@ export function ChairDetails({chairInfo, setChairInfo, wishlist, setWishlist, se
                     ? <p className="chair-availability" style={{color: "#c79393"}}>Availability: only {chair.availability} available!</p>
                     : <p className="chair-availability">Availability: {chair.availability} in Stock</p>}
                     <p className="chair-description">{chair.description}</p>
-                    {chair.discount > 0
+                    {/* {chair.discount > 0
                     ? <div className="priceDiscounted">
                         <p className="originalPrice">{chair.price}.00 €</p>
                         <p className="discountPrice">{getSalePrice(chair.price, chair.discount)}.00 €</p>
                     </div>
-                    : <p className="no-discount">{chair.price}€</p>}
+                    : <p className="no-discount">{chair.price}€</p>} */}
+                    <Discount chair={chair}></Discount>
                     <div className="quantityManager">
                         <p>Quantity: </p>
                         <button  onClick={() => {if(quantity > 1) setQuantity(quantity - 1)}}>-</button>

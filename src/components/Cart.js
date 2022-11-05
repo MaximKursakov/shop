@@ -32,7 +32,7 @@ export function Cart ({Basket, setBasket}) {
         
 
     function getTotalPrice() {
-        setPrice(Basket.reduce((a,v) =>  a = a + v.price , 0 ))
+        setPrice(Basket.reduce((a,v) =>  a = a + getSalePrice(v.price, v.discount) , 0 ))
     }
 
     useEffect(() => {
@@ -53,7 +53,9 @@ export function Cart ({Basket, setBasket}) {
         BasketWithoutDuplicates[i].times = duplicateCounter[BasketWithoutDuplicates[i].title];
     }
 
-    
+    function getSalePrice(n,p) {
+        return n - (n * (p/100));
+    }
 
     return(
         <div>
@@ -73,14 +75,18 @@ export function Cart ({Basket, setBasket}) {
                         <img className="cart-img" src={`./images/${item.title}.png`}  alt={BasketWithoutDuplicates.title}></img>
                         <p className="cart-title">{item.title}</p>
                     </div>
-                    <p className="item-price">{item.price}€</p>
+                    <div className="individual-price">
+                        <p className="item-price">{getSalePrice(item.price, item.discount)}€</p>
+                        {item.discount > 0 
+                        && <p>(-{item.discount}%)</p>}
+                    </div>
                     <div className="basket-itemcounter">
                         <h3>Quanitity</h3>
                         <button onClick={() =>removeItem(item) }><BsCaretLeftFill></BsCaretLeftFill></button>
                         <p>{duplicateCounter[item.title]}</p>
                         <button onClick={() => setBasket(basket => basket.concat(item))}><BsCaretRightFill></BsCaretRightFill></button>
                     </div>
-                    <p className="item-total-price">{item.price * duplicateCounter[item.title]}€</p>
+                    <p className="item-total-price">{getSalePrice(item.price, item.discount) * duplicateCounter[item.title]}€</p>
                 </div>
             ))}
             
