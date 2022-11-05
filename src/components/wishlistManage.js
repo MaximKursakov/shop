@@ -21,7 +21,6 @@ export function WishlistManage ({wishlist, setWishlist, setChairInfo, chairInfo,
             return item
           }));
     }
-    console.log(chair)
     return(
         <>
         {!chair.wishlist 

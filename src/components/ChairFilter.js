@@ -2,11 +2,11 @@ import {useState} from "react"
 import { ChairShop } from "./chairShop"
 import { SortChairs } from "./SortChairs"
 
-export function ChairFilter({displayChairs, chairInfo, setChairInfo, wishlist, setWishlist}) {
+export function ChairFilter({chairInfo, setChairInfo, wishlist, setWishlist}) {
     const [filterState, setFilterState] = useState({bar: false, dining: false, livingroom: false, })
-
+    let displayChairs = chairInfo
     const [order, setOrder] = useState({priceLH: false, priceHL: false, nameAZ: false, nameZA: false})
-
+    
     function changeOrder(e) {
         const orderValue = e.target.value
         if (orderValue === "priceLH") {
@@ -35,11 +35,11 @@ export function ChairFilter({displayChairs, chairInfo, setChairInfo, wishlist, s
     else if(order.nameZA) {
         displayChairs = [...displayChairs].sort((a, b) => a.title < b.title ? 1 : -1,)
     }
+    console.log(displayChairs)
 
-
-    const barChairs = chairInfo.filter(item => item.category === "bar")
-    const diningChairs = chairInfo.filter(item => item.category === "dining")
-    const livingChairs = chairInfo.filter(item => item.category === "living")
+    const barChairs = displayChairs.filter(item => item.category === "bar")
+    const diningChairs = displayChairs.filter(item => item.category === "dining")
+    const livingChairs = displayChairs.filter(item => item.category === "living")
 
 
     return(
@@ -76,7 +76,7 @@ export function ChairFilter({displayChairs, chairInfo, setChairInfo, wishlist, s
                 &&  
                 <div className="conts"> 
                     <p className="filter-title">ALL</p>
-                    <ChairShop displayChairs={chairInfo} chairInfo={chairInfo}  setChairInfo={setChairInfo} wishlist={wishlist} setWishlist={setWishlist}></ChairShop>
+                    <ChairShop displayChairs={displayChairs} chairInfo={chairInfo}  setChairInfo={setChairInfo} wishlist={wishlist} setWishlist={setWishlist}></ChairShop>
                 </div>}
             </div>
         </div>
