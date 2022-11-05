@@ -448,7 +448,7 @@ a {
   background-color:#f6f6f6;
 }
 
-.shop-header {
+.shop-header, .cart-header {
   margin: 5% 0;
   display: flex;
   color: white;
@@ -458,17 +458,27 @@ a {
   font-size: 2rem;
   font-weight: 200;
   height: 50vh;
-  background-image: url(/public/images/shop-bg.jpg);
+  
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
 }
 
-.shop-header:hover {
+.shop-header {
+  background-image: url(/public/images/shop-bg.jpg);
+}
+
+.cart-header {
+  background-image: url(/public/images/cart-bg.jpg);
+  background-position: 90%;
+}
+
+
+.shop-header:hover, .cart-header:hover {
   cursor:default;
 }
 
-.shop-header span {
+.shop-header span, .cart-header span {
   background-color: white;
   height: 1px;
   width: 30px;
@@ -836,4 +846,112 @@ align-items: flex-start;
 
 .contact-column h2 {
   font-weight: 400;
+}
+
+.cart-header-title {
+  margin-left: 10vw;
+  color: #464644;
+}
+
+.cart-container {
+  display: flex;
+  justify-content: center;
+  font-size: .8rem;
+  gap: 100px;
+}
+
+.cart-items {
+  width: 50vw;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10vw;
+  padding: 20px 0;
+  border-bottom: solid #ebebeb 1px;
+}
+
+.cart-column {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cart-img {
+  background-color: #ebebeb;
+  width: 100px;
+}
+
+.cart-title {
+  font-weight: 400;
+  color: rgb(45, 45, 45);
+  font-size: 1rem;
+}
+
+.remove-bundle {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.basket-itemcounter {
+  padding: 3px 15px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background-color: transparent;
+  border: solid #a3a3a3 1px;
+  font-weight: 200;
+  
+}
+
+.basket-itemcounter button {
+  background-color: transparent;
+  border: none;
+  color: #626262;
+  cursor: pointer;
+}
+
+.basket-itemcounter h3 {
+  padding-right: 10px;
+  font-weight: 200;
+  font-size: .8rem;
+}
+
+.cart-total {
+  background-color: #ebebeb;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+}
+
+.shipping, .subtotal, .total-price {
+  display: flex;
+  align-items: center;
+}
+
+.total-price {
+  border-top: solid #a3a3a3 1px;
+  margin-top: auto;
+}
+
+.cart-total h2{
+  color: #464644;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+}
+
+.cart-total h3 {
+  width: 100px;
+  font-weight: 400;
+  font-size: .9rem;
+  color: #464644;
+}
+
+.checkout {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 13px;
 }
