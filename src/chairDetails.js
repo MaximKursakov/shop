@@ -33,7 +33,7 @@ export function ChairDetails({chairInfo, setChairInfo, wishlist, setWishlist, se
         <div >
             <div className="info-container">
                 <div className="image-container">
-                    <img src={`/images/${chair.title}.png`}  alt={chair.title} className="detailsImage"></img>
+                    <img src={`./images/${chair.title}.png`}  alt={chair.title} className="detailsImage"></img>
                 </div>
                 <div className="chair-info">
                     <h1>{chair.title} | by Lorem Ipsum</h1>
