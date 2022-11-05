@@ -13,17 +13,18 @@ export function ChairDetails({chairInfo, setChairInfo, wishlist, setWishlist, se
 
     const [quantity, setQuantity] = useState(1)
 
-    function addToBasket() {
+    function addToBasket(stock) {
         for(let i = 0; i < quantity; i++)
         {setBasket(basket => basket.concat(chair))}
-        setBasketNotification(true)
-    }
-    if(basketNotification) {
+        if (stock > 0) {
+            setBasketNotification(true)
         setTimeout(() => {
             setBasketNotification(false)
         }, 5000);
+        }
+        else alert("item currently out of stock!")
+        
     }
-
     // function getSalePrice(n,p) {
     //     return n - (n * (p/100));
     // }
@@ -36,9 +37,11 @@ export function ChairDetails({chairInfo, setChairInfo, wishlist, setWishlist, se
                 </div>
                 <div className="chair-info">
                     <h1>{chair.title} | by Lorem Ipsum</h1>
-                    {chair.availability <= 4 
+                    {chair.availability <= 4 && chair.availability > 0
                     ? <p className="chair-availability" style={{color: "#c79393"}}>Availability: only {chair.availability} available!</p>
                     : <p className="chair-availability">Availability: {chair.availability} in Stock</p>}
+                    {chair.availability === 0
+                    && <p className="chair-availability" style={{color: "#c79393"}}>Out of Stock!</p>}
                     <p className="chair-description">{chair.description}</p>
                     {/* {chair.discount > 0
                     ? <div className="priceDiscounted">
@@ -55,8 +58,8 @@ export function ChairDetails({chairInfo, setChairInfo, wishlist, setWishlist, se
                     </div>
                     <div className="basket-container">
                         {Basket.length === 0 
-                        ? <button className="add-to-basket" onClick={addToBasket}>add to Basket</button>
-                        : <button className="add-to-basket" onClick={addToBasket}>add another to Basket</button>}
+                        ? <button className="add-to-basket" onClick={() => addToBasket(chair.availability)}>add to Basket</button>
+                        : <button className="add-to-basket" onClick={() => addToBasket(chair.availability)}>add another to Basket</button>}
                         {basketNotification 
                         && <p className="basket-notification"><BsCartCheck></BsCartCheck></p>}
                     </div>

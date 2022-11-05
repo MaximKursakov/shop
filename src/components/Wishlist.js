@@ -22,7 +22,7 @@ export function Wishlist ({wishlist, setWishlist, Basket, setBasket}) {
                 <div key={item.id} className="wishlist-item" >
                     <div className="cart-column">
                         <p className="remove-bundle" onClick={() => removeItem(item)}><IoIosRemoveCircleOutline></IoIosRemoveCircleOutline></p>
-                        <img className="cart-img" src={`./images/${item.title}.png`}  alt={wishlist.title}></img>
+                        <Link to={`/Chairs/${item.title}`} state={{item}}><img className="cart-img" src={`./images/${item.title}.png`}  alt={wishlist.title}></img></Link>
                         <p className="cart-title">{item.title}</p>
                     </div>
                     <div className="wishlist-right">
