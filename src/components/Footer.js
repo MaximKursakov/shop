@@ -23,7 +23,7 @@ export function Footer() {
             </div>
             <div className="footer-contact">
                 <h3 className="footer-title">CONTACT</h3>
-                <p>expamplestreet 23</p>
+                <p>examplestreet 23</p>
                 <p>city, 00000</p>
                 <p>state</p>
                 <p>Phonenumber: 000-000-000</p>
