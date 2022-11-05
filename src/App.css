@@ -476,7 +476,7 @@ a {
 
 .item-section {
   display: flex;
-  margin-left: 5vw;
+  justify-content: center;
 }
 
 .shop-sidebar {
@@ -487,11 +487,11 @@ a {
   text-align: left;
   width: 20vw;
   margin-top: 210px;
+  padding-left: 3vw;
 }
 
 .shop-sidebar button {
   align-self: flex-start;
-  margin-left: 5vw;
   text-align: left;
   background-color: transparent;
   border: none;
@@ -504,8 +504,6 @@ a {
 .select-styling {
   position : relative;
   align-self: flex-start;
-
-  margin-left: 5vw
 }
 
 .chair-sort {
@@ -540,6 +538,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-right: 3vw;
 }
 
 .filter-title {
