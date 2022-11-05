@@ -78,7 +78,7 @@ export function Cart ({Basket, setBasket}) {
                     <div className="individual-price">
                         <p className="item-price">{getSalePrice(item.price, item.discount)}€</p>
                         {item.discount > 0 
-                        && <p>(-{item.discount}%)</p>}
+                        && <p className="cart-discount">(-{item.discount}%)</p>}
                     </div>
                     <div className="basket-itemcounter">
                         <h3>Quanitity</h3>
@@ -104,7 +104,7 @@ export function Cart ({Basket, setBasket}) {
                 </div>
                 <div className="total-price">
                     <h3>Total</h3>
-                    <p>{price}</p>
+                    <p>{price}€</p>
                 </div>
                 <button className="checkout">Proceed to Checkout</button>
                 </div>

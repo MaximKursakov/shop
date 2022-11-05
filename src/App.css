@@ -471,11 +471,18 @@ a {
 .cart-header {
   background-image: url(/public/images/cart-bg.jpg);
   background-position: 90%;
+  height: 35vh;
 }
 
 .individual-price {
   display: flex;
   gap: 10px;
+  position: relative;
+}
+
+.cart-discount {
+  position: absolute;
+  left: 50px;
 }
 
 .shop-header:hover, .cart-header:hover {
@@ -871,7 +878,7 @@ align-items: flex-start;
 .cart-item {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   gap: 10vw;
   padding: 20px 0;
   border-bottom: solid #ebebeb 1px;
@@ -928,6 +935,7 @@ align-items: flex-start;
   padding: 35px;
   display: flex;
   flex-direction: column;
+  height: 330px;
 }
 
 .shipping, .subtotal, .total-price {
@@ -958,4 +966,33 @@ align-items: flex-start;
   color: white;
   border: none;
   padding: 13px;
+}
+
+.wishlist-items {
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.wishlist-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid #ebebeb 1px;
+  padding: 20px 0;
+}
+
+.wishlist-right {
+  display: flex;
+  gap: 80px;
+  align-items: center;
+}
+
+.wishlist-basket {
+  color: #474645;
+  font-weight: 400;
+  font-size: .8rem;
+}
+
+.wishlist-discount {
+  position: absolute;
+  right: 50px;
 }
