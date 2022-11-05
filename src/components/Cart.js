@@ -1,58 +1,50 @@
 import { useEffect, useState } from "react";
+import { BsDashSquare } from "react-icons/bs";
 import { Link, useLocation } from "react-router-dom"
 
 export function Cart ({Basket, setBasket}) {
     const [price, setPrice] = useState(0)
-    // function handleClick() {
-    //     let counter = 0
-    //     setBasket(prevBasket => prevBasket.map((item) => {
-    //         counter++
-    //         return {...item, basketID: counter}
-    //     }))
-        
-    //     console.log(Basket)
-    // }
+
     function removeItem(el) {
         setBasket(Basket.filter((item) => {
             return item.basketID !== el.basketID
         }));
     }
 
-    useEffect(() => {
+    function addBasketID() {
         let counter = 0
         setBasket(prevBasket => prevBasket.map((item) => {
             counter++
             return {...item, basketID: counter}
         }))
-        }, [])
+        }
+
+        
+
     function getTotalPrice() {
         setPrice(Basket.reduce((a,v) =>  a = a + v.price , 0 ))
     }
     useEffect(() => {
         getTotalPrice()
-    })
+    }, )
 
-    // const uniqueObj = {};
-
-    // Basket.forEach(i => {
-    // uniqueObj[i.title] = i;
-    // });
 
 
     let BasketWithoutDuplicates = [];
-    var duplicateCounter = {};
-    for (var i = 0; i < Basket.length; i++) {
+    let duplicateCounter = {};
+    for (let i = 0; i < Basket.length; i++) {
     if (!duplicateCounter[Basket[i].title]) {
         BasketWithoutDuplicates.push(Basket[i]);
     }
     duplicateCounter[Basket[i].title] = ((duplicateCounter[Basket[i].title] || 0) + 1);
     }
-    for (var i = 0; i < BasketWithoutDuplicates.length; i++) {
+    for (let i = 0; i < BasketWithoutDuplicates.length; i++) {
         BasketWithoutDuplicates[i].times = duplicateCounter[BasketWithoutDuplicates[i].title];
     }
-    console.log(BasketWithoutDuplicates);
-    console.log(duplicateCounter)
 
+    useEffect(() => {
+        addBasketID()
+    }, [price])
 
     return(
         <div>
@@ -68,7 +60,15 @@ export function Cart ({Basket, setBasket}) {
                     <p>{item.price}€</p>
                     <button onClick={() => removeItem(item)}>remove</button>
                     <div>
+                        <button onClick={() =>{
+                            removeItem(item)
+                            
+                        } }>-</button>
                         <p>{duplicateCounter[item.title]}</p>
+                        <button onClick={() => {
+                            console.log(Basket)
+                            
+                            setBasket(basket => basket.concat(item))}}>+</button>
                     </div>
                 </div>
             ))}
