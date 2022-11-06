@@ -9,7 +9,14 @@ export function Home ({chairInfo}) {
         <div className="home">
             
             <div className="hero">
-                <Link to={`/Chairs/${ch20.title}`}  state={{ch20}}><img src="shop/images/ch23-seite.png" className="hero-img" alt="ch23 chair"></img></Link>
+                
+                <Link to={`/Chairs/${ch20.title}`}  state={{ch20}}>
+                    <div
+                    style={{
+                    backgroundImage: "url(./shop/images/ch23-seite.png"}}  
+                    alt={ch20.title} 
+                    className="hero-img">
+                </div></Link>
                 <div className="hero-mid">
                     <h2>COLLECTION</h2>
                     <h1>NAME</h1>

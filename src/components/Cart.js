@@ -72,7 +72,7 @@ export function Cart ({Basket, setBasket}) {
                 <div key={item.id} className="cart-item" >
                     <div className="cart-column">
                         <p className="remove-bundle" onClick={() => removeBundle(item)}><IoIosRemoveCircleOutline></IoIosRemoveCircleOutline></p>
-                        <Link to={`/Chairs/${item.title}`} state={{item}}><img className="cart-img" src={`./images/${item.title}.png`}  alt={BasketWithoutDuplicates.title}></img></Link>
+                        <Link to={`/Chairs/${item.title}`} state={{item}}><img className="cart-img" src={`./shop/images/${item.title}.png`}  alt={BasketWithoutDuplicates.title}></img></Link>
                         <p className="cart-title">{item.title}</p>
                     </div>
                     <div className="individual-price">
