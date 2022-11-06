@@ -28,6 +28,7 @@ export function Rooms() {
                 <motion.button 
                 onClick={() => setBarOptions(!barOptions)}
                 className="room-button"
+                whileHover={{scale: 1.1}}
                 animate={{y: barOptions ? 120 : 0}}
                 transition={{duration: .3}}>SHOP NOW
                 </motion.button>
@@ -49,6 +50,7 @@ export function Rooms() {
                 <motion.button 
                 onClick={() => setDiningOptions(!diningOptions)}
                 className="room-button"
+                whileHover={{scale: 1.1}}
                 animate={{y: diningOptions ? 120 : 0}}
                 transition={{duration: .3}}>SHOP NOW
                 </motion.button>
@@ -69,6 +71,7 @@ export function Rooms() {
                     </motion.ul>}
                 <motion.button 
                 onClick={() => setLivingOptions(!livingOptions)}
+                whileHover={{scale: 1.1}}
                 className="room-button"
                 animate={{y: livingOptions ? 120 : 0}}
                 transition={{duration: .3}}>SHOP NOW

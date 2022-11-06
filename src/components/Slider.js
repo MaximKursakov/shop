@@ -62,14 +62,26 @@ export function Slider ({chairInfo}) {
                         }}>
                         
                             {position === item.id 
-                            ? <div>
+                            ? <motion.div initial={{y : 200, opacity: 0}}
+                             whileInView={{y : 0, opacity: 1}}
+                             transition={{duration: .5}}>
                                 <Link to={`/Chairs/${item.title}`} state={{item}}>
-                                    <img className="featured-img"src={`shop/images/${item.title}.png`} alt="chair"></img>
+                                    <motion.img 
+                                    whileHover={{scale: 1.1}} 
+                                    className="featured-img"
+                                    src={`shop/images/${item.title}.png`} 
+                                    alt="chair"></motion.img>
                                 </Link>
                                 <motion.p className="featured-title" initial={{opacity: 0}} animate={{opacity: 1}}>{item.title} Chair</motion.p>
                                 <motion.p className="featured-price" initial={{opacity: 0}} animate={{opacity: 1}}>{item.price}.00€</motion.p>
-                                </div>
-                            : <img className="featured-img"src={`shop/images/${item.title}.png`} alt="chair"></img>
+                                </motion.div>
+                            : <motion.img 
+                                initial={{y : 200, opacity: 0}} 
+                                whileInView={{y : 0, opacity: 1}} 
+                                transition={{duration: 1,delay: .2}} 
+                                className="featured-img"
+                                src={`shop/images/${item.title}.png`} 
+                                alt="chair"></motion.img>
                            
                         }
                         </motion.div> 

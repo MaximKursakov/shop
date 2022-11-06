@@ -13,10 +13,6 @@ body {
   background-color: #f6f6f6;
 }
 
-img {
-  border: solid black 1px;
-}
-
 .active ~ .hover-navlink{
   position: absolute; 
   bottom: 0px; 
@@ -80,8 +76,8 @@ a {
 .menu-close {
   position: absolute;
   right: 0;
+  top: 5vh;
   margin-right: 30px;
-  padding-top: 5%;
   font-size: 1.2rem;
   background-color: transparent;
   color: white;
@@ -118,8 +114,8 @@ a {
   font-weight: 300;
   margin-right: 10vw;
   width: 100vw;
-  border: solid black 1px;
-  padding: 5% 0;
+  padding: 5vh 0;
+  background-color: #f6f6f6;
 }
 
 .navbar {
