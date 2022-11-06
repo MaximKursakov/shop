@@ -1,6 +1,7 @@
 import {useState} from "react"
 import { ChairShop } from "./chairShop"
 import { SortChairs } from "./SortChairs"
+import { motion } from "framer-motion"
 
 export function ChairFilter({chairInfo, setChairInfo, wishlist, setWishlist}) {
     const [filterState, setFilterState] = useState({bar: false, dining: false, livingroom: false, })
@@ -50,10 +51,10 @@ export function ChairFilter({chairInfo, setChairInfo, wishlist, setWishlist}) {
             </div>
             <div className="item-section">
                 <div className="shop-sidebar">
-                    <button onClick={() => setFilterState(prevState => ({bar: false, dining: false, livingroom: false}))}>ALL</button>
-                    <button onClick={() => setFilterState(prevState => ({bar: !prevState.bar, dining: false, livingroom: false}))}>BAR</button>
-                    <button onClick={() => setFilterState(prevState => ({bar: false, dining: !prevState.dining, livingroom: false}))}>DINING</button>
-                    <button onClick={() => setFilterState(prevState => ({bar: false, dining: false, livingroom: !prevState.livingroom}))}>LIVING ROOM</button>
+                    <motion.button whileHover={{scale: 1.2}} onClick={() => setFilterState(prevState => ({bar: false, dining: false, livingroom: false}))}>ALL</motion.button>
+                    <motion.button whileHover={{scale: 1.2}} onClick={() => setFilterState(prevState => ({bar: !prevState.bar, dining: false, livingroom: false}))}>BAR</motion.button>
+                    <motion.button whileHover={{scale: 1.2}} onClick={() => setFilterState(prevState => ({bar: false, dining: !prevState.dining, livingroom: false}))}>DINING</motion.button>
+                    <motion.button whileHover={{scale: 1.2}} onClick={() => setFilterState(prevState => ({bar: false, dining: false, livingroom: !prevState.livingroom}))}>LIVING ROOM</motion.button>
                     <SortChairs displayChairs={displayChairs} order={order} setOrder={setOrder} changeOrder={changeOrder}></SortChairs>
                 </div>
                 {filterState.bar 

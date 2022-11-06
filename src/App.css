@@ -578,7 +578,6 @@ a {
 }
 
 .shop-sidebar {
-  
   display: flex;
   gap: 15px;
   flex-direction: column;
@@ -676,7 +675,6 @@ a {
 }
 
 .shop-item {
-  border: solid black 1px;
   width: 40%;
   height: 20vw;
   position: relative;
@@ -795,9 +793,13 @@ a {
     width: 80vw;
     height: 40vw;
   }
+  .contact-column {
+    flex-direction: column;
+  }
 }
 
 .info-container {
+  padding-top: 15vh;
   display: flex;
   justify-content: center;
   gap: 100px;
@@ -970,6 +972,7 @@ align-items: flex-start;
 }
 
 .contact-container {
+  padding-top: 20vh;
   width: 70vw;
   margin-left: 10%;
   text-align: left;
