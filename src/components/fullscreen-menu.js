@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { TiSocialFacebookCircular, TiSocialGooglePlusCircular, TiSocialInstagramCircular, TiSocialTwitterCircular, TiSocialYoutubeCircular } from "react-icons/ti";
 import { Link, NavLink } from "react-router-dom";
+import {IoCloseOutline} from "react-icons/io"
 
 
 export function Menu() {
@@ -62,7 +63,8 @@ export function Menu() {
                 <AnimatePresence>
                 {menuOpen 
                  && <div className="menu">
-                    <motion.div variants={variants} initial="from" animate="enter" exit="leave" className="menu-overlay">
+                    <motion.div variants={variants} initial="from" animate="enter" exit="leave" onClick={() => setMenuOpen(!menuOpen)} className="menu-overlay">
+                    <button onClick={() => setMenuOpen(!menuOpen)} className="menu-close">X</button>
                             <motion.h2 variants={menu} initial="hidden" animate="visible" transition={{delay: .3, type: "tween", duration: .5}} className="logo">LOGO</motion.h2>
                             <motion.ul className="menu-links">
                                 <NavLink to="/Home" onClick={() => setMenuOpen(!menuOpen)}><motion.li variants={menu} whileHover="hover" initial="hidden" animate="visible" transition={{delay: .3, type: "tween", duration: .3}} className="menu-link" >Home</motion.li></NavLink>

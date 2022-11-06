@@ -15,7 +15,8 @@ export function Navbar({Basket, wishlist}) {
         <nav>
             <div className="sticky-bar">
             </div>
-            <div className="navbar">
+            <div className="navbar-container">
+                <div className="navbar">
                 <div className="logo">LOGO</div>
                 <Menu></Menu>
                 <div className="navbar-links">
@@ -40,7 +41,7 @@ export function Navbar({Basket, wishlist}) {
                         <span className="hover-navlink"></span>
                     </div>
                 </div>
-
+                </div>
                 
             </div>
         </nav>
