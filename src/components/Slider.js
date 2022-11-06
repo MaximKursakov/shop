@@ -49,7 +49,10 @@ export function Slider ({chairInfo}) {
         <div className="slider-container">
             <motion.button animate={controlPulse} className="slide-left" onClick={slideLeft}> <AiOutlineLeft></AiOutlineLeft> </motion.button>
             <motion.button animate={controlPulse} className="slide-right" onClick={slideRight}> <AiOutlineRight></AiOutlineRight> </motion.button>
-            <motion.div ref={container} className="slider">
+            <motion.div 
+            whileInView={{y : 0, opacity: 1}}
+            initial={{y : 200, opacity: 0}} 
+            transition={{duration: .8}}  ref={container} className="slider">
                 {chairsUpdatedID.map((item) => (
                         <motion.div 
                         key={item.id} 
@@ -62,9 +65,7 @@ export function Slider ({chairInfo}) {
                         }}>
                         
                             {position === item.id 
-                            ? <motion.div initial={{y : 200, opacity: 0}}
-                             whileInView={{y : 0, opacity: 1}}
-                             transition={{duration: .5}}>
+                            ? <motion.div>
                                 <Link to={`/Chairs/${item.title}`} state={{item}}>
                                     <motion.img 
                                     whileHover={{scale: 1.1}} 
@@ -76,9 +77,6 @@ export function Slider ({chairInfo}) {
                                 <motion.p className="featured-price" initial={{opacity: 0}} animate={{opacity: 1}}>{item.price}.00€</motion.p>
                                 </motion.div>
                             : <motion.img 
-                                initial={{y : 200, opacity: 0}} 
-                                whileInView={{y : 0, opacity: 1}} 
-                                transition={{duration: 1,delay: .2}} 
                                 className="featured-img"
                                 src={`shop/images/${item.title}.png`} 
                                 alt="chair"></motion.img>
