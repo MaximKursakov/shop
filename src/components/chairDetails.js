@@ -1,9 +1,9 @@
 import { useState } from "react"
 import { useLocation, useParams } from "react-router-dom"
-import { WishlistManage } from "./components/wishlistManage"
+import { WishlistManage } from "./wishlistManage"
 import { BsCartCheck } from "react-icons/bs"
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import { Discount } from "./components/discount";
+import { Discount } from "./discount";
 
 export function ChairDetails({chairInfo, setChairInfo, wishlist, setWishlist, setBasket, Basket}) {
     const location = useLocation()
@@ -43,12 +43,6 @@ export function ChairDetails({chairInfo, setChairInfo, wishlist, setWishlist, se
                     {chair.availability === 0
                     && <p className="chair-availability" style={{color: "#c79393"}}>Out of Stock!</p>}
                     <p className="chair-description">{chair.description}</p>
-                    {/* {chair.discount > 0
-                    ? <div className="priceDiscounted">
-                        <p className="originalPrice">{chair.price}.00 €</p>
-                        <p className="discountPrice">{getSalePrice(chair.price, chair.discount)}.00 €</p>
-                    </div>
-                    : <p className="no-discount">{chair.price}€</p>} */}
                     <Discount chair={chair}></Discount>
                     <div className="quantityManager">
                         <p>Quantity: </p>

@@ -5,7 +5,7 @@ import { Navbar } from './components/Navbar';
 import { Contact } from "./components/Contact"
 import { ChairFilter } from './components/ChairFilter';
 import React, { useState } from 'react';
-import { ChairDetails } from './chairDetails';
+import { ChairDetails } from './components/chairDetails';
 import { Cart } from './components/Cart';
 import { Wishlist } from './components/Wishlist';
 import { ChairShop } from './components/chairShop';
