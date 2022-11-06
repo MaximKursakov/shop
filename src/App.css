@@ -5,13 +5,14 @@
 body {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  color: #868686;
+  color: black;
   padding: 0;
   margin: 0;
   overflow-x: hidden;
   scroll-behavior: smooth;
   background-color: #f6f6f6;
 }
+
 
 .active ~ .hover-navlink{
   position: absolute; 
@@ -25,7 +26,7 @@ body {
 
 a {
   font-family: 'Roboto', sans-serif;
-  color: #a3a3a3;
+  color: #464644;
   text-decoration: none;
 }
 
@@ -87,19 +88,26 @@ a {
 
 
 .navbar {
+  color: black;
+  font-weight: 300;
   margin-right: 10vw;
   width: 100%;
   height: 10vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: transparent;
+  background-color: #f6f6f6;
+  position: fixed;
+  z-index: 1;
 }
 
 .navbar-links {
   margin-right: 4vw;
+  min-width: 350px;
+  max-width: 500px;
+  flex-grow: 1;
   display: flex;
-  gap: 25px;
+  justify-content: space-evenly;
 }
 
 .navlink {
@@ -141,7 +149,7 @@ a {
 }
 
 .hero {
-  min-height: 90vh;
+  height: 100vh;
   margin-bottom: 16vh;
   width: 100%;
   background-color: #f6f6f6;
@@ -152,7 +160,6 @@ a {
 }
 
 .hero-mid {
-  width: 20vw;
   text-align: center;
 }
 
@@ -164,7 +171,7 @@ a {
   letter-spacing: .5rem;
   font-size:  1rem;
   font-family: "Lora";
-  padding: 15px;
+  padding: 15px 20px;
 }
 
 .hero-mid h1 {
@@ -215,6 +222,7 @@ a {
 }
 
 .slider {
+  overflow: hidden;
   width: 100vw;
   position: relative;
   height: 60vh;
@@ -257,6 +265,7 @@ a {
 }
 
 .slider-section {
+  overflow: hidden;
   padding-top: 200px;
   font-family: "Lora";
   background-color: #f6f6f6;
@@ -300,7 +309,7 @@ a {
   justify-content: center;
   align-items: center;
   height: 60vh;
-  width: 33vw;
+  width: 33.333333%;
   background-position: bottom 25% right 50%;
   background-repeat: no-repeat;
   background-size: cover;
@@ -358,11 +367,12 @@ a {
 }
 
 .footer {
-  margin-top: 20px;
+  margin-top: 100px;
   padding-bottom: 40px;
+  background-color: #ebebeb;
   display: flex;
-  justify-content: center;
-  gap: 10vw;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .footer-title {
@@ -371,14 +381,22 @@ a {
   letter-spacing: 4px;
 }
 
+.footer-info, .footer-collections, .footer-contact {
+  max-width: 20%;
+  min-width: 200px;
+}
+
 .footer-newsletter {
+  flex-grow: 1;
+  min-width: 200px;
+  max-width: 30%;
   display: flex;
   flex-direction: column;
-  width: 30vw;
 }
 
 
 .newsletter-signup {
+  justify-self: flex-end;
   display: flex;
   flex-direction: row;
   float: left; 
@@ -396,7 +414,7 @@ a {
   outline: none;
   padding: 7px 0; 
   border-bottom: 1px solid #ccc;
-  z-index: 1
+  z-index: 1;
 }
 
 .email-input ~ .focus-animation {
@@ -435,8 +453,9 @@ a {
 
 .social-media {
   display: flex;
-  gap: 20px;
+  justify-content: space-evenly;
   font-size: 1.8rem;
+  color: #464644;
 }
 
 
