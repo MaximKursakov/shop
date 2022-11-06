@@ -116,6 +116,7 @@ a {
   width: 100vw;
   padding: 5vh 0;
   background-color: #f6f6f6;
+  z-index: 1;
 }
 
 .navbar {
@@ -124,7 +125,6 @@ a {
   justify-content: space-between;
   align-items: center;
   background-color: #f6f6f6;
-  z-index: 1;
   position: relative;
 }
 
@@ -666,18 +666,19 @@ a {
     content: '';
 }
 
+
 .shop-items {
   width: 70vw;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   gap: 20px;
 }
 
 .shop-item {
+  border: solid black 1px;
   width: 40%;
   height: 20vw;
-  overflow: hidden;
   position: relative;
 }
 
@@ -745,6 +746,55 @@ a {
 
 .wishlistItem, .cartItem {
   border: solid 1px black;
+}
+
+@media only screen and (max-width: 970px) {
+
+  .shop-items {
+    width: 100vw;
+  }
+
+  .shop-item {
+    min-width: 200px;
+    max-width: 300px;
+  }
+
+  .item-section {
+    flex-direction: column;
+  }
+
+  .shop-sidebar {
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 95%;
+    justify-content: space-around;
+    margin: 40px 0;
+    padding-bottom: 20px;
+  }
+
+  .shop-sidebar button {
+    margin: auto 0;
+    padding: 0;
+  }
+
+  .shop-sidebar :nth-child(5) { order: 1; }
+
+  .filter-title {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .shop-items {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shop-item {
+    width: 80vw;
+    height: 40vw;
+  }
 }
 
 .info-container {
