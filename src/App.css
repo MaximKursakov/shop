@@ -13,6 +13,9 @@ body {
   background-color: #f6f6f6;
 }
 
+img {
+  border: solid black 1px;
+}
 
 .active ~ .hover-navlink{
   position: absolute; 
@@ -35,15 +38,25 @@ a {
   display: flex;
   align-items: center;
   gap: 10px;
+  color: rgb(201, 200, 200);
+}
+
+.menu-toggle-container {
+  position: relative;
+  display: flex;
+  margin-bottom: 10px;
+  margin-right: 30px;
 }
 
 .menu-toggle {
-  position: fixed;
+  visibility: hidden;
+  position: absolute;
   top: 0;
   right: 0;
   z-index: 1;
   border: none;
   background-color: transparent;
+  color: #464644;
 }
 
 .menu, .menu-overlay {
@@ -72,6 +85,8 @@ a {
   align-items: center;
   font-size: 1.2rem;
   padding-left: 0;
+  z-index: 1;
+  gap: 10px;
 }
 
 .menu-overlay .logo {
@@ -91,7 +106,7 @@ a {
   color: black;
   font-weight: 300;
   margin-right: 10vw;
-  width: 100%;
+  width: 100vw;
   height: 10vh;
   display: flex;
   justify-content: space-between;
@@ -159,6 +174,8 @@ a {
   gap: 150px;
 }
 
+
+
 .hero-mid {
   text-align: center;
 }
@@ -222,7 +239,6 @@ a {
 }
 
 .slider {
-  overflow: hidden;
   width: 100vw;
   position: relative;
   height: 60vh;
@@ -313,19 +329,47 @@ a {
   background-position: bottom 25% right 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  
+
+}
+
+@media only screen and (max-width: 768px) {
+  .rooms-container {
+    flex-direction: column;
+    height: auto;
+  }
+  .rooms-container div {
+    width: 100%;
+    height: 60vh;
+  }
+  .hero-img, .hero-chair-link {
+    visibility: hidden;
+  }
+  .navbar-links {
+    visibility: hidden;
+    position: absolute;
+  }
+  .menu-toggle {
+    visibility: visible;
+  }
+  .menu-link {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .column1 {
   background:  rgba(0, 0, 0, 0.3) url("/public/images/bar.jpg");
-  background-blend-mode: darken
+  background-blend-mode: darken;
+  text-align: center;
 }
 .column2 {
   background: rgba(0, 0, 0, 0.3) url("/public/images/dining.jpg");
-  background-blend-mode: darken
+  background-blend-mode: darken;
+  text-align: center;
 }
 .column3 {
   background-image: url("/public/images/living.jpg");
+  text-align: center;
 }
 
 .room-title {
@@ -468,14 +512,16 @@ a {
 }
 
 .shop-header, .cart-header {
-  margin: 5% 0;
+  margin-bottom: 5vh;
+
+  padding: 5% 0;
   display: flex;
   color: white;
   align-items: center;
   padding-left: 13vw;
   gap: 20px;
   font-size: 2rem;
-  font-weight: 200;
+  font-weight: 300;
   height: 50vh;
   
   background-size: cover;

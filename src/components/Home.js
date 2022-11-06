@@ -9,14 +9,14 @@ export function Home ({chairInfo}) {
         <div className="home">
             
             <div className="hero">
-                <Link to={`/Chairs/${ch20.title}`}  state={{ch20}}><img src="shop/images/ch23-seite.png" className="hero-img" alt="ch23 chair"></img></Link>
+                <Link className="hero-chair-link" to={`/Chairs/${ch20.title}`}  state={{ch20}}><img src="shop/images/ch23-seite.png" className="hero-img" alt="ch23 chair"></img></Link>
                 <div className="hero-mid">
                     <h2>COLLECTION</h2>
                     <h1>NAME</h1>
                     <p>Some Title Text that describes the collection</p>
                     <Link to="/Chairs"><button className="shop-link">Shop now</button></Link>
                 </div>
-                <Link to={`/Chairs/${ch23.title}`} state={{ch23}}><img src="shop/images/ch26-seite.png" className="hero-img" alt="ch26 chair"></img></Link>
+                <Link className="hero-chair-link" to={`/Chairs/${ch23.title}`} state={{ch23}}><img src="shop/images/ch26-seite.png" className="hero-img" alt="ch26 chair"></img></Link>
             </div>
             <Rooms></Rooms>
             <div className="slider-section">
