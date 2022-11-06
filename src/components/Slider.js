@@ -64,12 +64,12 @@ export function Slider ({chairInfo}) {
                             {position === item.id 
                             ? <div>
                                 <Link to={`/Chairs/${item.title}`} state={{item}}>
-                                    <img className="featured-img"src={`./images/${item.title}.png`} alt="chair"></img>
+                                    <img className="featured-img"src={`shop/images/${item.title}.png`} alt="chair"></img>
                                 </Link>
                                 <motion.p className="featured-title" initial={{opacity: 0}} animate={{opacity: 1}}>{item.title} Chair</motion.p>
                                 <motion.p className="featured-price" initial={{opacity: 0}} animate={{opacity: 1}}>{item.price}.00€</motion.p>
                                 </div>
-                            : <img className="featured-img"src={`./images/${item.title}.png`} alt="chair"></img>
+                            : <img className="featured-img"src={`shop/images/${item.title}.png`} alt="chair"></img>
                            
                         }
                         </motion.div> 
