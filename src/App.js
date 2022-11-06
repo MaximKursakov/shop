@@ -67,6 +67,7 @@ function App() {
     <Navbar Basket={Basket} wishlist={wishlist}></Navbar>
     <Routes>
       <Route path='/' element={<Navigate to="/Home"></Navigate>}/>
+      <Route path='/shop' element={<Navigate to="/Home"></Navigate>}/>
       <Route path='/Home' element={<Home chairInfo={chairInfo}/> }/>
       <Route path='/ChairShop' element={<ChairShop></ChairShop>}/>
       <Route path="/Chairs" element={<ChairFilter chairInfo={chairInfo} setChairInfo={setChairInfo} wishlist={wishlist} setWishlist={setWishlist}/>}></Route>
