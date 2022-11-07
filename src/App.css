@@ -827,7 +827,8 @@ a {
   display: flex;
   justify-content: center;
   gap: 100px;
-  width: 100%;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .image-container {
@@ -840,7 +841,8 @@ a {
   min-width: 200px;
   width: 20vw;
   height: auto;
-  padding: 5vh 10vw;
+  padding: 5% 10%;
+  min-width: 350px;
   background-color: #ebebeb;
 }
 
@@ -861,7 +863,7 @@ align-items: flex-start;
 }
 
 .chair-description {
-  width: 60%;
+  width: 100%;
   font-weight: 100;
   line-height: 30px;
   margin-top: 30px;
@@ -970,6 +972,11 @@ align-items: flex-start;
   letter-spacing: 4px;
 }
 
+.item-description h3, .additional-info h3 {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
 .additional-info-container {
   width: 70vw;
 }
@@ -993,6 +1000,37 @@ align-items: flex-start;
   color: #5d5d5d;
   display: flex;
   justify-content: space-between;
+}
+
+@media only screen and (max-width: 970px) {
+  .info-container {
+    flex-direction: column;
+  }
+  .detailsImage {
+    width: 100%;
+    height: 500px;
+  }
+  .additional-info, .item-description p {
+    width: 100%;
+  }
+  .itemInfo {
+    width: 90%;
+    padding: 0;
+    justify-content: space-evenly;
+    
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .itemInfo {
+    flex-direction: column;
+    align-items: center;
+  }
+  .itemInfo li {
+    border: solid black 1px;
+    padding: 10px;
+  }
+  
 }
 
 .contact-container {
@@ -1168,7 +1206,7 @@ align-items: flex-start;
 }
 
 .wishlist-items {
-  width: 60vw;
+  width: 70vw;
   margin: 0 auto;
 }
 
@@ -1180,14 +1218,15 @@ align-items: flex-start;
 }
 
 .wishlist-right {
+  width: 40%;
   display: flex;
-  gap: 80px;
   align-items: center;
+  justify-content: space-between;
 }
 
 .wishlist-basket {
   color: #474645;
-  font-weight: 400;
+  font-weight: 600;
   font-size: .8rem;
 }
 
@@ -1195,3 +1234,5 @@ align-items: flex-start;
   position: absolute;
   right: 50px;
 }
+
+@me
