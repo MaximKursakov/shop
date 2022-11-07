@@ -678,6 +678,10 @@ a {
   width: 40%;
   height: 20vw;
   position: relative;
+  border: solid black 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .chair {
@@ -746,15 +750,26 @@ a {
   border: solid 1px black;
 }
 
+.media-title {
+  text-align: center;
+  visibility: hidden;
+  position: absolute;
+  left: 45%;
+  right: 50%;
+  top: 100%;
+}
+
 @media only screen and (max-width: 970px) {
 
   .shop-items {
-    width: 100vw;
+    width: 90vw;
+    gap: 60px;
   }
 
   .shop-item {
     min-width: 200px;
     max-width: 300px;
+    
   }
 
   .item-section {
@@ -780,6 +795,10 @@ a {
 
   .filter-title {
     display: none;
+  }
+
+  .media-title {
+    visibility: visible;
   }
 }
 

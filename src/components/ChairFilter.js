@@ -36,7 +36,6 @@ export function ChairFilter({chairInfo, setChairInfo, wishlist, setWishlist}) {
     else if(order.nameZA) {
         displayChairs = [...displayChairs].sort((a, b) => a.title < b.title ? 1 : -1,)
     }
-    console.log(displayChairs)
 
     const barChairs = displayChairs.filter(item => item.category === "bar")
     const diningChairs = displayChairs.filter(item => item.category === "dining")
