@@ -33,7 +33,7 @@ export function ChairShop({displayChairs, chairInfo, setChairInfo, wishlist, set
                                     && <div className="chair-hover">
                                         <WishlistManage chair={chair} wishlist={wishlist} setWishlist={setWishlist} chairInfo={chairInfo} setChairInfo={setChairInfo}></WishlistManage>
                                         <div className="chair-mid">
-                                            <p>{chair.title}s</p>
+                                            <p>{chair.title}</p>
                                             <Link to={`/Chairs/${chair.title}`} state={{chair}}> {">"} </Link>
                                         </div>
                                         </div>}

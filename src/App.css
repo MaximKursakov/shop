@@ -367,6 +367,7 @@ a {
     visibility: visible;
     opacity: 1;
   }
+  
 }
 
 .column1 {
@@ -553,9 +554,10 @@ a {
 
 .individual-price {
   display: flex;
-  gap: 10px;
   position: relative;
+  width: 15%;
 }
+
 
 .cart-discount {
   position: absolute;
@@ -702,6 +704,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100%;
   width: 100%;
   top: 0;
@@ -721,14 +724,16 @@ a {
 }
 
 .chair-mid {
-  margin: auto 0;
   font-weight: 300;
   text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5%;
 }
 
-.chair-mid p{
-  padding-bottom: 50%;
-}
+
 
 .chair-mid a {
   border: solid rgb(218, 218, 218) 1px;
@@ -1016,22 +1021,31 @@ align-items: flex-start;
   color: #464644;
 }
 
-.cart-container {
-  display: flex;
-  justify-content: center;
-  font-size: .8rem;
-  gap: 100px;
+.cart-items {
+  width: 60%;
 }
 
-.cart-items {
-  width: 50vw;
+@media only screen and (max-width: 1250px){
+  .cart-container {
+    flex-direction: column
+  }
+  .cart-items {
+    width: 100%;
+  }
+}
+
+.cart-container {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: .8rem;
+  width: 80vw;
+  margin: 0 auto;
 }
 
 .cart-item {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  gap: 10vw;
+  justify-content: space-between;
   padding: 20px 0;
   border-bottom: solid #ebebeb 1px;
 }
@@ -1084,7 +1098,7 @@ align-items: flex-start;
 
 .cart-total {
   background-color: #ebebeb;
-  padding: 35px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
   height: 330px;
@@ -1098,6 +1112,18 @@ align-items: flex-start;
 .total-price {
   border-top: solid #a3a3a3 1px;
   margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-price p {
+  
+  font-size: 2rem;
+  color: black;
+}
+
+.cart-total {
+  min-width: 240px;
 }
 
 .cart-total h2{
@@ -1107,7 +1133,7 @@ align-items: flex-start;
 }
 
 .cart-total h3 {
-  width: 100px;
+  width: 30%;
   font-weight: 400;
   font-size: .9rem;
   color: #464644;
@@ -1118,6 +1144,21 @@ align-items: flex-start;
   color: white;
   border: none;
   padding: 13px;
+}
+
+@media only screen and (max-width: 768px) {
+  .basket-itemcounter {
+    border: none;
+  }
+  .basket-itemcounter h3 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px)  {
+  .individual-price {
+    display: none;
+  }
 }
 
 .wishlist-items {
