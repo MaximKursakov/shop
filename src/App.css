@@ -1159,6 +1159,12 @@ align-items: flex-start;
   .individual-price {
     display: none;
   }
+  .cart-img {
+    display: none;
+  }
+  .cart-total {
+    padding: 30px 20px;
+  }
 }
 
 .wishlist-items {
