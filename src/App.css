@@ -963,6 +963,10 @@ align-items: flex-start;
 
 .react-tabs__tab--selected {
   color: black;
+  border-bottom: solid black 1px;
+  font-weight: 500;
+  border-width: 50%;
+  padding-bottom: 2px;
 }
 
 .itemInfo {
