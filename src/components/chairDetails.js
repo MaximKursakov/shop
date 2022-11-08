@@ -4,6 +4,7 @@ import { WishlistManage } from "./wishlistManage"
 import { BsCartCheck } from "react-icons/bs"
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { Discount } from "./discount";
+import { motion, useAnimation, useAnimationControls } from "framer-motion";
 
 export function ChairDetails({chairInfo, setChairInfo, wishlist, setWishlist, setBasket, Basket}) {
     const location = useLocation()
@@ -33,7 +34,7 @@ export function ChairDetails({chairInfo, setChairInfo, wishlist, setWishlist, se
         <div >
             <div className="info-container">
                 <div className="image-container">
-                    <img src={`shop/images/${chair.title}.png`}  alt={chair.title} className="detailsImage"></img>
+                    <img src={`/images/${chair.title}.png`}  alt={chair.title} className="detailsImage"></img>
                 </div>
                 <div className="chair-info">
                     <h1>{chair.title} | by Lorem Ipsum</h1>
@@ -51,9 +52,13 @@ export function ChairDetails({chairInfo, setChairInfo, wishlist, setWishlist, se
                         <button onClick={() => setQuantity(quantity + 1)}>+</button>
                     </div>
                     <div className="basket-container">
-                        {Basket.length === 0 
-                        ? <button className="add-to-basket" onClick={() => addToBasket(chair.availability)}>add to Basket</button>
-                        : <button className="add-to-basket" onClick={() => addToBasket(chair.availability)}>add another to Basket</button>}
+                        {!Basket.includes(chair)  
+                        ? <motion.div  className="add-to-basket" onClick={() => addToBasket(chair.availability)}>
+                            <motion.p whileHover={{scale: 1.2}}>add to Basket</motion.p >
+                            </motion.div>
+                        : <motion.div className="add-to-basket"  onClick={() => addToBasket(chair.availability)}>
+                            <motion.p whileHover={{scale: 1.2}}>add another to Basket</motion.p >
+                            </motion.div>}
                         {basketNotification 
                         && <p className="basket-notification"><BsCartCheck></BsCartCheck></p>}
                     </div>
