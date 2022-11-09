@@ -22,7 +22,7 @@ export function ChairShop({displayChairs, chairInfo, setChairInfo, wishlist, set
                     key={chair.id}>
                             <motion.div 
                                 style={{
-                                backgroundImage: `url(shop/images/${chair.thumbnailimg}.jpg)`}}  
+                                backgroundImage: `url(/shop/images/${chair.thumbnailimg}.jpg)`}}  
                                 alt={chair.title} 
                                 className="chair"
                                 onMouseOver={() => setIsHovering(chair.id)}

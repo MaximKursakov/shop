@@ -69,7 +69,7 @@ export function Slider ({chairInfo}) {
                                     <motion.img 
                                     whileHover={{scale: 1.1}} 
                                     className="featured-img"
-                                    src={`shop/images/${item.title}.png`} 
+                                    src={`/shop/images/${item.title}.png`} 
                                     alt="chair"></motion.img>
                                 </Link>
                                 <motion.p className="featured-title" initial={{opacity: 0}} animate={{opacity: 1}}>{item.title} Chair</motion.p>
@@ -77,7 +77,7 @@ export function Slider ({chairInfo}) {
                                 </motion.div>
                             : <motion.img 
                                 className="featured-img"
-                                src={`shop/images/${item.title}.png`} 
+                                src={`/shop/images/${item.title}.png`} 
                                 alt="chair"></motion.img>
                            
                         }
