@@ -1,5 +1,4 @@
 
-import { AiOutlineSend } from "react-icons/ai"
 import { TiSocialInstagramCircular, TiSocialYoutubeCircular, TiSocialFacebookCircular, TiSocialGooglePlusCircular, TiSocialTwitterCircular} from "react-icons/ti"
 import { Newsletter } from "./Newsletter"
 

@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import { Link } from "react-router-dom";
-import { SortChairs } from "./SortChairs";
 import { WishlistManage } from "./wishlistManage";
 import { motion} from "framer-motion"
 

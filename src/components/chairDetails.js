@@ -1,10 +1,9 @@
 import { useState } from "react"
-import { useLocation, useParams } from "react-router-dom"
-import { WishlistManage } from "./wishlistManage"
+import { useLocation } from "react-router-dom"
 import { BsCartCheck } from "react-icons/bs"
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { Discount } from "./discount";
-import { motion, useAnimation, useAnimationControls } from "framer-motion";
+import { motion} from "framer-motion";
 
 export function ChairDetails({chairInfo, setChairInfo, wishlist, setWishlist, setBasket, Basket}) {
     const location = useLocation()
@@ -26,9 +25,7 @@ export function ChairDetails({chairInfo, setChairInfo, wishlist, setWishlist, se
         else alert("item currently out of stock!")
         
     }
-    // function getSalePrice(n,p) {
-    //     return n - (n * (p/100));
-    // }
+
 
     return(
         <div >

@@ -1,4 +1,4 @@
-import { motion, useAnimationControls, useMotionValue, useTransform } from "framer-motion"
+import { motion, useAnimationControls} from "framer-motion"
 import { useEffect, useRef, useState } from "react"
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai"
 import { Link } from "react-router-dom"
@@ -7,7 +7,6 @@ export function Slider ({chairInfo}) {
     let counter = 0
     const [position, setPosition] = useState(2)
     const [containerWidth, setContainerWidth] = useState(0)
-    const [sliderPulsing, setSliderPulsing] = useState(Infinity)
     const controlPulse = useAnimationControls()
     controlPulse.start({
         scale: 1.2,
@@ -66,7 +65,7 @@ export function Slider ({chairInfo}) {
                         
                             {position === item.id 
                             ? <motion.div>
-                                <Link to={`/Chairs/${item.title}`} state={{item}}>
+                                <Link to={`/shop/Chairs/${item.title}`} state={{item}}>
                                     <motion.img 
                                     whileHover={{scale: 1.1}} 
                                     className="featured-img"

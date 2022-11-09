@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { BsCaretLeftFill, BsCaretRightFill, BsDashSquare } from "react-icons/bs";
+import { BsCaretLeftFill, BsCaretRightFill } from "react-icons/bs";
 import { IoIosRemoveCircleOutline } from "react-icons/io"
-import { Link, useLocation } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export function Cart ({Basket, setBasket}) {
     const [price, setPrice] = useState(0)
@@ -66,13 +66,13 @@ export function Cart ({Basket, setBasket}) {
             <h1 className="cart-header-title">SHOPPING CART</h1>
             <div className="cart-container">
             {price === 0 
-            ? <p>Basket is empty, click <Link to={"/Chairs"}>here</Link> to browse our shop!</p>
+            ? <p>Basket is empty, click <Link to={"/shop/Chairs"}>here</Link> to browse our shop!</p>
             : <div className="cart-items">
                 {BasketWithoutDuplicates.map((item) => (
                 <div key={item.id} className="cart-item" >
                     <div className="cart-column">
                         <p className="remove-bundle" onClick={() => removeBundle(item)}><IoIosRemoveCircleOutline></IoIosRemoveCircleOutline></p>
-                        <Link to={`/Chairs/${item.title}`} state={{item}}><img className="cart-img" src={`shop/images/${item.title}.png`}  alt={BasketWithoutDuplicates.title}></img></Link>
+                        <Link to={`/shop/Chairs/${item.title}`} state={{item}}><img className="cart-img" src={`shop/images/${item.title}.png`}  alt={BasketWithoutDuplicates.title}></img></Link>
                         <p className="cart-title">{item.title}</p>
                     </div>
                     <div className="individual-price">

@@ -3,8 +3,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { TiSocialFacebookCircular, TiSocialGooglePlusCircular, TiSocialInstagramCircular, TiSocialTwitterCircular, TiSocialYoutubeCircular } from "react-icons/ti";
-import { Link, NavLink } from "react-router-dom";
-import {IoCloseOutline} from "react-icons/io"
+import {  NavLink } from "react-router-dom";
 import {AiOutlineClose} from "react-icons/ai"
 
 
@@ -66,9 +65,6 @@ export function Menu() {
         }
     }
 
-    // function toggleMenu() {
-    //     setMenuOpen(!menuOpen)
-    // }
     useEffect(() => {
         if(menuOpen){
             document.body.style.overflow = 'hidden';}
@@ -103,11 +99,11 @@ export function Menu() {
                     exit="leave"><AiOutlineClose></AiOutlineClose></motion.button>
                             <motion.h2 variants={menu} initial="hidden" animate="visible" transition={{delay: .3, type: "tween", duration: .5}} className="logo">LOGO</motion.h2>
                             <motion.ul className="menu-links">
-                                <NavLink to="/Home" onClick={() => setMenuOpen(!menuOpen)}><motion.li variants={menu} whileHover="hover" initial="hidden" animate="visible" transition={{delay: .3, type: "tween", duration: .3}} className="menu-link" >Home</motion.li></NavLink>
-                                <NavLink to="/Chairs" onClick={() => setMenuOpen(!menuOpen)}><motion.li variants={menu} whileHover="hover" initial="hidden" animate="visible" transition={{delay: .4, type: "tween", duration: .3}} className="menu-link">Product</motion.li></NavLink>
-                                <NavLink to="/Contact" onClick={() => setMenuOpen(!menuOpen)}><motion.li variants={menu} whileHover="hover" initial="hidden" animate="visible" transition={{delay: .5, type: "tween", duration: .3}} className="menu-link">Contact</motion.li></NavLink>
-                                <NavLink to="/Cart" onClick={() => setMenuOpen(!menuOpen)}><motion.li variants={menu} whileHover="hover" initial="hidden" animate="visible" transition={{delay: .6, type: "tween", duration: .3}} className="menu-link">My Cart</motion.li></NavLink>
-                                <NavLink to="/Wishlist" onClick={() => setMenuOpen(!menuOpen)}><motion.li variants={menu} whileHover="hover" initial="hidden" animate="visible" transition={{delay: .7, type: "tween", duration: .3}} className="menu-link">Wishlist</motion.li></NavLink>
+                                <NavLink to="/shop/Home" onClick={() => setMenuOpen(!menuOpen)}><motion.li variants={menu} whileHover="hover" initial="hidden" animate="visible" transition={{delay: .3, type: "tween", duration: .3}} className="menu-link" >Home</motion.li></NavLink>
+                                <NavLink to="/shop/Chairs" onClick={() => setMenuOpen(!menuOpen)}><motion.li variants={menu} whileHover="hover" initial="hidden" animate="visible" transition={{delay: .4, type: "tween", duration: .3}} className="menu-link">Product</motion.li></NavLink>
+                                <NavLink to="/shop/Contact" onClick={() => setMenuOpen(!menuOpen)}><motion.li variants={menu} whileHover="hover" initial="hidden" animate="visible" transition={{delay: .5, type: "tween", duration: .3}} className="menu-link">Contact</motion.li></NavLink>
+                                <NavLink to="/shop/Cart" onClick={() => setMenuOpen(!menuOpen)}><motion.li variants={menu} whileHover="hover" initial="hidden" animate="visible" transition={{delay: .6, type: "tween", duration: .3}} className="menu-link">My Cart</motion.li></NavLink>
+                                <NavLink to="/shop/Wishlist" onClick={() => setMenuOpen(!menuOpen)}><motion.li variants={menu} whileHover="hover" initial="hidden" animate="visible" transition={{delay: .7, type: "tween", duration: .3}} className="menu-link">Wishlist</motion.li></NavLink>
                             </motion.ul>
                             <div className="social-media">
                                 <TiSocialInstagramCircular></TiSocialInstagramCircular>

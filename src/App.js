@@ -66,15 +66,15 @@ function App() {
     <BrowserRouter>
     <Navbar Basket={Basket} wishlist={wishlist}></Navbar>
     <Routes>
-      <Route path='/' element={<Navigate to="/Home"></Navigate>}/>
-      <Route path='/shop' element={<Navigate to="/Home"></Navigate>}/>
-      <Route path='/Home' element={<Home chairInfo={chairInfo}/> }/>
-      <Route path='/ChairShop' element={<ChairShop></ChairShop>}/>
-      <Route path="/Chairs" element={<ChairFilter chairInfo={chairInfo} setChairInfo={setChairInfo} wishlist={wishlist} setWishlist={setWishlist}/>}></Route>
-      <Route path='/Chairs/:title' element={<ChairDetails chairInfo={chairInfo} setChairInfo={setChairInfo} setBasket={setBasket} Basket={Basket} wishlist={wishlist} setWishlist={setWishlist}/>}></Route>
-      <Route path="/Contact" element={<Contact/>}/>
-      <Route path='/Cart' element={<Cart setBasket={setBasket} Basket={Basket}></Cart>}/>
-      <Route path='/Wishlist' element={<Wishlist wishlist={wishlist} setWishlist={setWishlist} setBasket={setBasket} Basket={Basket}></Wishlist>}/>
+      <Route path='/' element={<Navigate to="shop/Home"></Navigate>}/>
+      <Route path='/shop' element={<Navigate to="shop/Home"></Navigate>}/>
+      <Route path='shop/Home' element={<Home chairInfo={chairInfo}/> }/>
+      <Route path='shop/ChairShop' element={<ChairShop></ChairShop>}/>
+      <Route path="shop/Chairs" element={<ChairFilter chairInfo={chairInfo} setChairInfo={setChairInfo} wishlist={wishlist} setWishlist={setWishlist}/>}></Route>
+      <Route path='shop/Chairs/:title' element={<ChairDetails chairInfo={chairInfo} setChairInfo={setChairInfo} setBasket={setBasket} Basket={Basket} wishlist={wishlist} setWishlist={setWishlist}/>}></Route>
+      <Route path="shop/Contact" element={<Contact/>}/>
+      <Route path='shop/Cart' element={<Cart setBasket={setBasket} Basket={Basket}></Cart>}/>
+      <Route path='shop/Wishlist' element={<Wishlist wishlist={wishlist} setWishlist={setWishlist} setBasket={setBasket} Basket={Basket}></Wishlist>}/>
     </Routes>
     <Footer></Footer>
     </BrowserRouter>
