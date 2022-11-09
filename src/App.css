@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Montserrat:wght@100;200;300;400;500&family=Mulish:wght@200;300;400&family=Playfair+Display&family=Quattrocento+Sans:wght@400;700&family=Roboto:wght@100;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500&family=Roboto:wght@100;300;400&display=swap');
 
 /* filter fonts when done! */
 
@@ -222,7 +222,7 @@ a {
   height: 50px;
   background-color: #f6f6f6;
   border: solid black 1px;
-  font-family: "Montserrat";
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
 .shop-link:hover {
@@ -398,7 +398,7 @@ a {
   gap: 20px;
   padding: 0;
   list-style: none;
-  font-family: "Montserrat";
+  font-family: 'Roboto', sans-serif;
   text-align: center;
 }
 
@@ -596,7 +596,7 @@ a {
   text-align: left;
   background-color: transparent;
   border: none;
-  font-family: "Roboto";
+  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   font-weight: 300;
   color:#868686;
@@ -612,7 +612,7 @@ a {
 .chair-sort {
   cursor: pointer;
   appearance: none;
-  font-family: "Roboto";
+  font-family: 'Roboto', sans-serif;
   font-weight: 300;
   color: #868686;
   font-size: inherit;
