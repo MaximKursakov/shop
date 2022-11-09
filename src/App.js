@@ -66,8 +66,8 @@ function App() {
     <BrowserRouter>
     <Navbar Basket={Basket} wishlist={wishlist}></Navbar>
     <Routes>
-      <Route path='/' element={<Navigate to="shop/Home"></Navigate>}/>
-      <Route path='/shop' element={<Navigate to="shop/Home"></Navigate>}/>
+      <Route path='/' element={<Navigate to="/shop/Home"></Navigate>}/>
+      <Route path='/shop' element={<Navigate to="/shop/Home"></Navigate>}/>
       <Route path='shop/Home' element={<Home chairInfo={chairInfo}/> }/>
       <Route path='shop/ChairShop' element={<ChairShop></ChairShop>}/>
       <Route path="shop/Chairs" element={<ChairFilter chairInfo={chairInfo} setChairInfo={setChairInfo} wishlist={wishlist} setWishlist={setWishlist}/>}></Route>

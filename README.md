@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+Chair Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Description
+The Focus with this project was to get really proficient in using react. The main goal at the beginning was to build a functioning shopping basket. After experimenting with react router I was caught in a loop of even more experimenting and eventually build almost the entire front end for a chair shop.
 
-## Available Scripts
+The Webpage can be expanded by more Chairs by adding its information into the "chairInfo" Array in App.js. Information that can (and must) be passed in is:
+    -title (which also must match the images title that is placed in public/images)
+    -thumbnail image title (same as above)
+    -description
+    -price
+    -discount (in whole numbers (20% => 20))
+    -category
+    -wishlist (default: false)
+    -id (must be in ascending order)
+    -featured (if true gets displayed in the slider in /Home)
+    -availability
 
-In the project directory, you can run:
+The Website follows a minimalistic design, which fits with the minimalistic chairs of Carl Hansen featured in the shop.
+The following features are available on the website:
+    -Navigation Bar
+    Homepage:
+        -Rooms section with three categorys (bar / dining / living) that expands into subcategories by clicking on "shop now"
+        -Slider (with title + price displayed beneath the chair currently positioned in the middle. Sliding arrows pulsate to indicate usability until user clicks on either one)
+    -Product:
+        -Filter
+        -Sorter (?)
+        -hovering on individual item: 
+            - button that links to item
+            - button for adding 
+            - removing from wishlist
+        
+    -Footer with newsletter signup that gives feedback to: 
+        -input in focus 
+        -email format beeing wrong 
+        - email signup unsuccessful 
+        - email signup successful
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Difficulties
+Some difficulties I faced during this project were:
+    -slider
+    -basket(- +)
+    -
