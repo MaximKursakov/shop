@@ -52,9 +52,6 @@ export function Cart ({Basket, setBasket}) {
     for (let i = 0; i < BasketWithoutDuplicates.length; i++) {
         BasketWithoutDuplicates[i].times = duplicateCounter[BasketWithoutDuplicates[i].title];
     }
-
-    console.log(BasketWithoutDuplicates)
-    console.log(duplicateCounter)
     function getSalePrice(n,p) {
         return n - (n * (p/100));
     }
