@@ -1088,6 +1088,11 @@ align-items: flex-start;
   overflow: hidden;
 }
 
+.map-marker img {
+  width: 30px;
+  height: 30px;
+}
+
 .map {
   width: 60%;
   height: 100%;

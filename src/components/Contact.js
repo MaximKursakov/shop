@@ -1,23 +1,12 @@
-import Map, { Layer, Marker, Source } from 'react-map-gl';
+import Map, { Marker, Popup } from 'react-map-gl';
+import { motion } from 'framer-motion';
+import { useState } from 'react';
  
 
 
 export function Contact() {
-    const geojson = {
-        type: 'FeatureCollection',
-        features: [
-          {type: 'Feature', geometry: {type: "point", coordinates: [11.58598310587922, 48.16322164738846]}}
-        ]
-      };
+    const [markerSelected, setMarkerSelected] = useState(false)
 
-    // const layerStyle = {
-    //     id: 'point',
-    //     type: 'circle',
-    //     paint: {
-    //       'circle-radius': 10,
-    //       'circle-color': '#007cbf'
-    //     }
-    //   };
 
     return(
         <div className="contact-container">
@@ -33,11 +22,28 @@ export function Contact() {
             >
             <Marker
             latitude={48.16322164738846}
-            longitude={11.58598310587922 }
-            // zoom={17}
+            longitude={11.58598310587922}
             >
-                <div className='map-marker'>my marker</div>
+                <motion.div onClick={() => setMarkerSelected(!markerSelected)} whileHover={{scale: 1.1}} className='map-marker'>
+                    <img src='/images/location-svgrepo-com.svg'></img>
+                </motion.div>
             </Marker>
+            {markerSelected ? (
+                <div>
+                <Popup
+                onClose={() => setMarkerSelected(!markerSelected)}
+                latitude={48.16322164738847}
+                longitude={11.58598310587923}
+                anchor="right">
+                    <div>
+                        <h3>Location</h3>
+                        <p>4209 Lorem Ipsum</p>
+                        <p>Lorem 202D</p>
+                        <p>Lorem 80201</p>
+                    </div>
+                </Popup>
+                </div>
+            ) : null}
             </Map>
             <h1>Contact Us</h1>
             <div className="contact-column">
