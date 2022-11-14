@@ -2,7 +2,8 @@ import Map, { Marker, Popup } from 'react-map-gl';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import mapboxgl from 'mapbox-gl';
-eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
+// @ts-ignore
+// eslint-disable-next-line import/no-webpack-loader-syntax, import/no-unresolved
 mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
  
 
