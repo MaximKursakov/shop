@@ -1,6 +1,8 @@
 import Map, { Marker, Popup } from 'react-map-gl';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
+import mapboxgl from 'mapbox-gl';
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
  
 
 
@@ -54,6 +56,9 @@ export function Contact() {
                 </div>
             </div>
             <div className='map'>
+                <h2>
+                    Location
+                </h2>
                 <Map 
                 className="map-container"
                 initialViewState={{
