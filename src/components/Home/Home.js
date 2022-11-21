@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { Rooms } from "../Room/Rooms";
 import { Slider } from "../Slider/Slider";
 import { motion } from "framer-motion";
+import "./Home.css"
 
 export function Home ({chairInfo}) {
     let ch20 = chairInfo[0]
