@@ -1,0 +1,72 @@
+.rooms-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 40vh;
+  }
+  
+  .rooms-container div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    width: 33.333333%;
+    background-position: bottom 25% right 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+  }
+
+  .column1 {
+    background:  rgba(0, 0, 0, 0.3) url("/public/images/bar.jpg");
+    background-blend-mode: darken;
+    text-align: center;
+  }
+  .column2 {
+    background: rgba(0, 0, 0, 0.3) url("/public/images/dining.jpg");
+    background-blend-mode: darken;
+    text-align: center;
+  }
+  .column3 {
+    background-image: url("/public/images/living.jpg");
+    text-align: center;
+  }
+  
+  .room-title {
+    color: white;
+    font-size: 2.2rem;
+    border: none;
+  }
+  
+  .rooms-categories {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+  }
+  
+  
+  .rooms-categories a li {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: white;
+    z-index: 1;
+  }
+  
+  .room-button {
+    letter-spacing: 4px;
+    color: white;
+    background: transparent;
+    border: solid white 1px;
+    font-weight: bold;
+    padding: 15px 30px;
+  }
+  
+  .column h2, .column button {
+    border: none;
+  }

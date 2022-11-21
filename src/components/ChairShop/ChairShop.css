@@ -1,0 +1,97 @@
+.shop-items {
+    width: 70vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+  }
+  
+  .shop-item {
+    width: 40%;
+    height: 20vw;
+    position: relative;
+    border: solid black 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .chair {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .chair-hover > * {
+    transform: translateY(50%);
+    transition: transform 0.5s;
+  }
+  
+  .chair-hover {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    color: rgb(218, 218, 218);
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  
+  .chair-hover:hover > * {
+    transform: translateY(0);
+  }
+  
+  .chair-hover:hover {
+    opacity: 1;
+  }
+  
+  .chair-mid {
+    font-weight: 300;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5%;
+  }
+  
+  
+  
+  .chair-mid a {
+    color: white;
+    border: solid rgb(218, 218, 218) 1px;
+    padding: .5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .addToWishlist, .removeFromWishlist {
+    align-self: flex-end;
+    font-size: 1.3rem;
+    padding-right: 5%;
+  }
+  
+  .wishlistItem {
+    border: solid 1px black;
+  }
+  
+  .media-title {
+    text-align: center;
+    visibility: hidden;
+    position: absolute;
+    left: 45%;
+    right: 50%;
+    top: 100%;
+  }
+  

@@ -1,0 +1,92 @@
+.footer {
+    margin-top: 100px;
+    padding-bottom: 40px;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .footer-title {
+    color: rgb(57, 57, 57);
+    font-family: "Lora";
+    letter-spacing: 4px;
+  }
+  
+  .footer-info, .footer-collections, .footer-contact {
+    max-width: 20%;
+    min-width: 200px;
+  }
+  
+  .footer-newsletter {
+    flex-grow: 1;
+    min-width: 200px;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .newsletter-signup {
+    justify-self: flex-end;
+    display: flex;
+    flex-direction: row;
+    float: left; 
+    width: 100%;
+    margin: 5% 0;
+    position: relative;
+  }
+  
+  .email-input {
+    width: 100%;
+    font-size: 1rem;
+    opacity: 0.5;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 7px 0; 
+    border-bottom: 1px solid #ccc;
+    z-index: 1;
+  }
+  
+  .email-input ~ .focus-animation {
+    position: absolute; 
+    bottom: 0; 
+    left: 0; 
+    width: 0; 
+    height: 2px; 
+    background-color: #3399FF; 
+    transition: 0.4s;
+    z-index: 1;
+  }
+  
+  .email-input:focus ~ .focus-animation {
+    width: 100%; 
+    transition: 0.4s;
+  }
+  
+  .email-valid {
+    color: green;
+  }
+  
+  .email-invalid {
+    color: red;
+  }
+  
+  .newsletter-signup button {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color:rgb(57, 57, 57);
+    position: absolute;
+    right: 0;
+    z-index: 1
+  }
+  
+  .social-media {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.8rem;
+    color: #464644;
+  }
+  

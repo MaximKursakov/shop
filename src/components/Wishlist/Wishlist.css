@@ -1,0 +1,30 @@
+
+.wishlist-items {
+    width: 70vw;
+    margin: 0 auto;
+  }
+  
+  .wishlist-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid #ebebeb 1px;
+    padding: 20px 0;
+  }
+  
+  .wishlist-right {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .wishlist-basket {
+    color: #474645;
+    font-weight: 600;
+    font-size: .8rem;
+  }
+  
+  .wishlist-discount {
+    position: absolute;
+    right: 50px;
+  }

@@ -1,0 +1,170 @@
+.cart-header {
+    margin-bottom: 5vh;
+  
+    padding: 5% 0;
+    display: flex;
+    color: white;
+    align-items: center;
+    padding-left: 13vw;
+    gap: 20px;
+    font-size: 2rem;
+    font-weight: 300;
+    height: 50vh;
+    
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+
+  .cart-header {
+    background-image: url(/public/images/cart-bg.jpg);
+    background-position: 90%;
+    height: 35vh;
+    cursor: default;
+  }
+
+  .cart-discount {
+    position: absolute;
+    left: 50px;
+  }
+
+  .cart-header span {
+    background-color: white;
+    height: 1px;
+    width: 30px;
+  }
+
+  .cartItem {
+    border: solid 1px black;
+  }
+
+  .cart-header-title {
+    margin-left: 10vw;
+    color: #464644;
+  }
+  
+  .cart-items {
+    width: 60%;
+  }
+  
+  @media only screen and (max-width: 1250px){
+    .cart-container {
+      flex-direction: column
+    }
+    .cart-items {
+      width: 100%;
+    }
+  }
+  
+  .cart-container {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: .8rem;
+    width: 80vw;
+    margin: 0 auto;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: solid #ebebeb 1px;
+  }
+  
+  .cart-column {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .cart-img {
+    background-color: #ebebeb;
+    width: 100px;
+  }
+  
+  .cart-title {
+    font-weight: 400;
+    color: rgb(45, 45, 45);
+    font-size: 1rem;
+  }
+  
+  .remove-bundle {
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .basket-itemcounter {
+    padding: 3px 15px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background-color: transparent;
+    border: solid #a3a3a3 1px;
+    font-weight: 200;
+    
+  }
+  
+  .basket-itemcounter button {
+    background-color: transparent;
+    border: none;
+    color: #626262;
+    cursor: pointer;
+  }
+  
+  .basket-itemcounter h3 {
+    padding-right: 10px;
+    font-weight: 200;
+    font-size: .8rem;
+  }
+  
+  .cart-total {
+    background-color: #ebebeb;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    height: 330px;
+  }
+  
+  .shipping, .subtotal, .total-price {
+    display: flex;
+    align-items: center;
+  }
+  
+  .total-price {
+    border-top: solid #a3a3a3 1px;
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .total-price p {
+    
+    font-size: 2rem;
+    color: black;
+  }
+  
+  .cart-total {
+    min-width: 240px;
+  }
+  
+  .cart-total h2{
+    color: #464644;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+  }
+  
+  .cart-total h3 {
+    width: 30%;
+    font-weight: 400;
+    font-size: .9rem;
+    color: #464644;
+  }
+  
+  .checkout {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 13px;
+  }
+  

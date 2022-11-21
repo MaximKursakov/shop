@@ -1,15 +1,15 @@
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
-import { Home } from './components/Home';
-import { Navbar } from './components/Navbar';
-import { Contact } from "./components/Contact"
-import { ChairFilter } from './components/ChairFilter';
+import { Home } from './components/Home/Home';
+import { Navbar } from './components/Navbar/Navbar';
+import { Contact } from "./components/Contact/Contact"
+import { ChairFilter } from './components/ChairFilter/ChairFilter';
 import React, { useState } from 'react';
-import { ChairDetails } from './components/chairDetails';
-import { Cart } from './components/Cart';
-import { Wishlist } from './components/Wishlist';
-import { ChairShop } from './components/chairShop';
-import { Footer } from './components/Footer';
+import { ChairDetails } from './components/ChairDetails/chairDetails';
+import { Cart } from './components/Cart/Cart';
+import { Wishlist } from './components/Wishlist/Wishlist';
+import { ChairShop } from './components/ChairShop/chairShop';
+import { Footer } from './components/Footer/Footer';
 
 function App() {
   const [Basket, setBasket] = useState([{

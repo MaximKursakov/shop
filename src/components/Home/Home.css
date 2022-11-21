@@ -1,0 +1,64 @@
+.hero {
+    height: 100vh;
+    margin-bottom: 16vh;
+    width: 100%;
+    background-color: #f6f6f6;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  }
+  
+  
+  
+  .hero-mid {
+    text-align: center;
+    padding: 0 100px;
+  }
+  
+  .hero-mid h1, .hero-mid h2 {
+    cursor: default;
+    border: solid black 1px;
+    margin: 0;
+    color: rgb(54, 53, 53);
+    letter-spacing: .5rem;
+    font-size:  1rem;
+    font-family: "Lora";
+    padding: 15px 20px;
+  }
+  
+  .hero-mid h1 {
+    border-top: 0;
+    font-size: 4rem;
+    padding: 20px;
+    letter-spacing: 1rem;
+  }
+  .hero-mid p {
+    cursor: default;
+    margin-top: 40px;
+  }
+  
+  .shop-link {
+    margin-top: 20px;
+    color: rgb(54, 53, 53);
+    font-size: 1.2rem;
+    width: 200px;
+    height: 50px;
+    background-color: #f6f6f6;
+    border: solid black 1px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+  }
+  .shop-link:hover {
+    cursor: pointer;
+  }
+  
+  .hero-img {
+    width: 15vw;
+    height: 100%;
+    transition: transform .2s;
+  }
+  
+  .hero-img:hover {
+    transform: scale(1.1);
+  }
+  

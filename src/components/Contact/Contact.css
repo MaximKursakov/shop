@@ -1,0 +1,51 @@
+
+.contact-container {
+    padding-top: 20vh;
+    width: 70vw;
+    margin-left: 10%;
+    text-align: left;
+  }
+  
+  .map {
+    width: 100%;
+    height: 400px;
+  }
+  
+  .map h2 {
+    margin: 30px 0;
+  }
+  
+  .map-container {
+    position: relative;
+  }
+  
+  .mapboxgl-map {
+    overflow: hidden;
+  }
+  
+  .map-marker img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .disclaimer {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+  }
+  
+  
+  .contact-column {
+    display: flex;
+    justify-content: space-between;
+    border-bottom:solid 1px #d4d4d4 ;
+  }
+  
+  .contact-column div {
+    min-width: 25%;
+  }
+  
+  .contact-column h2 {
+    font-weight: 400;
+  }
+  
