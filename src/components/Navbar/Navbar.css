@@ -64,3 +64,17 @@
   .search {
     margin-right: 70px;
   }
+
+  @media only screen and (max-width: 768px) {
+    .navbar-links {
+      visibility: hidden;
+      position: absolute;
+    }
+    .menu-toggle {
+      visibility: visible;
+    }
+    .menu-link {
+      visibility: visible;
+      opacity: 1;
+    }
+  }  

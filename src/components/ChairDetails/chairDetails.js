@@ -6,7 +6,7 @@ import { Discount } from "../Discount/discount";
 import { motion} from "framer-motion";
 import "./ChairDetails.css"
 
-export function ChairDetails({chairInfo, setChairInfo, wishlist, setWishlist, setBasket, Basket}) {
+export function ChairDetails({ setBasket, Basket}) {
     const location = useLocation()
     const chairName = Object.keys(location.state)[0]
     const chair = location.state[chairName]

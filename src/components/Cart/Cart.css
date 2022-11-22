@@ -168,3 +168,23 @@
     padding: 13px;
   }
   
+  @media only screen and (max-width: 768px) {
+    .basket-itemcounter {
+      border: none;
+    }
+    .basket-itemcounter h3 {
+      display: none;
+    }
+  }
+  
+  @media only screen and (max-width: 600px)  {
+    .individual-price {
+      display: none;
+    }
+    .cart-img {
+      display: none;
+    }
+    .cart-total {
+      padding: 30px 20px;
+    }
+  }

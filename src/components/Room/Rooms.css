@@ -70,3 +70,14 @@
   .column h2, .column button {
     border: none;
   }
+
+  @media only screen and (max-width: 768px) {
+    .rooms-container {
+      flex-direction: column;
+      height: auto;
+    }
+    .rooms-container div {
+      width: 100%;
+      height: 60vh;
+    }
+  }

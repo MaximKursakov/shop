@@ -27,10 +27,10 @@ export function Cart ({Basket, setBasket}) {
         }))
         }
 
-        useEffect(() => {
-            addBasketID()
-        }, [price])
-        
+    useEffect(() => {
+        addBasketID()
+    }, [price])
+    
 
     function getTotalPrice() {
         setPrice(Basket.reduce((a,v) =>  a = a + getSalePrice(v.price, v.discount) , 0 ))
@@ -81,10 +81,10 @@ export function Cart ({Basket, setBasket}) {
                         && <p className="cart-discount">(-{item.discount}%)</p>}
                     </div>
                     <div className="basket-itemcounter">
-                        <h3>Quanitity</h3>
-                        <button onClick={() =>removeItem(item) }><BsCaretLeftFill></BsCaretLeftFill></button>
-                        <p>{duplicateCounter[item.title]}</p>
-                        <button onClick={() => setBasket(basket => basket.concat(item))}><BsCaretRightFill></BsCaretRightFill></button>
+                        <h3>Quantity</h3>
+                        <button data-testid="quantity-reduce-display" onClick={() =>removeItem(item) }><BsCaretLeftFill></BsCaretLeftFill></button>
+                        <p data-testid="quantity-display">{duplicateCounter[item.title]}</p>
+                        <button data-testid="quantity-increase-display" onClick={() => setBasket(basket => basket.concat(item))}><BsCaretRightFill></BsCaretRightFill></button>
                     </div>
                     <p className="item-total-price">{getSalePrice(item.price, item.discount) * duplicateCounter[item.title]}€</p>
                 </div>
@@ -104,7 +104,7 @@ export function Cart ({Basket, setBasket}) {
                 </div>
                 <div className="total-price">
                     <h3>Total</h3>
-                    <p>{price}€</p>
+                    <p data-testid="total-price-display">{price}€</p>
                 </div>
                 <button className="checkout">Proceed to Checkout</button>
                 </div>

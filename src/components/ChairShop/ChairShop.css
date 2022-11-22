@@ -94,4 +94,9 @@
     right: 50%;
     top: 100%;
   }
-  
+
+  @media only screen and (max-width: 970px) {  
+    .media-title {
+      visibility: visible;
+    }
+  }
