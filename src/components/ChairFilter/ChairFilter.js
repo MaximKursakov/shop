@@ -1,4 +1,4 @@
-import {useState} from "react"
+import {useState, useMemo} from "react"
 import { ChairShop } from "../ChairShop/chairShop"
 import { SortChairs } from "../SortChairs/SortChairs"
 import { motion } from "framer-motion"
@@ -25,18 +25,22 @@ export function ChairFilter({chairInfo, setChairInfo, wishlist, setWishlist}) {
         }
     }
 
-    if(order.priceLH) {
-        displayChairs = [...displayChairs].sort((a, b) => a.price - b.price)
-    }
-    else if(order.priceHL) {
-        displayChairs = [...displayChairs].sort((a, b) => b.price - a.price)
-    }
-    else if(order.nameAZ) {
-        displayChairs = [...displayChairs].sort((a, b) => a.title > b.title ? 1 : -1,)
-    }
-    else if(order.nameZA) {
-        displayChairs = [...displayChairs].sort((a, b) => a.title < b.title ? 1 : -1,)
-    }
+    useMemo(() => {
+        if(order.priceLH) {
+            displayChairs = [...displayChairs].sort((a, b) => a.price - b.price)
+        }
+        else if(order.priceHL) {
+            displayChairs = [...displayChairs].sort((a, b) => b.price - a.price)
+        }
+        else if(order.nameAZ) {
+            displayChairs = [...displayChairs].sort((a, b) => a.title > b.title ? 1 : -1,)
+        }
+        else if(order.nameZA) {
+            displayChairs = [...displayChairs].sort((a, b) => a.title < b.title ? 1 : -1,)
+        }
+    }, [order])
+
+    
 
     const barChairs = displayChairs.filter(item => item.category === "bar")
     const diningChairs = displayChairs.filter(item => item.category === "dining")
