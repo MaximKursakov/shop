@@ -1,4 +1,4 @@
-import {useState, useMemo} from "react"
+import {useState, useMemo, useCallback} from "react"
 import { ChairShop } from "../ChairShop/chairShop"
 import { SortChairs } from "../SortChairs/SortChairs"
 import { motion } from "framer-motion"
@@ -9,7 +9,7 @@ export function ChairFilter({chairInfo, setChairInfo, wishlist, setWishlist}) {
     let displayChairs = chairInfo
     const [order, setOrder] = useState({priceLH: false, priceHL: false, nameAZ: false, nameZA: false})
     
-    function changeOrder(e) {
+    const changeOrder = useCallback((e) => {
         const orderValue = e.target.value
         if (orderValue === "priceLH") {
             setOrder({priceLH: true, priceHL: false, nameAZ: false, nameZA: false})
@@ -24,6 +24,7 @@ export function ChairFilter({chairInfo, setChairInfo, wishlist, setWishlist}) {
             setOrder({priceLH: false, priceHL: false, nameAZ: false, nameZA: true})
         }
     }
+    )
 
     useMemo(() => {
         if(order.priceLH) {

@@ -9,6 +9,17 @@ export function Slider ({chairInfo}) {
     const [position, setPosition] = useState(2)
     const [containerWidth, setContainerWidth] = useState(0)
     const controlPulse = useAnimationControls()
+    const [windowWidth, setWindowWidth] = useState()
+    function getResizedWindow () {
+        setWindowWidth(window.innerWidth)
+    }
+    useEffect(() => {
+        window.addEventListener('resize', getResizedWindow);
+        return () => {
+            window.removeEventListener('resize', getResizedWindow);
+          }
+      }, [])
+    
     controlPulse.start({
         scale: 1.2,
         transition: {
@@ -28,7 +39,7 @@ export function Slider ({chairInfo}) {
     const container = useRef()
     useEffect(() => {
         setContainerWidth(container.current.offsetWidth)
-    })
+    }, [windowWidth])
 
     function slideRight() {
         if (position < chairsUpdatedID.length ) {
@@ -43,6 +54,7 @@ export function Slider ({chairInfo}) {
         }
         controlPulse.stop()
     }
+    
 
 
     return(
