@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <script defer="" src="./React App_files/bundle.js"></script><style>@import url(https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&family=Libre+Baskerville:wght@400;700&display=swap);</style><style>body {
+  margin: 0;
+  font-family: "League Spartan", sans-serif;
+  background-color: white;
+  color: #3f4244;
+}
+
+.intro-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.intro-sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 5%;
+  height: 100%;
+  margin-left: 2%;
+}
+.intro-sidebar .portfolio-title {
+  margin: 0;
+  font-weight: bold;
+  letter-spacing: 4px;
+  color: #3f4244;
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+}
+.intro-sidebar .line1, .intro-sidebar .line2 {
+  border-left: 2px solid #3f4244;
+  height: 35%;
+  margin: 3% 0 0 3%;
+}
+.intro-sidebar svg {
+  color: #3f4244;
+  scale: 1.5;
+}
+
+.intro {
+  width: 95vw;
+  height: 90vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.intro-hero {
+  width: 95vw;
+  height: 90vh;
+}
+
+.bird {
+  position: absolute;
+  top: 40%;
+  bottom: 0%;
+  left: 70%;
+  right: 25%;
+}
+
+.welcome {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  font-size: 10rem;
+  font-weight: 900;
+}
+
+.welcome-top, .welcome-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 40vw;
+}
+
+circle {
+  stroke-width: 20px;
+  stroke-linecap: square;
+  fill: transparent;
+}
+
+.circle {
+  margin-top: auto;
+}
+
+.intro-part-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 10px;
+  width: 40%;
+  height: 100%;
+  margin: auto 5% auto auto;
+}
+.intro-part-2 * {
+  text-align: left;
+  margin: 0;
+}
+.intro-part-2 h2 {
+  font-size: 4rem;
+  font-weight: 900;
+  color: #EDF6FF;
+}
+.intro-part-2 .welcome-text {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #EDF6FF;
+}
+.intro-part-2 .greeting {
+  display: flex;
+  width: auto;
+  gap: 10%;
+}
+.intro-part-2 .greeting .name {
+  color: #6DAFFE;
+  text-shadow: 2px 0 #EDF6FF, -2px 0 #EDF6FF, 0 2px #EDF6FF, 0 -2px #EDF6FF, 1px 1px #EDF6FF, -1px -1px #EDF6FF, 1px -1px #EDF6FF, -1px 1px #EDF6FF;
+  width: auto;
+  display: flex;
+}
+.intro-part-2 .greeting .name p {
+  font-size: 4rem;
+  font-weight: 900;
+}
+.intro-part-2 .greeting .name .text-line {
+  align-self: flex-start;
+  border-left: 2px solid #EDF6FF;
+  height: 80%;
+  margin-left: 3%;
+}
+.intro-part-2 h3 {
+  font-size: 1rem;
+  font-weight: 900;
+  color: #437FC7;
+  text-align: center;
+  padding: 5px 10px;
+  background-color: white;
+}
+.intro-part-2 .welcome-info {
+  margin: 20px 0;
+  color: #EDF6FF;
+  font-size: 1.5rem;
+}
+.intro-part-2 img {
+  margin-top: auto;
+  justify-self: flex-end;
+  min-width: 300px;
+  max-width: 400px;
+}
+.intro-part-2 button {
+  width: 20%;
+  background-color: #437FC7;
+  border: none;
+  color: white;
+  font-family: league spartan;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 10px 0;
+  width: 200px;
+}
+
+.card-container {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  margin: 200px auto;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9BcHAuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUF1QkE7RUFDSSxTQUFBO0VBQ0EseUNBQUE7RUFDQSx1QkFBQTtFQUNBLGNBbkJVO0FBRmQ7O0FBd0JBO0VBbkJJLGFBQUE7RUFDQSx1QkFBQTtFQUNBLG1CQUFBO0VBbUJBLGFBQUE7RUFDQSxrQkFBQTtBQW5CSjs7QUFzQkE7RUFDSSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSxtQkFBQTtFQUNBLDZCQUFBO0VBQ0EsU0FBQTtFQUNBLFlBQUE7RUFDQSxlQUFBO0FBbkJKO0FBb0JJO0VBQ0ksU0FBQTtFQUNBLGlCQUFBO0VBQ0EsbUJBQUE7RUFDQSxjQXhDTTtFQXlDTixlQUFBO0VBQ0Esa0JBQUE7RUFDQSxXQUFBO0VBQ0EsY0FBQTtBQWxCUjtBQW9CSTtFQUNJLDhCQUFBO0VBQ0EsV0FBQTtFQUNBLGlCQUFBO0FBbEJSO0FBb0JNO0VBQ0ksY0FwREk7RUFxREosVUFBQTtBQWxCVjs7QUEwQkE7RUFDSSxXQUFBO0VBQ0EsWUFBQTtFQUNBLGdCQUFBO0VBQ0Esa0JBQUE7QUF2Qko7O0FBMEJBO0VBQ0ksV0FBQTtFQUNBLFlBQUE7QUF2Qko7O0FBMEJBO0VBQ0ksa0JBQUE7RUFDQSxRQUFBO0VBQ0EsVUFBQTtFQUNBLFNBQUE7RUFDQSxVQUFBO0FBdkJKOztBQTBCQTtFQXpFSSxrQkFBQTtFQUNBLE1BQUE7RUFDQSxPQUFBO0VBQ0EsUUFBQTtFQUNBLE9BQUE7RUFUQSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtFQStFQSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSxnQkFBQTtFQUNBLGdCQUFBO0FBakJKOztBQW9CQTtFQXZGSSxhQUFBO0VBQ0EsdUJBQUE7RUFDQSxtQkFBQTtFQXVGQSxhQUFBO0VBQ0EsV0FBQTtBQWZKOztBQWtCQTtFQUNJLGtCQUFBO0VBQ0Esc0JBQUE7RUFDQSxpQkFBQTtBQWZKOztBQW1CRTtFQUNJLGdCQUFBO0FBaEJOOztBQW1CQTtFQW5HSSxrQkFBQTtFQUNBLE1BQUE7RUFDQSxPQUFBO0VBQ0EsUUFBQTtFQUNBLE9BQUE7RUFpR0EsYUFBQTtFQUNBLHNCQUFBO0VBQ0EsdUJBQUE7RUFDQSx1QkFBQTtFQUNBLFNBQUE7RUFDQSxVQUFBO0VBQ0EsWUFBQTtFQUNBLHlCQUFBO0FBWko7QUFhSTtFQUNHLGdCQUFBO0VBQ0EsU0FBQTtBQVhQO0FBYUk7RUFDSSxlQUFBO0VBQ0EsZ0JBQUE7RUFDQSxjQWhJQTtBQXFIUjtBQWFJO0VBQ0ksZUFBQTtFQUNBLGdCQUFBO0VBQ0EsY0FySUE7QUEwSFI7QUFhSTtFQUNJLGFBQUE7RUFDQSxXQUFBO0VBQ0EsUUFBQTtBQVhSO0FBWVE7RUFDSSxjQTdJRTtFQThJRixpSkFBQTtFQUVBLFdBQUE7RUFDQSxhQUFBO0FBWFo7QUFhWTtFQUNJLGVBQUE7RUFDQSxnQkFBQTtBQVhoQjtBQWFZO0VBQ0ksc0JBQUE7RUFDQSw4QkFBQTtFQUNBLFdBQUE7RUFDQSxlQUFBO0FBWGhCO0FBZUk7RUFDSSxlQUFBO0VBQ0EsZ0JBQUE7RUFDQSxjQW5LSztFQW9LTCxrQkFBQTtFQUNBLGlCQUFBO0VBQ0EsdUJBQUE7QUFiUjtBQWVJO0VBQ0ksY0FBQTtFQUNBLGNBeEtBO0VBeUtBLGlCQUFBO0FBYlI7QUFlSTtFQUNJLGdCQUFBO0VBQ0Esc0JBQUE7RUFDQSxnQkFBQTtFQUNBLGdCQUFBO0FBYlI7QUFlSTtFQUNJLFVBQUE7RUFDQSx5QkFyTEs7RUFzTEwsWUFBQTtFQUNBLFlBQUE7RUFDQSwyQkFBQTtFQUNBLGlCQUFBO0VBQ0Esa0JBQUE7RUFDQSxlQUFBO0VBQ0EsWUFBQTtBQWJSOztBQWlCQTtFQUNJLFlBQUE7RUFDQSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSxrQkFBQTtBQWRKIiwic291cmNlc0NvbnRlbnQiOlsiQGltcG9ydCB1cmwoJ2h0dHBzOi8vZm9udHMuZ29vZ2xlYXBpcy5jb20vY3NzMj9mYW1pbHk9TGVhZ3VlK1NwYXJ0YW46d2dodEAxMDA7MjAwOzMwMDs0MDA7NTAwOzYwMDs3MDA7ODAwOzkwMCZmYW1pbHk9TGlicmUrQmFza2VydmlsbGU6d2dodEA0MDA7NzAwJmRpc3BsYXk9c3dhcCcpO1xuXG4kYmx1ZS1kYXJrIDogIzQzN0ZDNztcbiRibHVlLWxpZ2h0IDogIzZEQUZGRTtcbiRncmV5IDogI0VERjZGRjtcbiRicm93bi1kYXJrIDogI2E0NmM0Nztcbi8vICRicm93bi1kYXJrIDogI2IzODIyOTtcbiRicm93bi1saWdodCA6ICNGRkNDNkU7XG4kdGV4dC1jb2xvciA6ICMzZjQyNDQ7XG5cbkBtaXhpbiBmbGV4LWNlbnRlciB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuQG1peGluIHBvc2l0aW9uLWNlbnRlciB7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIHRvcDogMDtcbiAgICBsZWZ0OiAwO1xuICAgIHJpZ2h0OiAwO1xuICAgIGxlZnQ6IDA7XG59XG5cbmJvZHkge1xuICAgIG1hcmdpbjogMDtcbiAgICBmb250LWZhbWlseTogJ0xlYWd1ZSBTcGFydGFuJywgc2Fucy1zZXJpZjtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICBjb2xvcjogJHRleHQtY29sb3I7XG59XG5cbi5pbnRyby1jb250YWluZXIge1xuICAgIEBpbmNsdWRlIGZsZXgtY2VudGVyKCk7XG4gICAgaGVpZ2h0OiAxMDB2aDtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG5cbi5pbnRyby1zaWRlYmFyIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWV2ZW5seTtcbiAgICB3aWR0aDogNSU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIG1hcmdpbi1sZWZ0OjIlO1xuICAgIC5wb3J0Zm9saW8tdGl0bGUge1xuICAgICAgICBtYXJnaW46IDA7XG4gICAgICAgIGZvbnQtd2VpZ2h0OiBib2xkO1xuICAgICAgICBsZXR0ZXItc3BhY2luZzogNHB4O1xuICAgICAgICBjb2xvcjogJHRleHQtY29sb3I7XG4gICAgICAgIGZvbnQtc2l6ZTogMnJlbTtcbiAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgbWFyZ2luOiAwIGF1dG87XG4gICAgfVxuICAgIC5saW5lMSwgLmxpbmUyIHtcbiAgICAgICAgYm9yZGVyLWxlZnQ6IDJweCBzb2xpZCAkdGV4dC1jb2xvcjtcbiAgICAgICAgaGVpZ2h0OiAzNSU7XG4gICAgICAgIG1hcmdpbjogMyUgMCAwIDMlO1xuICAgICAgfVxuICAgICAgc3ZnIHtcbiAgICAgICAgICBjb2xvcjogJHRleHQtY29sb3I7XG4gICAgICAgICAgc2NhbGU6MS41XG4gICAgICB9XG59XG5cblxuXG5cblxuLmludHJvIHtcbiAgICB3aWR0aDogOTV2dztcbiAgICBoZWlnaHQ6IDkwdmg7XG4gICAgb3ZlcmZsb3c6IGhpZGRlbjsgICBcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG59XG5cbi5pbnRyby1oZXJvIHtcbiAgICB3aWR0aDogOTV2dztcbiAgICBoZWlnaHQ6IDkwdmg7XG59XG5cbi5iaXJkIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgdG9wOiA0MCU7XG4gICAgYm90dG9tOiAwJTtcbiAgICBsZWZ0OiA3MCU7XG4gICAgcmlnaHQ6IDI1JTtcbn1cblxuLndlbGNvbWUge1xuICAgIEBpbmNsdWRlIHBvc2l0aW9uLWNlbnRlcigpO1xuICAgIEBpbmNsdWRlIGZsZXgtY2VudGVyKCk7XG4gICAgaGVpZ2h0OiAxMDB2aDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGZvbnQtc2l6ZTogMTByZW07XG4gICAgZm9udC13ZWlnaHQ6IDkwMDtcbn1cblxuLndlbGNvbWUtdG9wLCAud2VsY29tZS1ib3R0b20ge1xuICAgIEBpbmNsdWRlIGZsZXgtY2VudGVyKCk7XG4gICAgaGVpZ2h0OiAyMDBweDtcbiAgICB3aWR0aDogNDB2dztcbn1cblxuY2lyY2xlIHtcbiAgICBzdHJva2Utd2lkdGg6IDIwcHg7XG4gICAgc3Ryb2tlLWxpbmVjYXA6c3F1YXJlO1xuICAgIGZpbGw6IHRyYW5zcGFyZW50O1xuICB9XG5cblxuICAuY2lyY2xlIHtcbiAgICAgIG1hcmdpbi10b3A6IGF1dG87XG4gIH1cblxuLmludHJvLXBhcnQtMiB7XG4gICAgQGluY2x1ZGUgcG9zaXRpb24tY2VudGVyKCk7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIGFsaWduLWl0ZW1zOiBmbGV4LXN0YXJ0O1xuICAgIGdhcDogMTBweDtcbiAgICB3aWR0aDogNDAlO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBtYXJnaW46IGF1dG8gNSUgYXV0byBhdXRvO1xuICAgICp7XG4gICAgICAgdGV4dC1hbGlnbjogbGVmdDtcbiAgICAgICBtYXJnaW46IDA7XG4gICAgfVxuICAgIGgyIHtcbiAgICAgICAgZm9udC1zaXplOiA0cmVtO1xuICAgICAgICBmb250LXdlaWdodDogOTAwO1xuICAgICAgICBjb2xvcjogJGdyZXk7XG4gICAgfVxuICAgIC53ZWxjb21lLXRleHQge1xuICAgICAgICBmb250LXNpemU6IDNyZW07XG4gICAgICAgIGZvbnQtd2VpZ2h0OiA5MDA7XG4gICAgICAgIGNvbG9yOiAkZ3JleTtcbiAgICB9XG4gICAgLmdyZWV0aW5nIHtcbiAgICAgICAgZGlzcGxheTogZmxleDtcbiAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgIGdhcDogMTAlO1xuICAgICAgICAubmFtZSB7XG4gICAgICAgICAgICBjb2xvcjogJGJsdWUtbGlnaHQ7XG4gICAgICAgICAgICB0ZXh0LXNoYWRvdzogMnB4IDAgJGdyZXksIC0ycHggMCAkZ3JleSwgMCAycHggJGdyZXksIDAgLTJweCAkZ3JleSxcbiAgICAgICAgICAgIDFweCAxcHggJGdyZXksIC0xcHggLTFweCAkZ3JleSwgMXB4IC0xcHggJGdyZXksIC0xcHggMXB4ICRncmV5O1xuICAgICAgICAgICAgd2lkdGg6IGF1dG87XG4gICAgICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICAgICAgXG4gICAgICAgICAgICBwIHtcbiAgICAgICAgICAgICAgICBmb250LXNpemU6IDRyZW07XG4gICAgICAgICAgICAgICAgZm9udC13ZWlnaHQ6IDkwMDtcbiAgICAgICAgICAgIH1cbiAgICAgICAgICAgIC50ZXh0LWxpbmUge1xuICAgICAgICAgICAgICAgIGFsaWduLXNlbGY6IGZsZXgtc3RhcnQ7XG4gICAgICAgICAgICAgICAgYm9yZGVyLWxlZnQ6IDJweCBzb2xpZCAkZ3JleTtcbiAgICAgICAgICAgICAgICBoZWlnaHQ6IDgwJTtcbiAgICAgICAgICAgICAgICBtYXJnaW4tbGVmdDogMyU7XG4gICAgICAgICAgICB9XG4gICAgICAgIH1cbiAgICB9XG4gICAgaDMge1xuICAgICAgICBmb250LXNpemU6IDFyZW07XG4gICAgICAgIGZvbnQtd2VpZ2h0OiA5MDA7XG4gICAgICAgIGNvbG9yOiAkYmx1ZS1kYXJrO1xuICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgIHBhZGRpbmc6IDVweCAxMHB4O1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICB9XG4gICAgLndlbGNvbWUtaW5mbyB7XG4gICAgICAgIG1hcmdpbjogMjBweCAwO1xuICAgICAgICBjb2xvcjogJGdyZXk7XG4gICAgICAgIGZvbnQtc2l6ZTogMS41cmVtO1xuICAgIH1cbiAgICBpbWcge1xuICAgICAgICBtYXJnaW4tdG9wOiBhdXRvO1xuICAgICAgICBqdXN0aWZ5LXNlbGY6IGZsZXgtZW5kO1xuICAgICAgICBtaW4td2lkdGg6IDMwMHB4O1xuICAgICAgICBtYXgtd2lkdGg6IDQwMHB4O1xuICAgIH1cbiAgICBidXR0b24ge1xuICAgICAgICB3aWR0aDogMjAlO1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAkYmx1ZS1kYXJrO1xuICAgICAgICBib3JkZXI6IG5vbmU7XG4gICAgICAgIGNvbG9yOiB3aGl0ZTtcbiAgICAgICAgZm9udC1mYW1pbHk6IGxlYWd1ZSBzcGFydGFuO1xuICAgICAgICBmb250LXNpemU6IDEuNXJlbTtcbiAgICAgICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgICAgICBwYWRkaW5nOiAxMHB4IDA7XG4gICAgICAgIHdpZHRoOiAyMDBweDtcbiAgICB9XG59XG5cbi5jYXJkLWNvbnRhaW5lciB7XG4gICAgd2lkdGg6IDEwMHB4O1xuICAgIGhlaWdodDogMTAwcHg7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogYmx1ZTtcbiAgICBtYXJnaW46IDIwMHB4IGF1dG87XG59XG5cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="App"><div><div></div><div class="intro-container"><div class="intro-hero" style="background: linear-gradient(90deg, rgb(237, 246, 255) 50%, rgb(109, 175, 254) 50%);"><div class="intro"><div initial="hidden" animate="visible" class="intro-sidebar"><p class="portfolio-title">MK</p><div class="line1"></div><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M16 5H0V4h16v1zm0 8H0v-1h16v1zm0-4.008H0V8h16v.992z"></path></svg><div class="line2"></div></div><div class="bird"><svg width="185" height="194" viewBox="0 0 185 194" fill="none" xmlns="http://www.w3.org/2000/svg" left="70%" right="25%" visibility="hidden" transform-origin="91px 94px" style="transform: translateY(0.343633px) translateX(0px) translateY(0px) rotateY(0deg) rotateZ(0deg); transform-origin: 91px 94px;"><g id="Frame 1"><rect x="0.5" y="0.5" width="181" height="187" fill="transparent"></rect><path id="bird-body" d="M111 183L113 106L86 46L57 26L41 42.5H57V86L97.5 131L86 154L111 183Z" fill="#6DAFFE"></path><g id="wings"><path id="wing-front" fill="#6DAFFE" d="M113 106L161.26806 27.99361L86 46L113 106Z" filter="blur(0.85908px)"></path><path id="wing-back" fill="#6DAFFE" d="M113 106L132.23792 20.09082L86 46L113 106Z" filter="blur(0.85908px)"></path></g></g></svg></div><div class="bird"><svg width="185" height="194" viewBox="0 0 185 194" fill="none" xmlns="http://www.w3.org/2000/svg" left="70%" right="25%" visibility="shown" transform-origin="91px 94px" style="transform: translateY(0.343633px) translateX(0px) translateY(0px) rotateY(0deg) rotateZ(0deg); transform-origin: 91px 94px;"><g id="Frame 1"><rect x="0.5" y="0.5" width="181" height="187" fill="transparent"></rect><path id="bird-body" d="M111 183L113 106L86 46L57 26L41 42.5H57V86L97.5 131L86 154L111 183Z" fill="#EDF6FF"></path><g id="wings"><path id="wing-front" fill="#EDF6FF" d="M113 106L161.26806 27.99361L86 46L113 106Z" filter="blur(0.85908px)"></path><path id="wing-back" fill="#EDF6FF" d="M113 106L132.23792 20.09082L86 46L113 106Z" filter="blur(0.85908px)"></path></g></g></svg></div><div class="welcome"><div style="transform: none;"><svg width="500" height="400" viewBox="0 0 199 165" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Welcome"><path class="welcome-text" id="Dot" d="M199 151C199 158.18 193.18 164 186 164C178.82 164 173 158.18 173 151C173 143.82 178.82 138 186 138C193.18 138 199 143.82 199 151Z" fill="#EDF6FF" transform-origin="186px 151px" style="transform: none; transform-origin: 186px 151px;"></path><g id="O"><g id="O_2"><mask id="path-2-inside-1_3_21" fill="white"><path class="welcome-text" d="M172 128C172 147.882 155.882 164 136 164C116.118 164 100 147.882 100 128C100 108.118 116.118 92 136 92C155.882 92 172 108.118 172 128Z" opacity="1" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="1px 1px"></path></mask><path class="welcome-text" d="M172 128C172 147.882 155.882 164 136 164C116.118 164 100 147.882 100 128C100 108.118 116.118 92 136 92C155.882 92 172 108.118 172 128Z" stroke="#1C1B20" stroke-width="32" mask="url(#path-2-inside-1_3_21)" opacity="1" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="1px 1px"></path></g></g><g id="H"><path class="welcome-text" id="Waag" d="M17.0263 37.1309L37.8148 37.024" stroke="#1C1B20" stroke-width="16" opacity="1" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="1px 1px"></path><path class="welcome-text" id="Senk1" d="M9.36998 73.0044L9.3763 0.999999" stroke="#1C1B20" stroke-width="16" opacity="1" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="1px 1px"></path><path class="welcome-text" id="Senk2" d="M45.37 73.0044L45.3763 0.999999" stroke="#1C1B20" stroke-width="16" opacity="1" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="1px 1px"></path></g><g id="L1"><path id="Waag_2" d="M1 156.105L44 156.105" stroke="#1C1B20" stroke-width="16" opacity="1" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="1px 1px"></path><path id="Senk" d="M8.89939 164.004L8.90572 92" stroke="#1C1B20" stroke-width="16" opacity="1" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="1px 1px"></path></g><g id="L2"><path class="welcome-text" id="Waag_3" d="M56 156.105L99 156.105" stroke="#1C1B20" stroke-width="16" opacity="1" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="1px 1px"></path><path class="welcome-text" id="Senk_2" d="M63.8994 164.004L63.9057 92" stroke="#1C1B20" stroke-width="16" opacity="1" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="1px 1px"></path></g><g id="E"><path class="welcome-text" id="Waag3" d="M63.5 8.99997L100 9.00002" stroke="#1C1B20" stroke-width="16" opacity="1" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="1px 1px"></path><path class="welcome-text" id="Waag1" d="M64 65L100.125 65.0434" stroke="#1C1B20" stroke-width="16" opacity="1" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="1px 1px"></path><path class="welcome-text" id="Waag2" d="M78.9999 36.0584L99 35.9971" stroke="#1C1B20" stroke-width="16" opacity="1" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="1px 1px"></path><path class="welcome-text" id="Senk_3" d="M71.37 73.0044L71.3763 0.999999" stroke="#1C1B20" stroke-width="16" opacity="1" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="1px 1px"></path></g></g></svg></div></div></div></div></div></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  
+
+</body></html>
