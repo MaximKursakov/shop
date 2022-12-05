@@ -12,7 +12,7 @@
   
   .hero-mid {
     text-align: center;
-    padding: 0 100px;
+    padding: 0 10%;
   }
   
   .hero-mid h1, .hero-mid h2 {
@@ -64,6 +64,6 @@
   
   @media only screen and (max-width: 768px) {
     .hero-img, .hero-chair-link {
-      visibility: hidden;
+      display: none;
     }
   }

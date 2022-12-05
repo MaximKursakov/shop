@@ -11,6 +11,10 @@ body {
   background-color: #f6f6f6;
 }
 
+#root {
+  overflow: hidden;
+}
+
 .active ~ .hover-navlink{
   position: absolute; 
   bottom: 0px; 
