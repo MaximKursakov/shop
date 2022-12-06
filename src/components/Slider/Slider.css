@@ -30,6 +30,13 @@
     right: 0;
     margin: auto;
   }
+
+  .slider-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   
   .slide-left, .slide-right {
     position: absolute;
@@ -81,5 +88,12 @@
   
   .featured-price {
     text-align: center;
+  }
+
+  @media screen and (max-width:768px) {
+    .slider-item p {
+      margin: 5px 0;
+      font-size: .8rem;
+    }
   }
   

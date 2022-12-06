@@ -77,12 +77,12 @@ export function Slider ({chairInfo}) {
                         }}>
                         
                             {position === item.id 
-                            ? <motion.div>
+                            ? <motion.div className="slider-item">
                                 <Link to={`/shop/Chairs/${item.title}`} state={{item}}>
                                     <motion.img 
                                     whileHover={{scale: 1.1}} 
                                     className="featured-img"
-                                    src={`/shop/images/${item.title}.png`} 
+                                    src={`/images/${item.title}.png`} 
                                     alt="chair"></motion.img>
                                 </Link>
                                 <motion.p className="featured-title" initial={{opacity: 0}} animate={{opacity: 1}}>{item.title} Chair</motion.p>
