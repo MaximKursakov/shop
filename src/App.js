@@ -68,7 +68,6 @@ function App() {
     <Navbar Basket={Basket} wishlist={wishlist}></Navbar>
     <ScrollToTop/>
     <Routes>
-        
       <Route path='/' element={<Navigate to="/shop/Home"></Navigate>}/>
       <Route path='/shop' element={<Navigate to="/shop/Home"></Navigate>}/>
       <Route path='shop/Home' element={<Home chairInfo={chairInfo}/> }/>
