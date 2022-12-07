@@ -10,6 +10,7 @@ import { Cart } from './components/Cart/Cart';
 import { Wishlist } from './components/Wishlist/Wishlist';
 import { ChairShop } from './components/ChairShop/chairShop';
 import { Footer } from './components/Footer/Footer';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   const [Basket, setBasket] = useState([{
@@ -65,7 +66,9 @@ function App() {
   return (
     <BrowserRouter>
     <Navbar Basket={Basket} wishlist={wishlist}></Navbar>
+    <ScrollToTop/>
     <Routes>
+        
       <Route path='/' element={<Navigate to="/shop/Home"></Navigate>}/>
       <Route path='/shop' element={<Navigate to="/shop/Home"></Navigate>}/>
       <Route path='shop/Home' element={<Home chairInfo={chairInfo}/> }/>
