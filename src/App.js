@@ -1,4 +1,4 @@
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { HashRouter, Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { Home } from './components/Home/Home';
 import { Navbar } from './components/Navbar/Navbar';
@@ -64,7 +64,7 @@ function App() {
 }])
 
   return (
-    <BrowserRouter>
+    <HashRouter>
     <Navbar Basket={Basket} wishlist={wishlist}></Navbar>
     <ScrollToTop/>
     <Routes>
@@ -79,7 +79,7 @@ function App() {
       <Route path='shop/Wishlist' element={<Wishlist wishlist={wishlist} setWishlist={setWishlist} setBasket={setBasket} Basket={Basket}></Wishlist>}/>
     </Routes>
     <Footer></Footer>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
